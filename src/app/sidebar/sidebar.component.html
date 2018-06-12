@@ -1,3 +1,6 @@
-<div class="sidebar">
-  
+<div class="sidebar" [class.hide]="sidebarTgl">
+
+  <div class="toggle-btn">
+    <button class="btn" (click)="sidebarToggle()"><i class="material-icons">close</i></button>
+  </div>
 </div>

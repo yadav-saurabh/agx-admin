@@ -1,3 +1,20 @@
 $black : #191919;
-$sidebar-width: 20%;
 $bodybg-color: #eee;
+
+
+$sidebar-width: 20%;
+$sidebar-width-mob: 65%;
+$sidebar-width-ipad: 30%;
+
+
+
+
+
+
+// @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+//   $sidebar-width: 65%;
+// }
+
+// @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+//   $sidebar-width: 30%;
+// }
