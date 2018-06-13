@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,15 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  sidebarTgl = false;
+  // sidebarTgl = true;
+
+  @Input()
+  sidebarToggle;
+
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  sidebarToggle() {
-    this.sidebarTgl = !this.sidebarTgl;
-  }
+  // sidebarToggle() {
+  //   this.sidebarTgl = !this.sidebarTgl;
+  // }
 
 }

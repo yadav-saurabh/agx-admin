@@ -1,8 +1,11 @@
 <div class="wrapper">
   <div class="sidebar-panel">
-    <app-sidebar></app-sidebar>
+    <app-sidebar  [sidebarToggle]="closeSidebar"></app-sidebar>
   </div>
   <div class="main-panel">
-    <app-navbar></app-navbar>
+    <app-navbar  (emitEvent)="navBarEvent($event)"></app-navbar>
+    <div class="container" style="height:1000px;">
+      abc
+    </div>
   </div>
 </div>
