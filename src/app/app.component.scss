@@ -8,9 +8,13 @@
 }
 .main-panel{
   width: calc(100% - #{$sidebar-width});
-}
-.panel-content{
-  margin-top: $navbar-height;
+  .panel-content{
+    margin: $navbar-height;
+    margin-top: $navbar-height + $navbar-height;
+    background: $white;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.14);
+  }
 }
 
 @media only screen and (max-device-width : 480px) {

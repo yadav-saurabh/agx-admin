@@ -1,8 +1,24 @@
-<nav class="navbar navigation-bar" [class.hidden]="navbarHidden">
+<nav class="navbar navigation-bar"  [class.hidden]="navbarHidden">
   <div class="nav-toggle-btn" [class.open]="!sidebarToggler" (click)="toggleSidebar()">
     <span *ngFor="let number of [0,1,2,3,4,5]"></span>
   </div>
+  <div style="display: none;">
+    <a class="navbar-brand" href="#">
+      <img src="/docs/4.1/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+      Bootstrap
+    </a>
+  </div>
   <ul>
-    <li>Home</li>
+    <li class="nav-item">Dashboard</li>
+  </ul>
+  <ul>
+    <li>
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn my-2 my-sm-0" type="submit"><i class="material-icons">search</i></button>
+      </form>
+    </li>
+    <li class="nav-item"><i class="material-icons">notifications</i></li>
+    <li class="nav-item"><i class="material-icons">person</i></li>
   </ul>
 </nav>
