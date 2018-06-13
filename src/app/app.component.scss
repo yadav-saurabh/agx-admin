@@ -9,7 +9,9 @@
 .main-panel{
   width: calc(100% - #{$sidebar-width});
 }
-
+.panel-content{
+  margin-top: $navbar-height;
+}
 
 @media only screen and (max-device-width : 480px) {
   .sidebar-panel{

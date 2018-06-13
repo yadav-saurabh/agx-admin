@@ -1,17 +1,8 @@
 <nav class="navbar navigation-bar" [class.hidden]="navbarHidden">
   <div class="nav-toggle-btn" [class.open]="!sidebarToggler" (click)="toggleSidebar()">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
+    <span *ngFor="let number of [0,1,2,3,4,5]"></span>
   </div>
   <ul>
     <li>Home</li>
-    <li>About</li>
-    <li>Services</li>
-    <li>Blog</li>
-    <li>Contact</li>
   </ul>
 </nav>

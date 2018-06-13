@@ -13,9 +13,13 @@
 }
 
 .sidebar-wrapper{
-  color: #fff;
+  color: $white;
+  padding:10px 5px;
+  .sidebar-item{
+    padding:10px 5px;
+    
+  }
 }
-
 
 @media only screen and (max-device-width : 480px) {
   .sidebar{

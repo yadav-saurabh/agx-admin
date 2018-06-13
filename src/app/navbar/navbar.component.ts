@@ -1,6 +1,5 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { HostListener } from "@angular/core";
-// import { EventEmitter } from 'events';
 
 declare var $: any;
 
@@ -16,9 +15,9 @@ export class NavbarComponent {
   sidebarToggler = true;
   previousScroll = 0;
 
-  @Output() 
+  @Output()
   emitEvent = new EventEmitter();
-  
+
   @HostListener("window:scroll", ['$event'])
   onWindowScroll(event) {
     let currentScroll = window.pageYOffset;
@@ -31,14 +30,14 @@ export class NavbarComponent {
       this.previousScroll = currentScroll;
     }
   }
-  
-  hideNavbar = ()=>{
+
+  hideNavbar = () => {
     setTimeout(() => {
       this.navbarHidden = true;
     }, 300);
   }
-  
-  showNavbar = ()=>{
+
+  showNavbar = () => {
     setTimeout(() => {
       this.navbarHidden = false;
     }, 300);
@@ -47,7 +46,7 @@ export class NavbarComponent {
 
   constructor() { }
 
-  toggleSidebar(){
+  toggleSidebar() {
     this.sidebarToggler = !this.sidebarToggler;
     this.emitEvent.emit(this.sidebarToggler);
   }

@@ -12,7 +12,6 @@ export class AppComponent {
   
   navBarEvent(event) {
     this.closeSidebar = event;
-    console.log(event);
   }
 
 }
