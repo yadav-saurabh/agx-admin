@@ -29,6 +29,9 @@
       padding: 0.5em;
     }
   }
+  .navbar-brand{
+    display: none;
+  }
 }
 
 .nav-toggle-btn {
@@ -105,31 +108,21 @@
     line-height: 0;
     background-image: linear-gradient(0deg,$black 2px,rgba(156,39,176,0) 0);
   }
-  button{
-    height: 41px;
-    width: 41px;
-    padding: 0;
-    position: relative;
-    border-radius: 50%;
-    i{
-      top: 0;
-      left: 0;
-      width: 100%;
-      margin-top: 0;
-      font-size: 20px;
-      line-height: 41px;
-      position: absolute;
-    }
-  }
 }
 
 
-@media only screen and (max-device-width : 480px) {
+@media only screen and (max-device-width : $mobile-screen) {
+  
   .navigation-bar{
     left: 0;
     padding: 10px 15px;
     ul{
       display: none;
+    }
+    .navbar-brand{
+      display: initial;
+      width: 85%;
+      text-align: center;
     }
   }
   .nav-toggle-btn{

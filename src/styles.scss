@@ -5,3 +5,20 @@ body {
   background-color: $bodybg-color;
   // font-weight: 300;
 }
+
+.btn-just-icon {
+  height: 41px;
+  width: 41px;
+  padding: 0;
+  position: relative;
+  border-radius: 50%;
+  i{
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 0;
+    font-size: 20px;
+    line-height: 41px;
+    position: absolute;
+  }
+}
