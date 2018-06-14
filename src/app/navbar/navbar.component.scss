@@ -1,23 +1,22 @@
 @import '../../styles.scss';
 
 .navigation-bar {
-  background-color: $white;
-  left: $sidebar-width;
-  position: fixed;
-  right: 0;
   top: 0;
+  right: 0;
+  opacity: 1;
   z-index: 99;
+  position: fixed;
+  left: $sidebar-width;
+  height: $navbar-height;
+  background-color: $white;
   padding: 0 $navbar-height;
   transition-duration: .2s,.2s,.35s;
   transition-timing-function: linear,linear,ease;
-  opacity: 1;
-  height: $navbar-height;
   box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
   &.hidden {
     opacity: 0;
     height: $navbar-height - 10px;
     z-index: -1;
-    // display: none;
   }
   ul {
     list-style: none;
@@ -40,12 +39,12 @@
   position: relative;
   cursor: pointer;
   span {
+    width: 50%;
+    height: 2px;
+    opacity: 1;
     display: block;
     position: absolute;
-    height: 2px;
-    width: 50%;
     background: $black;
-    opacity: 1;
     transform: rotate(0deg);
     transition: .25s ease-in-out;
     &:nth-child(even) {
@@ -104,37 +103,23 @@
     box-shadow: none;
     padding-left: 0;
     line-height: 0;
-    background-image: linear-gradient(0deg,$black 2px,rgba(156,39,176,0) 0),linear-gradient(0deg,#d2d2d2 1px,hsla(0,0%,82%,0) 0);
+    background-image: linear-gradient(0deg,$black 2px,rgba(156,39,176,0) 0);
   }
   button{
-    width: 2.5rem;
-    height: 2.5rem;
+    height: 41px;
+    width: 41px;
+    padding: 0;
+    position: relative;
     border-radius: 50%;
-
-
-    
-      font-size: 24px;
-      height: 41px;
-      min-width: 41px;
-      width: 41px;
-      padding: 0;
-      overflow: hidden;
-      position: relative;
-      line-height: 41px;
     i{
-      margin-top: 0;
-      position: absolute;
-      width: 100%;
-      transform: none;
-      left: 0;
       top: 0;
-      height: 100%;
-      line-height: 41px;
+      left: 0;
+      width: 100%;
+      margin-top: 0;
       font-size: 20px;
+      line-height: 41px;
+      position: absolute;
     }
-
-
-
   }
 }
 
@@ -142,19 +127,13 @@
 @media only screen and (max-device-width : 480px) {
   .navigation-bar{
     left: 0;
+    padding: 10px 15px;
+    ul{
+      display: none;
+    }
   }
   .nav-toggle-btn{
     display: initial;
   }
+  
 }
-
-// @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-//   .sidebar-panel{
-//     width: $sidebar-width-ipad;
-//   }
-//   .main-panel{
-//     width: calc(100% - #{$sidebar-width-ipad});
-//   }
-// }
-
-
