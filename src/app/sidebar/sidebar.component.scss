@@ -37,40 +37,50 @@
   ul{
     padding: 0;
     list-style: none;
+    li .active > a{
+        background-color: #e91e63;
+        box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(233,30,99,.4);
+    }
     li:first-child {
       margin-top: 10px;
+    } 
+  }
+}
+
+.sidebar-item{
+  margin: 5px;
+  a{
+    color: $white;
+    display: block;
+    text-decoration: none;
+    background-color: transparent;
+    margin: 10px 15px;
+    border-radius: 3px;
+    padding:.5rem 10px;
+    text-transform: capitalize;
+    cursor: pointer;
+    i{
+      position: relative;
+      top: 5px;
     }
-    .sidebar-item{
-      margin: 5px;
-      a{
-        margin: 0 15px;
-        color: $white;
-        display: block;
-        text-decoration: none;
-        background-color: transparent;
-        margin: 10px 15px;
-        border-radius: 3px;
-        padding-left: 10px;
-        padding-right: 10px;
-        text-transform: capitalize;
-        padding: .5rem 1rem;
-        i{
-          position: relative;
-          top: 5px;
-        }
-        p{
-          display: inline-block;
-          margin: 0;
-          padding-left: 10px;
-        }
-      }
-      &.active{
-        a{
-          // background-color: #e91e63;
-          // box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(233,30,99,.4);
-        }
-      }
+    p{
+      display: inline-block;
+      margin: 0;
+      padding-left: 10px;
     }
+  }
+  &:hover > a ,&.active > a[data-toggle=collapse]{
+      background-color: rgba(255,255,255,.4);
+  }
+}
+
+.sub-item {
+  a{
+    margin:5px 15px 5px 30px; 
+    padding: 5px 10px;
+  }
+  &:hover>a{
+    background-color: rgba(200, 182, 179, 0.3);
   }
 }
 
