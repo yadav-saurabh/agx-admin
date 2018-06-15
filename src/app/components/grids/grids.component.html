@@ -1,0 +1,193 @@
+<div class="grid-system">
+
+  <h4>Always Horizontal</h4>
+
+  <h6>Equally distributed across all devices automatiaclly</h6>
+  <div class="row">
+    <div class="col" *ngFor="let n of [0,1,2,3,4,5,7,8,9,10,11]">
+      <div class="card">
+        <div class="card-body">.col</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="row">
+    <div class="col-2" *ngFor="let n of [0,1,2,3,4,5]">
+      <div class="card">
+        <div class="card-body">.col-2</div>
+      </div>
+    </div>
+  </div> -->
+  <h6>4 columns across all devices</h6>
+  <div class="row">
+    <div class="col-3" *ngFor="let n of [0,1,2,3]">
+      <div class="card">
+        <div class="card-body">.col-3</div>
+      </div>
+    </div>
+  </div>
+
+  <h6>3 columns across all devices</h6>
+  <div class="row">
+    <div class="col-4" *ngFor="let n of [0,1,2]">
+      <div class="card">
+        <div class="card-body">.col-4</div>
+      </div>
+    </div>
+  </div>
+
+  <h6>2 columns across all devices</h6>
+  <div class="row">
+    <div class="col-6" *ngFor="let n of [0,1]">
+      <div class="card">
+        <div class="card-body">.col-6</div>
+      </div>
+    </div>
+  </div>
+
+  <h6>Single columns across all devices</h6>
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">.col-12</div>
+      </div>
+    </div>
+  </div>
+
+  <h4>Mixed Columns Showing different sizes on different screens</h4>
+  <div class="row">
+    <div class="col-md-6 col-lg-4" *ngFor="let n of [0,1,2,3,4,5]">
+      <div class="card">
+        <div class="card-body">.col-md-6 .col-lg-4</div>
+      </div>
+    </div>
+  </div>
+
+  <h4>Offsetting columns</h4>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">.col-md-4</div>
+      </div>
+    </div>
+    <div class="col-md-4 offset-md-4">
+      <div class="card">
+        <div class="card-body">.col-md-4 .offset-md-4</div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3 offset-md-3">
+      <div class="card">
+        <div class="card-body">.col-md-4 .offset-md-4</div>
+      </div>
+    </div>
+    <div class="col-md-3 offset-md-3">
+      <div class="card">
+        <div class="card-body">.col-md-4 .offset-md-4</div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="card">
+        <div class="card-body">.col-md-6 .offset-md-3</div>
+      </div>
+    </div>
+  </div>
+
+  <h4>Vertical alignment</h4>
+  <div class="row alignment">
+    <div class="col align-self-start">
+      <div class="card">
+        <div class="card-body">One of three columns</div>
+      </div>
+    </div>
+    <div class="col align-self-center">
+      <div class="card">
+        <div class="card-body">One of three columns</div>
+      </div>
+    </div>
+    <div class="col align-self-end">
+      <div class="card">
+        <div class="card-body">One of three columns</div>
+      </div>
+    </div>
+  </div>
+
+
+  <h4>Horizontal alignment</h4>
+  <div class="row justify-content-start">
+    <div class="col-4">
+      <div class="card">
+        <div class="card-body">One of two columns</div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="card">
+        <div class="card-body">One of two columns</div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-4">
+      <div class="card">
+        <div class="card-body">One of two columns</div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="card">
+        <div class="card-body">One of two columns</div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-end">
+    <div class="col-4">
+      <div class="card">
+        <div class="card-body">One of two columns</div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="card">
+        <div class="card-body">One of two columns</div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-around">
+    <div class="col-4">
+      <div class="card">
+        <div class="card-body">One of two columns</div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="card">
+        <div class="card-body">One of two columns</div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-between">
+    <div class="col-4">
+      <div class="card">
+        <div class="card-body">One of two columns</div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="card">
+        <div class="card-body">One of two columns</div>
+      </div>
+    </div>
+  </div>
+
+
+  <div>
+    <h4>For more information on Bootstrap 4 grid system : </h4>
+    <h6>
+      <a href="https://getbootstrap.com/docs/4.0/layout/grid/" target="_blank">Bootstrap 4 grid Docs</a>
+    </h6>
+    <h6>
+      <a href="https://getbootstrap.com/docs/4.0/layout/grid/" target="_blank">W3schools guide</a>
+    </h6>
+  </div>
+
+
+</div>

@@ -1,10 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 @import './assets/_variable.scss';
 
 body {
+  font-family: 'Roboto', 'sans-serif' !important;
   background-color: $bodybg-color;
   // font-weight: 300;
 }
+
 
 .btn-just-icon {
   height: 41px;

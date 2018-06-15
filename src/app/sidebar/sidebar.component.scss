@@ -4,6 +4,7 @@
   height: 100vh;
   position: fixed;
   overflow: hidden;
+  z-index: 99;
   width:$sidebar-width;
   background-color: $black;
   transition-property: top,bottom,width;
@@ -37,7 +38,7 @@
   ul{
     padding: 0;
     list-style: none;
-    li .active > a{
+    li.active > a{
         background-color: #e91e63;
         box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(233,30,99,.4);
     }
@@ -70,7 +71,7 @@
     }
   }
   &:hover > a ,&.active > a[data-toggle=collapse]{
-      background-color: rgba(255,255,255,.4);
+      background-color: rgba(255,255,255,.4) !important;
   }
 }
 
