@@ -34,7 +34,7 @@
 .sidebar-body{
   color: $white;
   height: calc(100% - #{($navbar-height + 10px)});
-  overflow-y: auto;
+  // overflow-y: auto;
   ul{
     padding: 0;
     list-style: none;

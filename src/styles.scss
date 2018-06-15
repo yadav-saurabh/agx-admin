@@ -32,3 +32,13 @@ body {
   border-radius: 6px;
   box-shadow: 0 1px 4px 0 rgba(0,0,0,.14);
 }
+
+// sidebar scrollbar
+.ng-scrollbar{
+  &.-vertical{
+    background-color: rgba(255,255,255,.3);
+  }
+  .ng-scrollbar-thumb{
+    background-color: rgba(255,255,255,.4);
+  }
+}
