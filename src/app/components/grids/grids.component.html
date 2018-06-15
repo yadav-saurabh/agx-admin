@@ -11,14 +11,7 @@
     </div>
   </div>
 
-  <!-- <div class="row">
-    <div class="col-2" *ngFor="let n of [0,1,2,3,4,5]">
-      <div class="card">
-        <div class="card-body">.col-2</div>
-      </div>
-    </div>
-  </div> -->
-  <h6>4 columns across all devices</h6>
+  <h6>Four columns across all devices</h6>
   <div class="row">
     <div class="col-3" *ngFor="let n of [0,1,2,3]">
       <div class="card">
@@ -27,7 +20,7 @@
     </div>
   </div>
 
-  <h6>3 columns across all devices</h6>
+  <h6>Three columns across all devices</h6>
   <div class="row">
     <div class="col-4" *ngFor="let n of [0,1,2]">
       <div class="card">
@@ -36,7 +29,7 @@
     </div>
   </div>
 
-  <h6>2 columns across all devices</h6>
+  <h6>Two columns across all devices</h6>
   <div class="row">
     <div class="col-6" *ngFor="let n of [0,1]">
       <div class="card">
@@ -54,7 +47,9 @@
     </div>
   </div>
 
-  <h4>Mixed Columns Showing different sizes on different screens</h4>
+  <br>
+  <h4>Mixed Columns</h4> 
+  <!-- <h6>Showing different sizes on different screens</h6> -->
   <div class="row">
     <div class="col-md-6 col-lg-4" *ngFor="let n of [0,1,2,3,4,5]">
       <div class="card">
@@ -63,6 +58,30 @@
     </div>
   </div>
 
+  <br>
+  <h4>Column wrapping</h4>
+  <div class="row">
+    <div class="col-9">
+      <div class="card">
+        <div class="card-body">.col-9</div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="card">
+        <div class="card-body">.col-4
+          <br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="card">
+        <div class="card-body">.col-6
+          <br>Subsequent columns continue along the new line.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
   <h4>Offsetting columns</h4>
   <div class="row">
     <div class="col-md-4">
@@ -96,6 +115,7 @@
     </div>
   </div>
 
+  <br>
   <h4>Vertical alignment</h4>
   <div class="row alignment">
     <div class="col align-self-start">
@@ -115,7 +135,7 @@
     </div>
   </div>
 
-
+  <br>
   <h4>Horizontal alignment</h4>
   <div class="row justify-content-start">
     <div class="col-4">
@@ -178,16 +198,43 @@
     </div>
   </div>
 
-
-  <div>
-    <h4>For more information on Bootstrap 4 grid system : </h4>
-    <h6>
-      <a href="https://getbootstrap.com/docs/4.0/layout/grid/" target="_blank">Bootstrap 4 grid Docs</a>
-    </h6>
-    <h6>
-      <a href="https://getbootstrap.com/docs/4.0/layout/grid/" target="_blank">W3schools guide</a>
-    </h6>
+  <br>
+  <h4>Example</h4>
+  <div class="card example">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-9">
+          <div class="row">
+            <div class="col-md">
+              <h5>Column 1</h5>
+             <p> Lorem ipsum dolor sit amet orem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            </div>
+            <div class="col-md">
+              <h5>Column 2</h5>
+             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p> 
+            </div>
+            <div class="w-100"></div>
+            <div class="col-md">
+              <h5>Column 3</h5>
+             <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt maxime voluptate molestiae placeat minima facilis, natus
+              corporis fugit voluptates </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md">
+          <h5>Column 4</h5>
+         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt maxime voluptate molestiae placeat minima facilis, natus
+          corporis fugit voluptates </p>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <br>
+  <br>
+  <h6>For complete information on Bootstrap 4 Grid system :
+    <a href="https://getbootstrap.com/docs/4.0/layout/grid/" target="_blank">Bootstrap 4 Docs</a>
+  </h6>
 
 
 </div>

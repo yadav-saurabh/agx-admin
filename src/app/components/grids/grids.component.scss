@@ -1,9 +1,10 @@
 .grid-system{
-  .col, .col-1, .col-2, .col-3, .col-4, .col-6, .col-12 {
+  padding-left: 1rem;
+  .col, .col-1, .col-2, .col-3, .col-4, .col-6, .col-7, .col-8, .col-9, .col-12 {
     padding: 0 5px;
   }
   h4{
-    margin:15px 0 0 0;
+    margin:1.5rem 0 .5rem -1rem;
   } 
   h6{
     margin:10px 0 0 0;
@@ -15,5 +16,12 @@
   }
   .alignment{
     height:200px;
+  }
+  .example {
+    margin-left:-5px;
+    margin-right:-5px;
+    .card-body{
+      text-align: left;
+    }
   }
 }
