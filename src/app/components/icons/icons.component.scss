@@ -1,5 +1,8 @@
 .icons{
   .card-body{
+    h4{
+      margin-top: 1rem;
+    }
     padding: 1rem 2.5rem;
     .ex-md-icons {
       padding: 1rem;
@@ -13,5 +16,8 @@
         font-size: 35px;
       }
     }
+  }
+  h6{
+    text-align: right;
   }
 }

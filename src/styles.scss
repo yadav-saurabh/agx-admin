@@ -1,14 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
 @import './assets/mixins.scss';
 @import './assets/variable.scss';
 
 body {
-  font-family: 'Roboto', 'sans-serif' !important;
+  font-family: 'Open Sans', sans-serif ;
   background-color: $body-bg;
-  // font-weight: 300;
 }
+
+h2 {
+  text-shadow: 2px 2px 3px rgba($black,.3);
+}  
 
 .card{
   margin: 5px 0;
