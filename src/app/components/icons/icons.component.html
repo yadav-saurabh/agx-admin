@@ -1,3 +1,27 @@
-<p>
-  icons works!
-</p>
+<div class="icons">
+
+  <h3>Icons</h3>
+  <h4>Google Material Icons</h4>
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col ex-md-icons" *ngFor="let icon of materialIcons">
+          <i class="material-icons">{{icon}}</i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h6>For more Material Icons : <a href="https://material.io/tools/icons/" target="_blank"> Matrial.io <i class="material-icons">launch</i></a> </h6>
+  
+  <h4>Font Awesome Icons</h4>
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col ex-fa-icons" *ngFor="let icon of fontAwesome">
+          <i class="fa fa-{{icon}}"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h6>For more Font Awesome Icons : <a href="https://fontawesome.com/v4.7.0/icons/"> Font Awsome <i class="material-icons">launch</i></a></h6>
+</div>
