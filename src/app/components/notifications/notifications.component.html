@@ -1,101 +1,64 @@
 <div class="card">
   <div class="card-body">
     <form [formGroup]="form">
-
-      <div class="field half">
-        <label class="fe_select" for="type">
-          <span class="field-label">Type</span>
-          <div class="fe_select-container">
-            <select id="type" name="type" formControlName="type">
-              <option *ngFor="let t of types" [value]="t">{{t}}</option>
-            </select>
-            <svg height="12" width="12" fill="#cccccc" viewBox="520 2957 10 5">
-              <path d="M520 2957l5 5 5-5z" />
-            </svg>
-          </div>
-        </label>
+      <div class="form-group">
+        <label for="type">Type select</label>
+        <select id="type" class="form-control" name="type" formControlName="type">
+          <option *ngFor="let t of types" [value]="t">{{t}}</option>
+        </select>
       </div>
-
-      <div class="field half">
-        <label class="fe_text" for="title">
-          <span class="field-label">Title</span>
-          <input id="title" name="title" type="text" formControlName="title">
-        </label>
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input class="form-control" id="title" name="title" type="text" formControlName="title">
       </div>
-
-      <div class="field">
-        <label class="fe_text" for="content">
-          <span class="field-label">Content</span>
-          <input id="content" name="content" type="text" formControlName="content">
-        </label>
+      <div class="form-group">
+        <label for="content">Content</label>
+        <input class="form-control" id="content" name="content" type="text" formControlName="content">
       </div>
-
-      <div class="field half">
-        <label class="fe_text" for="timeOut">
-          <span class="field-label">Time Out</span>
-          <input id="timeOut" name="timeOut" type="number" formControlName="timeOut">
-        </label>
+      <div class="form-group">
+        <label for="timeOut">Time Out</label>
+        <input class="form-control" id="timeOut" name="timeOut" type="number" formControlName="timeOut">
       </div>
-
-      <div class="field half">
-        <label class="fe_select" for="animate">
-          <span class="field-label">Animation</span>
-          <div class="fe_select-container">
-            <select id="animate" name="animate" formControlName="animate">
-              <option *ngFor="let t of animationTypes" [value]="t">{{t}}</option>
-            </select>
-            <svg height="12" width="12" fill="#cccccc" viewBox="520 2957 10 5">
-              <path d="M520 2957l5 5 5-5z" />
-            </svg>
-          </div>
-        </label>
+      <div class="form-group">
+        <label for="animate">Animation</label>
+        <select class="form-control" id="animate" name="animate" formControlName="animate">
+          <option *ngFor="let t of animationTypes" [value]="t">{{t}}</option>
+        </select>
       </div>
-
-      <p class="field-label">Show progress bar?</p>
-      <div class="field">
-        <label class="fe_radio" for="showProgressBar-yes">
-          <input id="showProgressBar-yes" name="showProgressBar" type="radio" [value]="true" formControlName="showProgressBar" />
-          <div class="control"></div>
-          <span>Yes</span>
-        </label>
-        <label class="fe_radio" for="showProgressBar-no">
-          <input id="showProgressBar-no" name="showProgressBar" type="radio" [value]="false" formControlName="showProgressBar" />
-          <div class="control"></div>
-          <span>No</span>
-        </label>
+      <div class="form-inline">
+        <label class="field-label">Show progress bar?</label>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="showProgressBar" id="showProgressBar-yes" [value]="true" formControlName="showProgressBar">
+          <label class="form-check-label" for="showProgressBar-yes">Yes</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="showProgressBar" id="showProgressBar-no" [value]="false" formControlName="showProgressBar">
+          <label class="form-check-label" for="showProgressBar-no">No</label>
+        </div>
       </div>
-
-      <p class="field-label">Pause on hover?</p>
-      <div class="field">
-        <label class="fe_radio" for="pauseOnHover-yes">
-          <input id="pauseOnHover-yes" name="pauseOnHover" type="radio" [value]="true" formControlName="pauseOnHover" />
-          <div class="control"></div>
-          <span>Yes</span>
-        </label>
-        <label class="fe_radio" for="pauseOnHover-no">
-          <input id="pauseOnHover-no" name="pauseOnHover" type="radio" [value]="false" formControlName="pauseOnHover" />
-          <div class="control"></div>
-          <span>No</span>
-        </label>
+      <div class="form-inline">
+        <label class="field-label">Pause on hover?</label>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="pauseOnHover" id="pauseOnHover-yes" [value]="true" formControlName="pauseOnHover">
+          <label class="form-check-label" for="pauseOnHover-yes">Yes</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="pauseOnHover" id="pauseOnHover-no" [value]="false" formControlName="pauseOnHover">
+          <label class="form-check-label" for="pauseOnHover-no">No</label>
+        </div>
       </div>
-
-      <p class="field-label">Click to close?</p>
-      <div class="field">
-        <label class="fe_radio" for="clickToClose-yes">
-          <input id="clickToClose-yes" name="clickToClose" type="radio" [value]="true" formControlName="clickToClose" />
-          <div class="control"></div>
-          <span>Yes</span>
-        </label>
-        <label class="fe_radio" for="clickToClose-no">
-          <input id="clickToClose-no" name="clickToClose" type="radio" [value]="false" formControlName="clickToClose" />
-          <div class="control"></div>
-          <span>No</span>
-        </label>
+      <div class="form-inline">
+        <label class="field-label">Click to close?</label>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="clickToClose" id="clickToClose-yes" [value]="true" formControlName="clickToClose">
+          <label class="form-check-label" for="clickToClose-yes">Yes</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="clickToClose" id="clickToClose-no" [value]="false" formControlName="clickToClose">
+          <label class="form-check-label" for="clickToClose-no">No</label>
+        </div>
       </div>
-
-      <div class="field cta-field">
-        <button type="submit" (click)="create()">Create</button>
-      </div>
+      <button type="submit" (click)="create()" class="btn btn-primary mb-2">Confirm identity</button>
     </form>
   </div>
 </div>

@@ -1,14 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-@import './assets/_variable.scss';
+@import './assets/mixins.scss';
+@import './assets/variable.scss';
 
 body {
   font-family: 'Roboto', 'sans-serif' !important;
-  background-color: $bodybg-color;
+  background-color: $body-bg;
   // font-weight: 300;
 }
 
+.card{
+  margin: 5px 0;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.14);
+}
 
 .btn-just-icon {
   height: 41px;
@@ -27,18 +33,38 @@ body {
   }
 }
 
-.card{
-  margin: 5px 0;
-  border-radius: 6px;
-  box-shadow: 0 1px 4px 0 rgba(0,0,0,.14);
-}
-
 // sidebar scrollbar
 .ng-scrollbar{
   &.-vertical{
-    background-color: rgba(255,255,255,.3);
+    background-color: rgba($white,.3);
   }
   .ng-scrollbar-thumb{
-    background-color: rgba(255,255,255,.4);
+    background-color: rgba($white,.4);
+  }
+}
+
+.simple-notification{
+  box-shadow: 0 5px 15px 0 rgba($black,.4);
+  border-radius: 0.3rem;
+  .sn-content,.sn-title{
+    color: $white !important;
+  }
+  .sn-progress-loader > span{
+    background: rgba($white,.5) !important;
+  }
+  &.warn {
+    background: $warning !important;
+  }
+  &.success {
+    background: $sucess !important;
+  } 
+  &.error {
+    background: $error !important;
+  }
+  &.info {
+    background: $info !important;
+  }
+  &.alert{
+    background: $error !important;
   }
 }
