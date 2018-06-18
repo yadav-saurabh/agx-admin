@@ -47,6 +47,7 @@
   
   color: $white;
   height: calc(100% - #{($navbar-height + 10px)});
+  overflow: hidden;
   overflow-y: auto;
   ul{
     padding: 0;
@@ -78,14 +79,21 @@
       padding-left: 1.5rem;
     }
   }
-  &:not(.active):hover, &.active {
+  &:hover, &.active, .sub-item:hover, .sub-item.active {
+    &:not(.active) > a {
+      background-color: rgba($white,.2);
+      span.arrow{
+        border-right-color: rgba($white,.3);
+      }
+    }
     & > a {
       background-color: rgba($white,.4);
-      // box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(233,30,99,.4);
-      & > span.arrow {
-        display: inline-block;
-        border-right: 2rem solid rgba($white,.6);
+      span.arrow{
+        border-right-color: rgba($white,.6);
       }
+    }
+     span.arrow {
+      display: inline-block;
     }
   }
   .sub-item {
@@ -101,25 +109,34 @@
       width: 1.5rem;
     }
     span.arrow{
+      display: none;
       border: 1rem solid transparent;
-    }
-    &:not(.active):hover, &.active {
-      & > a {
-        background-color: rgba($white,.4);
-        // box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(233,30,99,.4);
-        & > span.arrow {
-         display: inline-block;
-         border-right: 1.5rem solid rgba($white,.6);
-       }
-      }
+      border-right: 1.5rem solid;
     }
   }
   &.active, .sub-item.active {
     & > a:not([data-toggle=collapse]){
-      background-color: #e91e63;
-      box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(233,30,99,.4);
+      background-color: $primary;
     }
   }
+  &, .sub-item{
+   & > a[data-toggle=collapse] {
+      &:before{
+        content: '\e316';
+        font-size: 2rem;
+        position: absolute;
+        font-family: 'Material Icons';
+        right: 5px;
+        top: 0;
+        transform: rotate(0deg);
+        transition: all 0.5s;
+      }
+      &.collapsed:before{
+        transform: rotate(180deg);
+        transition: all 0.5s;
+      }
+    }  
+  } 
 }
 
 
@@ -129,6 +146,7 @@ span.arrow {
   position: absolute;
   right: 0px;
   top: 0px;
+  border-right: 2rem solid;
 }
 
 
@@ -140,7 +158,7 @@ span.arrow {
     }
     .sidebar-item {
       a {
-        min-width: 12rem;
+        min-width: 10.5rem;
       }
     }
   }
