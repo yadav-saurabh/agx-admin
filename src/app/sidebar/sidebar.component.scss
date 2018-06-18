@@ -6,7 +6,7 @@
   overflow: hidden;
   z-index: 99;
   width:$sidebar-width;
-  background-color: $black;
+  background-color: rgba($black,.9);
   transition-property: top,bottom,width;
   transition-duration: .2s,.2s,.35s;
   transition-timing-function: linear,linear,ease;
@@ -34,57 +34,72 @@
 .sidebar-body{
   color: $white;
   height: calc(100% - #{($navbar-height + 10px)});
-  // overflow-y: auto;
   ul{
     padding: 0;
     list-style: none;
-    li.active > a{
-        background-color: #e91e63;
-        box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(233,30,99,.4);
-    }
     li:first-child {
       margin-top: 10px;
     } 
   }
 }
 
-.sidebar-item{
+.sidebar-item {
   margin: 5px;
+  margin-right: 0px;
   a{
     color: $white;
     display: block;
     text-decoration: none;
     background-color: transparent;
-    margin: 10px 15px;
-    border-radius: 3px;
-    padding:.5rem 10px;
-    text-transform: capitalize;
+    margin: 10px 0 15px 10px;
+    border-radius: 3px 0 0 3px;
+    padding:.5rem .8rem;
     cursor: pointer;
+    text-transform: capitalize;
     i{
       position: relative;
       top: 5px;
     }
-    p{
-      display: inline-block;
-      margin: 0;
+    strong{
       padding-left: 10px;
     }
   }
-  &:hover > a ,&.active > a[data-toggle=collapse]{
-      background-color: rgba(255,255,255,.4) !important;
+  &:not(.active):hover, &.active {
+    & > a {
+      background-color: rgba($white,.4);
+      box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(233,30,99,.4);
+    }
+    & > span.arrow {
+      display: inline-block;
+      border-right: 30px solid rgba($white,.6);
+    }
+  }
+  &.active {
+    & > a{
+      background-color: #e91e63;
+      box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(233,30,99,.4);
+    }
+  }
+  .sub-item {
+    a {
+      margin:5px 15px 5px 30px; 
+      padding: 5px 10px;
+    }
+    &:hover > a {
+      background-color: rgba(200, 182, 179, 0.3);
+    }
   }
 }
 
-.sub-item {
-  a{
-    margin:5px 15px 5px 30px; 
-    padding: 5px 10px;
-  }
-  &:hover>a{
-    background-color: rgba(200, 182, 179, 0.3);
-  }
-}
 
+span.arrow {
+  border: 22px solid transparent;
+  border-right: 30px solid $white;
+  display: none;
+  position: absolute;
+  right: 0px;
+  top: 10px;
+}
 
 
 @media only screen and (max-device-width : $mobile-screen) {
@@ -92,6 +107,11 @@
     width: $sidebar-width-mob;
     &.hide {
       width:0;
+    }
+    .sidebar-item {
+      a {
+        min-width: 10rem;
+      }
     }
   }
   .sidebar-header{

@@ -1,22 +1,20 @@
 <div class="sidebar" [class.hide]="sidebarToggle">
   <div class="sidebar-header align-middle">
     <!-- <img src="" alt="brand"> -->
-    <p>ANGULAR ADMIN</p>
+    <strong>ANGULAR ADMIN</strong>
   </div>
   <hr>
   <div class="sidebar-body">
     <ng-scrollbar [autoHide]=true>
       <ul>
         <li class="sidebar-item">
-          <a routerLink="/">
-            <i class="material-icons">dashboard</i>
-            <p>Dashboard</p>
-          </a>
+          <span class="arrow"></span>
+          <a routerLink="/"><i class="material-icons">dashboard</i><strong>Dashboard</strong></a>
         </li>
         <li class="sidebar-item">
           <a data-toggle="collapse" href="#componentsExamples">
             <i class="material-icons">apps</i>
-            <p>components</p>
+            <strong>components</strong>
           </a>
           <div class="collapse" id="componentsExamples">
             <ul>
@@ -68,43 +66,43 @@
         <li class="sidebar-item">
           <a>
             <i class="material-icons">ballot</i>
-            <p>forms</p>
+            <strong>forms</strong>
           </a>
         </li>
         <li class="sidebar-item">
           <a>
             <i class="material-icons">grid_on</i>
-            <p>tables</p>
+            <strong>tables</strong>
           </a>
         </li>
         <li class="sidebar-item">
           <a>
             <i class="material-icons">show_chart</i>
-            <p>charts</p>
+            <strong>charts</strong>
           </a>
         </li>
         <li class="sidebar-item">
           <a>
             <i class="material-icons">place</i>
-            <p>maps</p>
+            <strong>maps</strong>
           </a>
         </li>
         <li class="sidebar-item">
           <a>
             <i class="material-icons">edit</i>
-            <p>editors</p>
+            <strong>editors</strong>
           </a>
         </li>
         <li class="sidebar-item">
           <a>
             <i class="material-icons">pages</i>
-            <p>pages</p>
+            <strong>pages</strong>
           </a>
         </li>
         <li class="sidebar-item">
           <a>
             <i class="material-icons">date_range</i>
-            <p>calendar</p>
+            <strong>calendar</strong>
           </a>
         </li>
       </ul>

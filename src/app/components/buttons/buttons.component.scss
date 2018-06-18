@@ -8,3 +8,274 @@
     margin: 0 1.5rem 1.5rem 0;
   }
 }
+
+
+//first
+.first{
+
+  .pagination-container {
+    margin-top: 1em;
+    padding-top: 2em;
+    border-top: 1px solid #d7dadb;
+    text-align: center;
+    display: inline-flex;
+    width: 100%;
+  }
+
+  .pagination {
+    margin: 0 auto;
+  }
+
+  .pagination-item {
+      background-color: #fa4248;
+      border-radius: 50%;
+      color: #fff;
+      float: left;
+      font-size: 2em;
+      height: 100px;
+      line-height: 3em;
+      list-style-type: none;
+      width: 100px;
+      position: relative;
+  }
+
+  .pagination-link {
+    padding: 1.1em 1.6em;
+    float: left;
+    text-decoration: none;
+    color: #8b969c;
+  }
+
+  .pagination-item--wide {
+    list-style-type: none;
+    float: left;
+    position: relative;
+    top: 2.3em;
+  }
+
+  .pagination-item--wide.first {
+    margin: 0 1em 0 0;
+  }
+
+  .pagination-item--wide.last {
+    margin: 0 0 0 1em;
+  }
+
+  .pagination-link--wide {
+    text-decoration: none;
+    color: #8b969c;
+    padding: 1.1em 1.6em;
+  }
+
+  .pagination-link--wide:hover {
+    color: #fa4248;
+  }
+
+  .pagination-link--wide.first:before,
+  .pagination-link--wide.last:after {
+    font-family: 'entypo';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    // Better Font Rendering
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .pagination-link--wide.first:before {
+    content: "\E765";
+    margin-right: 0.5em;
+  }
+
+  .pagination-link--wide.last:after {
+    content: "\E766";
+    margin-left: 0.5em;
+  }
+
+  .pagination-number {
+      left: 0;
+      position: absolute;
+      text-align: center;
+      top: 0;
+      width: 100%;
+  }
+}
+
+
+
+
+//second
+
+
+.md-ui.component-pagination {
+	list-style: none;
+	padding: 8px;
+	li {
+		border-radius: 50%;
+		color: rgba(33,33,33 ,1);
+		display: inline-block;
+		margin: 0;
+		transition: .15s ease-in;
+		cursor: pointer;
+		&:hover {
+			background: rgba(233,30,99,.12);
+		}
+	}
+	.pagination-number,
+	.pagination-arrow i {
+		vertical-align: middle;
+	}
+	.pagination-number {
+		// font-family: "Roboto", sans-serif;
+		font-size: 14px;
+		text-align: center;
+		line-height: 24px;
+		min-width: 40px;
+		padding: 8px 0;
+		&.current-number {
+			background: #E91E63;
+			color: #fff;
+		}
+	}
+	.pagination-arrow i {
+		font-size: 24px;
+		padding: 8px;
+	}
+}
+
+
+//third
+.third{
+
+  @mixin transition-hover($x){
+    transition: all $x linear;
+  }
+
+  .pagination{
+    text-align: center;
+    padding: 20px 0;
+    
+    a{
+      font-family: 'Open Sans';
+      font-size: 15px;
+      width: 50px;
+      height: 50px;
+      background-color: transparent;
+      color: #222;
+      border: 2px solid #ddd;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 45px;
+      text-decoration: none;
+      border-radius: 50%;
+      font-weight: 700;
+      margin: 4px;
+      
+      @include transition-hover(.2s);
+      
+      &:hover,
+      &.selected{color: #fff; background-color: #3498db; border-color: #3498db}
+    }
+  }
+
+}
+
+.btn-ctn{
+  $color1: #426FC5;
+$color2: #00897b;
+$color3: #f6774f;
+$color4: #e94043;
+
+.box {
+  margin: 1rem;
+  width: 18.75rem;
+  
+  img {
+    width: 100%;
+  }
+}
+
+.btn {
+  border: none;
+  color: white;
+  overflow: hidden;
+  margin: 1rem;
+  padding: 0;
+  text-transform: uppercase;
+  width: 150px;
+  height: 40px;
+  
+  &.color-1 {
+    background-color: $color1;
+  }
+  
+  &.color-2 {
+    background-color: $color2;
+  }
+  
+  &.color-3 {
+    background-color: $color3;
+  }
+  
+  &.color-4 {
+    background-color: $color4;
+  }
+}
+
+.btn-border {
+  
+  &.color-1 {
+    background-color: transparent;
+    border: 2px solid $color1;
+    color: $color1;
+  }
+  
+  &.color-2 {
+    background-color: transparent;
+    border: 2px solid $color2;
+    color: $color2;
+  }
+  
+  &.color-3 {
+    background-color: transparent;
+    border: 2px solid $color3;
+    color: $color3;
+  }
+  
+  &.color-4 {
+    background-color: transparent;
+    border: 2px solid $color4;
+    color: $color4;
+  }
+}
+
+.btn-round {
+  border-radius: 10em;
+}
+
+.material-design {
+  position: relative;
+  
+  canvas {
+    opacity: 0.25;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.container {
+  align-content: center;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 46rem;
+}
+}
