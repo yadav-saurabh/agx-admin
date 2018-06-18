@@ -4,6 +4,29 @@
 @import './assets/mixins.scss';
 @import './assets/variable.scss';
 
+
+
+/* width */
+::-webkit-scrollbar {
+  width: .5rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba($white,.7); 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba($black,.4); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $black; 
+}
+
+
 body {
   font-family: 'Open Sans', sans-serif ;
   background-color: $body-bg;
