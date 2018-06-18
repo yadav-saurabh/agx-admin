@@ -13,10 +13,8 @@
         </li>
         <li class="sidebar-item" routerLinkActive #rla="routerLinkActive" [class.active]="rla.isActive">
           <a data-toggle="collapse" href="#componentsExamples" [class.collapsed]="!rla.isActive"><i class="material-icons">apps</i><strong>components</strong>
-            <!-- <span class="arrow" ></span> -->
           </a>
-          <!-- routerLinkActive="show" -->
-          <div class="collapse" routerLinkActive="show" id="componentsExamples">
+          <div class="collapse" [class.show]="rla.isActive" id="componentsExamples">
             <ul>
               <li class="sub-item" routerLinkActive="active">
                 <a class="nav-link" routerLink="/components/buttons"><span class="sidebar-mini"> B </span><strong class="sidebar-normal"> Buttons </strong>
