@@ -1,12 +1,4 @@
-abc{
-  @include themify($themes) { 
-    background-color: themed('body-bg') !important;  
-  }
-}
+@import 'variables';
 
-$theme-colors: (
-  "danger": #ff5252,
-  "primary": #6200ea
-);
-
+/*override bootstrap variables*/
 @import "node_modules/bootstrap/scss/bootstrap";

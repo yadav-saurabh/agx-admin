@@ -1,7 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
-@import './assets/themes';
 @import './assets/variables';
 @import './assets/mixins';
 @import './assets/bootstrap-override';
@@ -30,9 +29,7 @@
 
 body {
   font-family: 'Open Sans', sans-serif ;
-  @include themify($themes) { 
-    background-color: themed('body-bg');  
-  }
+  background-color: $body-bg;  
 }
 
 
@@ -76,29 +73,19 @@ h2 {
     background: rgba($white,.5) !important;
   }
   &.warn {
-    @include themify($themes) { 
-      background-color: themed('warning') !important;  
-    }
+    background-color: $warning !important;  
   }
   &.success {
-    @include themify($themes) { 
-      background-color: themed('sucess') !important;  
-    }
+    background-color: $sucess !important;  
   } 
   &.error {
-    @include themify($themes) { 
-      background-color: themed('error') !important;  
-    }
+    background-color: $error !important;  
   }
   &.info {
-    @include themify($themes) { 
-      background-color: themed('info') !important;  
-    }
+    background-color: $info !important;  
   }
   &.alert{
-    @include themify($themes) { 
-      background-color: themed('error') !important;  
-    }
+    background-color: $error !important;  
   }
 }
 
@@ -112,6 +99,7 @@ h2 {
     border-bottom-left-radius: 0;
   }
 }
+
 .btn.btn-round {
   border-radius: 30px;
 }

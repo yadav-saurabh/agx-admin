@@ -1,70 +1,21 @@
 <div class="sidebar" [class.hide]="sidebarToggle">
   <div class="sidebar-header align-middle">
     <!-- <img src="" alt="brand"> -->
-    <strong>ANGULAR ADMIN</strong>
+    <strong class="text-uppercase d-inline-block">ANGULAR ADMIN</strong>
   </div>
   <hr>
   <div class="sidebar-body">
       <ul>
-        <li class="sidebar-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-          <a routerLink="/" ><i class="material-icons">dashboard</i><strong>Dashboard</strong>
+        <li *ngFor="let item of sidebarItems;let i = index;" class="sidebar-item" [class.active]="temp.isActive" #temp="routerLinkActive" routerLinkActive  [routerLinkActiveOptions]="{exact: true}">
+          <a *ngIf="!!item.link" [routerLink]="item.link" ><i class="material-icons">{{item.icon}}</i><strong class="text-capitalize d-inline-block">{{item.label}}</strong>
             <span class="arrow"></span>
           </a>
-        </li>
-        <li class="sidebar-item" routerLinkActive #rlaComponent="routerLinkActive" [class.active]="rlaComponent.isActive">
-          <a data-toggle="collapse" href="#componentsExamples" [class.collapsed]="!rlaComponent.isActive"><i class="material-icons">apps</i><strong>components</strong></a>
-          <div class="collapse" [class.show]="rlaComponent.isActive" id="componentsExamples">
-            <ul>
-              <li class="sub-item" routerLinkActive="active"><a routerLink="/components/buttons"><span>B</span><strong> Buttons </strong><span class="arrow"></span></a></li>
-              <li class="sub-item" routerLinkActive="active"><a routerLink="/components/grids"><span>GS</span><strong> Grid System </strong><span class="arrow"></span> </a></li>
-              <li class="sub-item" routerLinkActive="active"><a routerLink="/components/panels"><span>P</span><strong> Panels </strong><span class="arrow"></span></a></li>
-              <li class="sub-item" routerLinkActive="active"><a routerLink="/components/alerts"><span>A</span><strong> Alert </strong><span class="arrow"></span> </a></li>
-              <li class="sub-item" routerLinkActive="active"><a routerLink="/components/notifications"><span>N</span><strong> Notifications </strong><span class="arrow"></span> </a></li>
-              <li class="sub-item" routerLinkActive="active"><a routerLink="/components/icons"><span>I</span><strong> Icons </strong><span class="arrow"></span></a></li>
-              <li class="sub-item" routerLinkActive="active"><a routerLink="/components/typography"><span>T</span><strong> Typography </strong><span class="arrow"></span></a></li>
-            </ul>
+          <!-- if menu contains children -->
+          <a *ngIf="!item.link" data-toggle="collapse" [href]="'#'+item.label" [class.collapsed]="!temp.isActive"  ><i class="material-icons">{{item.icon}}</i><strong class="text-capitalize d-inline-block">{{item.label}}</strong></a>
+          <div *ngIf="!!item.subItem" class="collapse" [class.show]="temp.isActive" [id]="item.label">
+            <li *ngFor="let subItem of item.subItem" class="sub-item" routerLinkActive="active"><a [routerLink]=[subItem.link]><span class="text-uppercase">{{subItem.icon}}</span><strong class="text-capitalize d-inline-block"> {{subItem.label}} </strong><span class="arrow"></span></a></li>
           </div>
         </li>
-        <li class="sidebar-item" routerLinkActive #rlaForm="routerLinkActive" [class.active]="rlaForm.isActive">
-          <a data-toggle="collapse" href="#forms" [class.collapsed]="!rlaForm.isActive"><i class="material-icons">ballot</i><strong>forms</strong> </a>
-          <div class="collapse" [class.show]="rlaForm.isActive" id="forms">
-            <ul>
-              <li class="sub-item" routerLinkActive="active"><a routerLink="/forms/elements"><span> FE </span>  <strong> Forms Elements </strong>  <span class="arrow"></span></a></li>
-              <li class="sub-item" routerLinkActive="active"><a routerLink="/forms/validations"><span> FV </span>  <strong> Forms Validations </strong>  <span class="arrow"></span></a></li>
-              <li class="sub-item" routerLinkActive="active"><a routerLink="/forms/examples"><span> FE </span>  <strong> Forms Examples </strong>  <span class="arrow"></span></a></li>
-            </ul>
-          </div>
-        </li>
-        <li class="sidebar-item" routerLinkActive="active">
-          <a><i class="material-icons">grid_on</i>  <strong>tables</strong>
-            <span class="arrow"></span>
-          </a>
-        </li>
-        <li class="sidebar-item" routerLinkActive="active">
-          <a><i class="material-icons">show_chart</i>  <strong>charts</strong>
-            <span class="arrow"></span>
-          </a>
-        </li>
-        <li class="sidebar-item" routerLinkActive="active">
-          <a><i class="material-icons">place</i>  <strong>maps</strong>
-            <span class="arrow"></span>
-          </a>
-        </li>
-        <li class="sidebar-item" routerLinkActive="active">
-          <a><i class="material-icons">edit</i>  <strong>editors</strong>
-            <span class="arrow"></span>
-          </a>
-        </li>
-        <li class="sidebar-item" routerLinkActive="active">
-          <a><i class="material-icons">pages</i>  <strong>pages</strong>
-            <span class="arrow"></span>
-          </a>
-        </li>
-        <li class="sidebar-item" routerLinkActive="active">
-          <a><i class="material-icons">date_range</i>  <strong>calendar</strong>
-            <span class="arrow"></span>
-          </a>
-        </li>
-      </ul> 
+      </ul>
     </div>
 </div>
