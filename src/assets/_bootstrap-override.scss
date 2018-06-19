@@ -1,0 +1,12 @@
+abc{
+  @include themify($themes) { 
+    background-color: themed('body-bg') !important;  
+  }
+}
+
+$theme-colors: (
+  "danger": #ff5252,
+  "primary": #6200ea
+);
+
+@import "node_modules/bootstrap/scss/bootstrap";

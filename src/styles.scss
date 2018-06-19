@@ -1,9 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
-@import './assets/mixins.scss';
-@import './assets/variable.scss';
-
+@import './assets/themes';
+@import './assets/variables';
+@import './assets/mixins';
+@import './assets/bootstrap-override';
 
 
 /* width */
@@ -29,8 +30,11 @@
 
 body {
   font-family: 'Open Sans', sans-serif ;
-  background-color: $body-bg;
+  @include themify($themes) { 
+    background-color: themed('body-bg');  
+  }
 }
+
 
 h2 {
   text-shadow: 2px 2px 3px rgba($black,.3);
@@ -59,16 +63,9 @@ h2 {
   }
 }
 
-// sidebar scrollbar
-.ng-scrollbar{
-  &.-vertical{
-    background-color: rgba($white,.3);
-  }
-  .ng-scrollbar-thumb{
-    background-color: rgba($white,.4);
-  }
-}
-
+/*
+* notifications
+*/
 .simple-notification{
   box-shadow: 0 5px 15px 0 rgba($black,.4);
   border-radius: 0.3rem;
@@ -79,19 +76,29 @@ h2 {
     background: rgba($white,.5) !important;
   }
   &.warn {
-    background: $warning !important;
+    @include themify($themes) { 
+      background-color: themed('warning') !important;  
+    }
   }
   &.success {
-    background: $sucess !important;
+    @include themify($themes) { 
+      background-color: themed('sucess') !important;  
+    }
   } 
   &.error {
-    background: $error !important;
+    @include themify($themes) { 
+      background-color: themed('error') !important;  
+    }
   }
   &.info {
-    background: $info !important;
+    @include themify($themes) { 
+      background-color: themed('info') !important;  
+    }
   }
   &.alert{
-    background: $error !important;
+    @include themify($themes) { 
+      background-color: themed('error') !important;  
+    }
   }
 }
 

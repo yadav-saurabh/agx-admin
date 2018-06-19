@@ -104,7 +104,7 @@
       margin: .3rem 0 .3rem 1.9rem;
       padding: .3rem .7rem;  
     }
-    span.sidebar-mini {
+    span:not(.arrow) {
       display: inline-block;
       width: 1.5rem;
     }
