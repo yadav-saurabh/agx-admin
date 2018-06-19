@@ -3,10 +3,10 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-icons',
   templateUrl: './icons.component.html',
-  styleUrls: ['./icons.component.scss']
+  styles: ['.ex-md-icons i{font-size: 40px;} .ex-fa-icons i{font-size: 35px;}']
 })
-export class IconsComponent {
-
+export class IconsComponent {  
+  
   materialIcons = ['3d_rotation','accessibility','accessibility_new','accessible','keyboard_backspace','power',
     'accessible_forward','account_balance','account_balance_wallet','account_box','keyboard_arrow_right','cake',
     'account_circle','add_shopping_cart','alarm','alarm_add','alarm_off','alarm_on','videogame_asset','people',
@@ -34,7 +34,5 @@ export class IconsComponent {
     'vcard','video-camera','volume-control-phone','volume-down','volume-off','volume-up','warning','wheelchair','window-close-o',
     'wifi','wrench','btc','money','ils','eur','inr','usd'
   ];
-
-
 
 }

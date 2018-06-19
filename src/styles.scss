@@ -1,48 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
-@import './assets/variables';
-@import './assets/mixins';
-@import './assets/bootstrap-override';
+@import './assets/style/variables';
+@import './assets/style/mixins';
+@import './assets/style/bootstrap-override';
 
-
+/* custom scroller (not supported in firefox) */
 /* width */
 ::-webkit-scrollbar {
   width: .5rem;
 }
-
 /* Track */
 ::-webkit-scrollbar-track {
   background: rgba($white,.7); 
 }
-
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: rgba($black,.4); 
 }
-
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: $black; 
 }
 
-
-body {
-  font-family: 'Open Sans', sans-serif ;
-  background-color: $body-bg;  
-}
-
-
-h2 {
+/* heading with shadow effect */
+h2.heading {
   text-shadow: 2px 2px 3px rgba($black,.3);
-}  
-
-.card{
-  margin: 5px 0;
-  border-radius: 6px;
-  box-shadow: 0 1px 4px 0 rgba(0,0,0,.14);
 }
 
+/* material icons position fix */
+i.material-icons {
+  position: relative;
+  top: .3rem;
+}
+button  i.material-icons {
+  top: .25rem;
+}
+li.nav-item  i.material-icons {
+  top: 0;
+}
+
+/* removing underline from hyperlink */
+a, a:hover {
+  text-decoration: none;
+}
+
+
+/* button */
 .btn-just-icon {
   height: 41px;
   width: 41px;
@@ -50,19 +54,26 @@ h2 {
   position: relative;
   border-radius: 50%;
   i{
-    top: 0;
-    left: 0;
-    width: 100%;
-    margin-top: 0;
-    font-size: 20px;
-    line-height: 41px;
-    position: absolute;
+    font-size: 1.3rem;
   }
 }
 
-/*
-* notifications
-*/
+.btn-group{
+  &>.btn:not(:last-child):not(.dropdown-toggle) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  &>.btn:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+.btn.btn-round {
+  border-radius: 30px;
+}
+
+/* notifications */
 .simple-notification{
   box-shadow: 0 5px 15px 0 rgba($black,.4);
   border-radius: 0.3rem;
@@ -87,19 +98,4 @@ h2 {
   &.alert{
     background-color: $error !important;  
   }
-}
-
-.btn-group{
-  &>.btn:not(:last-child):not(.dropdown-toggle) {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-  &>.btn:not(:first-child) {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-}
-
-.btn.btn-round {
-  border-radius: 30px;
 }

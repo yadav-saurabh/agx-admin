@@ -2,3 +2,8 @@
 
 /*override bootstrap variables*/
 @import "node_modules/bootstrap/scss/bootstrap";
+
+.card {
+  border-radius: $border-radius-lg;
+  box-shadow: $box-shadow-sm;
+}

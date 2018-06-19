@@ -1,4 +1,4 @@
-@import '../../assets/variables';
+@import '../../assets/style/variables';
 
 .sidebar{
   height: 100vh;
@@ -71,10 +71,6 @@
     padding:.5rem .8rem;
     cursor: pointer;
     text-transform: capitalize;
-    i{
-      position: relative;
-      top: 5px;
-    }
     strong{
       padding-left: 1.5rem;
     }

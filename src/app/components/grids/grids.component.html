@@ -1,59 +1,59 @@
-<h2 class="text-center">Grid System</h2>
+<h2 class="text-center heading">Grid System</h2>
 <br>
 <div class="grid-system">
   <h4>Always Horizontal</h4>
-  <h6>Equally distributed across all devices automatiaclly</h6>
+  <h6 class="mt-2">Equally distributed across all devices automatiaclly</h6>
   <div class="row">
-    <div class="col" *ngFor="let n of [0,1,2,3,4,5,7,8,9,10,11]">
-      <div class="card">
-        <div class="card-body">.col</div>
+    <div class="col px-2 py-0" *ngFor="let n of [0,1,2,3,4,5,7,8,9,10,11]">
+      <div class="card m-1 p-1">
+        <div class="card-body text-center m-1 p-1">.col</div>
       </div>
     </div>
   </div>
 
-  <h6>Four columns across all devices</h6>
+  <h6 class="mt-2">Four columns across all devices</h6>
   <div class="row">
-    <div class="col-3" *ngFor="let n of [0,1,2,3]">
-      <div class="card">
-        <div class="card-body">.col-3</div>
+    <div class="col-3 px-2 py-0" *ngFor="let n of [0,1,2,3]">
+      <div class="card m-1 p-1">
+        <div class="card-body text-center m-1 p-1">.col-3</div>
       </div>
     </div>
   </div>
 
-  <h6>Three columns across all devices</h6>
+  <h6 class="mt-2">Three columns across all devices</h6>
   <div class="row">
-    <div class="col-4" *ngFor="let n of [0,1,2]">
-      <div class="card">
-        <div class="card-body">.col-4</div>
+    <div class="col-4 px-2 py-0" *ngFor="let n of [0,1,2]">
+      <div class="card m-1 p-1">
+        <div class="card-body text-center m-1 p-1">.col-4</div>
       </div>
     </div>
   </div>
 
-  <h6>Two columns across all devices</h6>
+  <h6 class="mt-2">Two columns across all devices</h6>
   <div class="row">
-    <div class="col-6" *ngFor="let n of [0,1]">
-      <div class="card">
-        <div class="card-body">.col-6</div>
+    <div class="col-6 px-2 py-0" *ngFor="let n of [0,1]">
+      <div class="card m-1 p-1">
+        <div class="card-body text-center m-1 p-1">.col-6</div>
       </div>
     </div>
   </div>
 
-  <h6>Single columns across all devices</h6>
+  <h6 class="mt-2">Single columns across all devices</h6>
   <div class="row">
-    <div class="col-12">
-      <div class="card">
-        <div class="card-body">.col-12</div>
+    <div class="col-12 px-2 py-0">
+      <div class="card m-1 p-1">
+        <div class="card-body text-center m-1 p-1">.col-12</div>
       </div>
     </div>
   </div>
 
   <br>
   <h4>Mixed Columns</h4> 
-  <!-- <h6>Showing different sizes on different screens</h6> -->
+  <!-- <h6 class="mt-2">Showing different sizes on different screens</h6> -->
   <div class="row">
     <div class="col-md-6 col-lg-4" *ngFor="let n of [0,1,2,3,4,5]">
-      <div class="card">
-        <div class="card-body">.col-md-6 .col-lg-4</div>
+      <div class="card m-1 p-1">
+        <div class="card-body text-center m-1 p-1">.col-md-6 .col-lg-4</div>
       </div>
     </div>
   </div>
@@ -61,20 +61,20 @@
   <br>
   <h4>Column wrapping</h4>
   <div class="row">
-    <div class="col-9">
-      <div class="card">
-        <div class="card-body">.col-9</div>
+    <div class="col-9 px-2 py-0">
+      <div class="card m-1 p-1">
+        <div class="card-body text-center m-1 p-1">.col-9</div>
       </div>
     </div>
-    <div class="col-4">
-      <div class="card">
-        <div class="card-body">.col-4
+    <div class="col-4 px-2 py-0">
+      <div class="card m-1 p-1">
+        <div class="card-body text-center m-1 p-1">.col-4
           <br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
       </div>
     </div>
-    <div class="col-6">
-      <div class="card">
-        <div class="card-body">.col-6
+    <div class="col-6 px-2 py-0">
+      <div class="card m-1 p-1">
+        <div class="card-body text-center m-1 p-1">.col-6
           <br>Subsequent columns continue along the new line.
         </div>
       </div>
@@ -85,32 +85,32 @@
   <h4>Offsetting columns</h4>
   <div class="row">
     <div class="col-md-4">
-      <div class="card">
-        <div class="card-body">.col-md-4</div>
+      <div class="card m-1 p-1">
+        <div class="card-body text-center m-1 p-1">.col-md-4</div>
       </div>
     </div>
     <div class="col-md-4 offset-md-4">
-      <div class="card">
-        <div class="card-body">.col-md-4 .offset-md-4</div>
+      <div class="card m-1 p-1">
+        <div class="card-body text-center m-1 p-1">.col-md-4 .offset-md-4</div>
       </div>
     </div>
   </div>
   <div class="row">
     <div class="col-md-3 offset-md-3">
-      <div class="card">
-        <div class="card-body">.col-md-4 .offset-md-4</div>
+      <div class="card m-1 p-1">
+        <div class="card-body text-center m-1 p-1">.col-md-4 .offset-md-4</div>
       </div>
     </div>
     <div class="col-md-3 offset-md-3">
-      <div class="card">
-        <div class="card-body">.col-md-4 .offset-md-4</div>
+      <div class="card m-1 p-1">
+        <div class="card-body text-center m-1 p-1">.col-md-4 .offset-md-4</div>
       </div>
     </div>
   </div>
   <div class="row">
     <div class="col-md-6 offset-md-3">
-      <div class="card">
-        <div class="card-body">.col-md-6 .offset-md-3</div>
+      <div class="card m-1 p-1">
+        <div class="card-body text-center m-1 p-1">.col-md-6 .offset-md-3</div>
       </div>
     </div>
   </div>
@@ -118,19 +118,19 @@
   <br>
   <h4>Vertical alignment</h4>
   <div class="row alignment">
-    <div class="col align-self-start">
-      <div class="card">
-        <div class="card-body">One of three columns</div>
+    <div class="col px-2 py-0 align-self-start">
+      <div class="card m-1 p-1">
+        <div class="card-body text-center m-1 p-1">One of three columns</div>
       </div>
     </div>
-    <div class="col align-self-center">
-      <div class="card">
-        <div class="card-body">One of three columns</div>
+    <div class="col px-2 py-0 align-self-center">
+      <div class="card m-1 p-1">
+        <div class="card-body text-center m-1 p-1">One of three columns</div>
       </div>
     </div>
-    <div class="col align-self-end">
-      <div class="card">
-        <div class="card-body">One of three columns</div>
+    <div class="col px-2 py-0 align-self-end">
+      <div class="card m-1 p-1">
+        <div class="card-body text-center m-1 p-1">One of three columns</div>
       </div>
     </div>
   </div>
@@ -138,70 +138,70 @@
   <br>
   <h4>Horizontal alignment</h4>
   <div class="row justify-content-start">
-    <div class="col-4">
-      <div class="card">
-        <div class="card-body">One of two columns</div>
+    <div class="col-4 px-2 py-0">
+      <div class="card m-1 p-1">
+        <div class="card-body text-center m-1 p-1">One of two columns</div>
       </div>
     </div>
-    <div class="col-4">
-      <div class="card">
-        <div class="card-body">One of two columns</div>
+    <div class="col-4 px-2 py-0">
+      <div class="card m-1 p-1">
+        <div class="card-body text-center m-1 p-1">One of two columns</div>
       </div>
     </div>
   </div>
   <div class="row justify-content-center">
-    <div class="col-4">
-      <div class="card">
-        <div class="card-body">One of two columns</div>
+    <div class="col-4 px-2 py-0">
+      <div class="card m-1 p-1">
+        <div class="card-body text-center m-1 p-1">One of two columns</div>
       </div>
     </div>
-    <div class="col-4">
-      <div class="card">
-        <div class="card-body">One of two columns</div>
+    <div class="col-4 px-2 py-0">
+      <div class="card m-1 p-1">
+        <div class="card-body text-center m-1 p-1">One of two columns</div>
       </div>
     </div>
   </div>
   <div class="row justify-content-end">
-    <div class="col-4">
-      <div class="card">
-        <div class="card-body">One of two columns</div>
+    <div class="col-4 px-2 py-0">
+      <div class="card m-1 p-1">
+        <div class="card-body text-center m-1 p-1">One of two columns</div>
       </div>
     </div>
-    <div class="col-4">
-      <div class="card">
-        <div class="card-body">One of two columns</div>
+    <div class="col-4 px-2 py-0">
+      <div class="card m-1 p-1">
+        <div class="card-body text-center m-1 p-1">One of two columns</div>
       </div>
     </div>
   </div>
   <div class="row justify-content-around">
-    <div class="col-4">
-      <div class="card">
-        <div class="card-body">One of two columns</div>
+    <div class="col-4 px-2 py-0">
+      <div class="card m-1 p-1">
+        <div class="card-body text-center m-1 p-1">One of two columns</div>
       </div>
     </div>
-    <div class="col-4">
-      <div class="card">
-        <div class="card-body">One of two columns</div>
+    <div class="col-4 px-2 py-0">
+      <div class="card m-1 p-1">
+        <div class="card-body text-center m-1 p-1">One of two columns</div>
       </div>
     </div>
   </div>
   <div class="row justify-content-between">
-    <div class="col-4">
-      <div class="card">
-        <div class="card-body">One of two columns</div>
+    <div class="col-4 px-2 py-0">
+      <div class="card m-1 p-1">
+        <div class="card-body text-center m-1 p-1">One of two columns</div>
       </div>
     </div>
-    <div class="col-4">
-      <div class="card">
-        <div class="card-body">One of two columns</div>
+    <div class="col-4 px-2 py-0">
+      <div class="card m-1 p-1">
+        <div class="card-body text-center m-1 p-1">One of two columns</div>
       </div>
     </div>
   </div>
 
   <br>
   <h4>Example</h4>
-  <div class="card example">
-    <div class="card-body">
+  <div class="card">
+    <div class="card-body m-1">
       <div class="row">
         <div class="col-md-9">
           <div class="row">
@@ -232,7 +232,7 @@
 
   <br>
   <br>
-  <h6>For complete information on Bootstrap 4 Grid system :
+  <h6 class="mt-2">For complete information on Bootstrap 4 Grid system :
     <a href="https://getbootstrap.com/docs/4.0/layout/grid/" target="_blank">Bootstrap 4 Docs  <i class="material-icons">launch</i></a>
   </h6>
 

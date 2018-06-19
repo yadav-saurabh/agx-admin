@@ -3,6 +3,6 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-grids',
   templateUrl: './grids.component.html',
-  styleUrls: ['./grids.component.scss']
+  styles: ['.alignment{height:200px;}']
 })
 export class GridsComponent { }
