@@ -3,16 +3,20 @@
 /*override bootstrap variables*/
 @import "node_modules/bootstrap/scss/bootstrap";
 
+/* other overrides */
+
+// card
+
 .card {
   border-radius: $border-radius-lg;
   box-shadow: $box-shadow-sm;
 }
 
+// button
 .btn {
   box-shadow: $box-shadow;
 }
 
-/* DEFAULT btn style */
 .btn:not([class*="btn-"]) {
   color: #fff;
   background-color:$default;
@@ -30,29 +34,9 @@
   }
 }
 
-a, a:hover, .btn-link:hover {
-  text-decoration: none;
-}
-
 .btn-outline-light{
   color:$black;
 }
-
-// .top {
-//   box-shadow: 0 -5px 5px -5px #333;
-// }
-
-// .right {
-//   box-shadow: -5px 0 5px -5px #333;
-// }
-
-// .bottom {
-//   box-shadow: 0 5px 5px -5px #333;
-// }
-
-// .left {
-//   box-shadow: 5px 0 5px -5px #333;
-// }
 
 .btn-group{
   box-shadow: $box-shadow;
@@ -61,27 +45,8 @@ a, a:hover, .btn-link:hover {
   }
 }
 
-.btn-group-round {
-  @extend .btn-group;
-  border-radius: $btn-round-br;
-  & > .btn:last-child:not(.dropdown-toggle) {
-    border-radius: 0 $btn-round-br $btn-round-br 0;
-  }
-  & >.btn:first-child {
-    border-radius: $btn-round-br 0 0 $btn-round-br;
-  }
-  &.btn-group-vertical {
-    & > .btn:last-child:not(.dropdown-toggle) {
-      border-radius:0 0 $btn-round-br  $btn-round-br;
-    }
-    & >.btn:first-child {
-      border-radius: $btn-round-br $btn-round-br 0 0;
-    }
-  }
-}
-
-.btn.btn-round {
-  border-radius: $btn-round-br;
+a, a:hover, .btn-link:hover {
+  text-decoration: none;
 }
 
 // pagination
@@ -99,30 +64,5 @@ a, a:hover, .btn-link:hover {
       color: $white;
       box-shadow: $box-shadow;
     }
-  }
-}
-
-// extra paginations
-.pagination-round {
-  @extend .pagination;
-  .page-item {
-    &:first-child .page-link, &:last-child .page-link , .page-link{
-      border-radius: 50%;
-    }
-  }
-}
-.pagination-shwd {
-  @extend .pagination;
-  .page-link {
-    box-shadow: $box-shadow;
-    margin: 0 .25rem;
-  }
-}
-.pagination-round-shwd {
-  @extend .pagination-round;
-  .page-link {
-    box-shadow: $box-shadow;
-    margin: 0 .25rem;
-    border-radius: 50%;
   }
 }

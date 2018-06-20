@@ -41,6 +41,57 @@ i.material-icons {
   }
 }
 
+
+/* round button */
+.btn.btn-round {
+  border-radius: $btn-round-br;
+}
+
+/* round button group */
+.btn-group-round {
+  @extend .btn-group;
+  border-radius: $btn-round-br;
+  & > .btn:last-child:not(.dropdown-toggle) {
+    border-radius: 0 $btn-round-br $btn-round-br 0;
+  }
+  & >.btn:first-child {
+    border-radius: $btn-round-br 0 0 $btn-round-br;
+  }
+  &.btn-group-vertical {
+    & > .btn:last-child:not(.dropdown-toggle) {
+      border-radius:0 0 $btn-round-br  $btn-round-br;
+    }
+    & >.btn:first-child {
+      border-radius: $btn-round-br $btn-round-br 0 0;
+    }
+  }
+}
+
+/* paginatons styles */
+.pagination-round {
+  @extend .pagination;
+  .page-item {
+    &:first-child .page-link, &:last-child .page-link , .page-link{
+      border-radius: 50%;
+    }
+  }
+}
+.pagination-shwd {
+  @extend .pagination;
+  .page-link {
+    box-shadow: $box-shadow;
+    margin: 0 .25rem;
+  }
+}
+.pagination-round-shwd {
+  @extend .pagination-round;
+  .page-link {
+    box-shadow: $box-shadow;
+    margin: 0 .25rem;
+    border-radius: 50%;
+  }
+}
+
 /* notifications */
 .simple-notification{
   box-shadow: 0 5px 15px 0 rgba($black,.4);

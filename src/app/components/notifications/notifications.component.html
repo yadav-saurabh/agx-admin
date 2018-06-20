@@ -1,3 +1,5 @@
+<h2 class="heading text-center">Notifications</h2>
+<br>
 <div class="card">
   <div class="card-body">
     <form [formGroup]="form">
@@ -37,6 +39,28 @@
         </div>
       </div>
       <div class="form-inline">
+        <label class="field-label">Prevent Duplicates?</label>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="preventDuplicates" id="preventDuplicates-yes" [value]="true" formControlName="preventDuplicates">
+          <label class="form-check-label" for="preventDuplicates-yes">Yes</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="preventDuplicates" id="preventDuplicates-no" [value]="false" formControlName="preventDuplicates">
+          <label class="form-check-label" for="preventDuplicates-no">No</label>
+        </div>
+      </div>
+      <div class="form-inline">
+        <label class="field-label">Prevent Last Duplicates?</label>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="preventLastDuplicates" id="preventLastDuplicates-yes" [value]="true" formControlName="preventLastDuplicates">
+          <label class="form-check-label" for="preventLastDuplicates-yes">Yes</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="preventLastDuplicates" id="preventLastDuplicates-no" [value]="false" formControlName="preventLastDuplicates">
+          <label class="form-check-label" for="preventLastDuplicates-no">No</label>
+        </div>
+      </div>
+      <div class="form-inline">
         <label class="field-label">Pause on hover?</label>
         <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" name="pauseOnHover" id="pauseOnHover-yes" [value]="true" formControlName="pauseOnHover">
@@ -62,3 +86,4 @@
     </form>
   </div>
 </div>
+<h6 class="text-right">get detailed information at : <a href="https://github.com/flauc/angular2-notifications"> angular2-notifications <i _ngcontent-c7="" class="material-icons">launch</i> </a></h6>

@@ -12,6 +12,7 @@ export class NotificationsComponent implements OnInit {
 	form: FormGroup;
   types = ['alert', 'error', 'info', 'warn', 'success'];
 	animationTypes = ['fromRight', 'fromLeft', 'scale', 'rotate'];
+	options= {}
 
   constructor(private notifications: NotificationsService, private fb: FormBuilder) { }
 
@@ -23,7 +24,10 @@ export class NotificationsComponent implements OnInit {
 			timeOut: 5000,
 			showProgressBar: true,
 			pauseOnHover: true,
+			preventDuplicates: true,
+			preventLastDuplicates: true,
 			clickToClose: true,
+			maxStack : 5,
 			animate: 'fromRight'
 		});
 	}
@@ -37,6 +41,8 @@ export class NotificationsComponent implements OnInit {
 		delete temp.title;
 		delete temp.content;
 		delete temp.type;
+
+		console.log(temp);
 
 		this.notifications.create(title, content, type, temp);
 	}
