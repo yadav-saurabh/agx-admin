@@ -2,18 +2,50 @@
 $black : #191919;
 $white : #fff;
 
-$body-bg: #eee !default;
-$sucess: #00c853 !default;
-$error: #ff5252 !default;
-$danger: #ff5252 !default;
-$info: #6200ea !default;
-$primary: #6200ea !default;
-$alert: #ffdb5b !default;
-$warning: #ffa000 !default;
+$body-bg: #eee;
+
+$default: #999;
+$primary: #6200ea;
+$secondary: #a6c;
+$sucess: #00c853;
+$info: #33b5e5;
+$warning: #ffa000;
+$danger: #ff5252;
+$error: #ff5252;
+$alert: #ffdb5b;
+
+
+
+// $primary: #4285f4;
+// $secondary: #a6c;
+// $sucess: #00c851;
+// $info: #33b5e5;
+// $warning: #f80;
+// $danger: #ff3547;
+// $error: #ff3547;
+// $alert: #ffdb5b;
+// Pagination
+
+$pagination-padding-y:              .5rem;
+$pagination-padding-x:               0;
+// $pagination-padding-y-sm:           .25rem;
+// $pagination-padding-x-sm:           .5rem;
+// $pagination-padding-y-lg:           .75rem;
+// $pagination-padding-x-lg:           1.5rem;
+$pagination-line-height:            1.5rem;
+
+$pagination-color:                  $black;
+$pagination-border-color:           none;
+$pagination-hover-color:            $white;
+$pagination-hover-bg:               lighten($primary,40%);
+$pagination-active-color:           $primary;
+
+
 
 
 $font-family-base: 'Open Sans', sans-serif;
 
+$btn-round-br : 1.5rem;
 
 $navbar-height: 50px;
 

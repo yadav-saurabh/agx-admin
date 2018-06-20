@@ -30,47 +30,15 @@ h2.heading {
 
 /* material icons position fix */
 i.material-icons {
-  position: relative;
-  top: .3rem;
+  vertical-align: middle;
 }
-button  i.material-icons {
-  top: .25rem;
-}
-li.nav-item  i.material-icons {
-  top: 0;
-}
-
-/* removing underline from hyperlink */
-a, a:hover {
-  text-decoration: none;
-}
-
-
-/* button */
 .btn-just-icon {
-  height: 41px;
-  width: 41px;
+  height: 2.5rem;
+  width: 2.5rem;
   padding: 0;
-  position: relative;
-  border-radius: 50%;
-  i{
-    font-size: 1.3rem;
+  i,i.material-icons{
+    font-size: 1.2rem;
   }
-}
-
-.btn-group{
-  &>.btn:not(:last-child):not(.dropdown-toggle) {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-  &>.btn:not(:first-child) {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-}
-
-.btn.btn-round {
-  border-radius: 30px;
 }
 
 /* notifications */
