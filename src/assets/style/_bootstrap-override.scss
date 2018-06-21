@@ -55,6 +55,7 @@ a, a:hover, .btn-link:hover {
     .page-link{
       text-align: center;
       min-width: 2.5rem;
+      border: none;
       i.material-icons{
         @extend i.material-icons;
         font-size: 1.3rem;
