@@ -94,7 +94,7 @@ i.material-icons {
 
 
 
-/** fill only form input */
+/** form input */
 .form-control .no-border, input.no-border{
   border: none;
   box-shadow: none;
@@ -109,6 +109,18 @@ i.material-icons {
 }
 .form-control .rounded-border, input.rounded-border{
   border-radius: $btn-round-br;
+}
+.input-with-icon{
+  position: relative;
+  i{
+    position: absolute;
+    top: .2rem;
+    left: 0;
+    // color: rgba(lighten($primary,.95%),0.8);
+  }
+  input{
+    padding-left:2rem;
+  }
 }
 
 
