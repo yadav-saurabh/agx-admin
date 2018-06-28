@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, NgForm } from '@angular/forms';
-import { NotificationsService } from 'angular2-notifications';
+// import { NotificationsService } from 'angular2-notifications';
+import { NotificationsService } from 'projects/angular6-notifications/src/public_api';
 
 @Component({
   selector: 'app-notifications',
@@ -12,9 +13,43 @@ export class NotificationsComponent implements OnInit {
 	form: FormGroup;
   types = ['alert', 'error', 'info', 'warn', 'success'];
 	animationTypes = ['fromRight', 'fromLeft', 'scale', 'rotate'];
-	options= {}
+	// options= {}
 
-  constructor(private notifications: NotificationsService, private fb: FormBuilder) { }
+	logs: any[] = [];
+
+  options: any = {
+    progress: true,
+    timeout: 1000 * 3,
+    pauseOnHover: true,
+    clickToClose: true,
+    theme: 'default',
+    rtl: false,
+    className: 'my-notify',
+    animate_in: 'notify-fade-in',
+    animate_out: 'notify-fade-out',
+    onCreate: item => {
+      this.logs.push(item);
+    },
+    onDestroy: item => {
+      this.logs.push(item);
+    },
+  };
+
+  setting: any = {
+    position: ['right', 'bottom'],
+    offset: [20, 20],
+    lastOnBottom: true,
+    zIndex: 1031,
+    minWidth: 300,
+    maxWidth: 300,
+  };
+
+
+
+
+
+
+  constructor(private notify:NotificationsService, private fb: FormBuilder) { }
 
   ngOnInit() {
 		this.form = this.fb.group({
@@ -36,15 +71,17 @@ export class NotificationsComponent implements OnInit {
 		const temp = this.form.getRawValue();
 		const title = temp.title;
 		const content = temp.content;
-		const type = temp.type;
+		// const type = temp.type;
 
 		delete temp.title;
 		delete temp.content;
-		delete temp.type;
+		// delete temp.type;
 
-		console.log(temp);
 
-		this.notifications.create(title, content, type, temp);
+		// console.log(temp);
+		// this.notify.success(title, content, this.options);
+		this.notify.success(title, content, this.options);
+		// this.notifications.create(title, content, type, temp);
 	}
 
 }
