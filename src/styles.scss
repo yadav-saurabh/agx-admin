@@ -92,6 +92,26 @@ i.material-icons {
   }
 }
 
+
+
+/** fill only form input */
+.form-control .no-border, input.no-border{
+  border: none;
+  box-shadow: none;
+  padding-left: 0;
+  line-height: 0;
+  background-image: linear-gradient(0deg,$black 1px,$white 0);
+  &:focus{
+    border: none;
+    box-shadow: 0 0.4rem 0.2rem -0.2rem lighten($primary,40%);
+    background-image: linear-gradient(0deg,lighten($primary,35%) 1px,$white 0);
+  }
+}
+.form-control .rounded-border, input.rounded-border{
+  border-radius: $btn-round-br;
+}
+
+
 /* notifications */
 .simple-notification{
   box-shadow: 0 5px 15px 0 rgba($black,.4);

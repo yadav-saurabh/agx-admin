@@ -1,3 +1,119 @@
-<p>
-  elements works!
-</p>
+<h2 class="heading text-center">Forms Elements</h2>
+<br>
+<div class="row">
+  <div class="col-lg-6">
+    <h4>Inputs</h4>
+    <div class="card">
+      <div class="card-body">
+        <div class="form-group">
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+        </div>
+        <div class="form-row">
+          <div class="col">
+            <input type="text" class="form-control" placeholder="First name">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Last name">
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" placeholder="Password">
+        </div>
+        <div class="form-group">
+          <input type="Number" class="form-control" placeholder="Age">
+        </div>
+        <div class="form-group">
+          <input type="date" class="form-control" placeholder="Date">
+        </div>
+        <!-- <div class="form-group">
+          <input type="text" disabled class="form-control" placeholder="Disabled">
+        </div> -->
+        <div class="form-group">
+          <textarea class="form-control" rows="3" placeholder="Text Area"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <h4>Size And Types</h4>
+    <div class="card">
+      <div class="card-body">
+        <h6>Sizes</h6>
+        <div class="form-group">
+          <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg">
+        </div>
+        <div class="form-group">
+          <input class="form-control" type="text" placeholder="Default input">
+        </div>
+        <div class="form-group">
+          <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm">
+        </div>
+        <h6>Types</h6>
+        <div class="form-group">
+          <input class="form-control" type="text" placeholder="Default">
+        </div>
+        <div class="form-group">
+          <input class="form-control rounded-border" type="text" placeholder="rounded border">
+        </div>
+        <div class="form-group">
+          <input class="form-control no-border" type="text" placeholder="no border">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<br><br>
+<div class="row">
+  <div class="col-lg-6">
+    <h4>Validation States</h4>
+    <div class="card">
+      <div class="card-body">
+        <div class="form-group">
+          <input type="text" class="form-control is-valid" id="validationServer01" placeholder="First name" value="Mark" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control is-invalid" id="validationServerUsername" placeholder="Username" aria-describedby="inputGroupPrepend3"
+            required>
+          <div class="invalid-feedback">
+            Please choose a username.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <h4>Input Groups</h4>
+    <div class="card">
+      <div class="card-body">
+        <label class="sr-only" for="inlineFormInputGroup">Username</label>
+        <div class="input-group mb-2">
+          <div class="input-group-prepend">
+            <div class="input-group-text">@</div>
+          </div>
+          <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">$</span>
+              <span class="input-group-text">0.00</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+          </div>
+
+          <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button">Button</button>
+              </div>
+            </div>
+        
+      </div>
+    </div>
+  </div>
+</div>

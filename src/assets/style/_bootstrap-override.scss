@@ -110,3 +110,9 @@ a, a:hover, .btn-link:hover {
     }
   }
 }
+
+// inputgroup
+.input-group-text {
+  background-color: lighten($primary, 45%);
+  border-color: lighten($primary, 40%);
+}

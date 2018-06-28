@@ -101,15 +101,6 @@
   }
 }
 
-.form-inline{
-  input{
-    border: none;
-    box-shadow: none;
-    padding-left: 0;
-    line-height: 0;
-    background-image: linear-gradient(0deg,$black 2px,rgba(156,39,176,0) 0);
-  }
-}
 
 
 @media only screen and (max-device-width : $mobile-screen) {
