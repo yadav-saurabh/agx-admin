@@ -6,7 +6,7 @@ import { NotificationsService } from 'projects/angular6-notifications/src/public
 @Component({
   selector: 'app-notifications',
   templateUrl: './notifications.component.html',
-  styleUrls: ['./notifications.component.scss']
+  styles: ['']
 })
 export class NotificationsComponent implements OnInit {
 
@@ -43,10 +43,6 @@ export class NotificationsComponent implements OnInit {
     minWidth: 300,
     maxWidth: 300,
   };
-
-
-
-
 
 
   constructor(private notify:NotificationsService, private fb: FormBuilder) { }
