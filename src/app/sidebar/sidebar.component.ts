@@ -25,7 +25,7 @@ export class SidebarComponent {
       {link:'/forms/validations',label:'Form Validation',icon:'fv'},
       {link:'/forms/examples',label:'Form Examples',icon:'se'}
     ]},
-    {link:'#', label:'tables',icon:'grid_on'}, 
+    {link:'/tables', label:'tables',icon:'grid_on'}, 
     {link:'#', label:'charts',icon:'show_chart'}, 
     {link:'#', label:'maps',icon:'place'}, 
     {link:'#', label:'editors',icon:'edit'}, 
