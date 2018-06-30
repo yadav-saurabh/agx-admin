@@ -1,1 +1,14 @@
 <h2 class="heading text-center">Maps</h2>
+<br>
+<h4>Default Style</h4>
+<div class="card">
+  <agm-map [latitude]="lat" [longitude]="lng" [zoom]="9">
+    <!-- <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker> -->
+  </agm-map>
+</div>
+<br>
+<h4>Custom Style</h4>
+<div class="card">
+  <agm-map [latitude]="lat" [longitude]="lng" [styles]="styles" [zoom]="9">
+  </agm-map>
+</div>

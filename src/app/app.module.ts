@@ -7,7 +7,8 @@ import { FooterComponent } from './footer/footer.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SimpleNotificationsModule } from 'angular2-notifications';
+import { NotificationsModule } from 'projects/angular6-notifications/src/public_api';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { SimpleNotificationsModule } from 'angular2-notifications';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    SimpleNotificationsModule.forRoot()
+    NotificationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
