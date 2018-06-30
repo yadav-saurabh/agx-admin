@@ -31,7 +31,8 @@
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "node_modules/chart.js/dist/Chart.min.js"
+              "node_modules/chart.js/dist/Chart.min.js",
+              "node_modules/@ckeditor/ckeditor5-build-classic/build/ckeditor.js"
             ]
           },
           "configurations": {
