@@ -30,6 +30,6 @@ export class SidebarComponent {
     {link:'/maps', label:'maps',icon:'place'}, 
     {link:'/editors', label:'editors',icon:'edit'}, 
     {link:'#', label:'pages',icon:'pages'}, 
-    {link:'#', label:'calendar',icon:'date_range'} 
+    {link:'/calendar', label:'calendar',icon:'date_range'} 
   ];
 }
