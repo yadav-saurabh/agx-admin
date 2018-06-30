@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class TablesComponent {
 
+  defaultTable = {
+    head:['#','First','Last','Handle'],
+    body:[
+      ['Mark', 'Otto', '@mdo'],
+      ['Jacob', 'Thornton', '@fat'],
+      ['Larry', 'the Bird', '@twitter'] 
+    ]
+  };
+
 }
