@@ -10,7 +10,8 @@ const routes: Routes = [
   { path: 'tables', loadChildren: './tables/tables.module#TablesModule' },
   { path: 'charts', loadChildren: './charts/charts.module#ChartsModule' },
   { path: 'maps', loadChildren: './maps/maps.module#MapsModule' },
-  { path: 'editors', loadChildren: './editors/editors.module#EditorsModule' }
+  { path: 'editors', loadChildren: './editors/editors.module#EditorsModule' },
+  { path: 'calendar', loadChildren: './calendar/calendar.module#CalendarModule' }
 ];
 
 @NgModule({
