@@ -150,3 +150,9 @@ i.material-icons {
     background-color: $error !important;  
   }
 }
+
+
+/*ckeditor editor*/
+.ck.ck-editor__main>.ck-editor__editable{
+  min-height: 200px;
+}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+declare var ClassicEditor: any;
 
 @Component({
   selector: 'app-editors',
@@ -10,6 +11,14 @@ export class EditorsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    ClassicEditor
+      .create(document.querySelector('#editor'))
+      .then(editor => {
+        console.log(editor);
+      })
+      .catch(error => {
+        console.error(error);
+      });
   }
 
 }

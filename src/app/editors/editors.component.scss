@@ -1,0 +1,10 @@
+.ck-editor__editable{
+  min-height: 300px;
+}
+
+.ck.ck-content.ck-editor__editable{
+  height: 300px !important;
+}
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused){
+  height: 100px;
+}
