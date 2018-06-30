@@ -5,12 +5,12 @@ import { AuthComponent } from './auth/auth.component';
 
 
 const routes: Routes = [
-  { path: '/notfound', component: NotFoundComponent },
-  { path: '/auth', component: AuthComponent },
+  { path: 'notfound', component: NotFoundComponent },
+  { path: 'auth', component: AuthComponent },
 ];
 
 @NgModule({
-  imports: [ RouterModule.forRoot(routes) ],
+  imports: [ RouterModule.forChild(routes) ],
   exports: [ RouterModule ]
 })
 export class PagesRoutingModule { }

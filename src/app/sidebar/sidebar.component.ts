@@ -25,11 +25,14 @@ export class SidebarComponent {
       {link:'/forms/validations',label:'Form Validation',icon:'fv'},
       {link:'/forms/examples',label:'Form Examples',icon:'se'}
     ]},
+    {label:'pages',icon:'pages',subItem:[
+      {link:'/pages/notfound',label:'Not Found',icon:'nf'},
+      {link:'/pages/auth',label:'Auth',icon:'A'}
+    ]}, 
     {link:'/tables', label:'tables',icon:'grid_on'}, 
     {link:'/charts', label:'charts',icon:'show_chart'}, 
     {link:'/maps', label:'maps',icon:'place'}, 
     {link:'/editors', label:'editors',icon:'edit'}, 
-    {link:'#', label:'pages',icon:'pages'}, 
     {link:'/calendar', label:'calendar',icon:'date_range'} 
   ];
 }

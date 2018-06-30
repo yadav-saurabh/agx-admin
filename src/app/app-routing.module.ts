@@ -7,6 +7,7 @@ const routes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'components', loadChildren: './components/components.module#ComponentsModule' },
   { path: 'forms', loadChildren: './forms/forms.module#FormsLocalModule' },
+  { path: 'pages', loadChildren: './pages/pages.module#PagesModule' },
   { path: 'tables', loadChildren: './tables/tables.module#TablesModule' },
   { path: 'charts', loadChildren: './charts/charts.module#ChartsModule' },
   { path: 'maps', loadChildren: './maps/maps.module#MapsModule' },
