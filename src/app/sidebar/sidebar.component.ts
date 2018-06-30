@@ -26,7 +26,7 @@ export class SidebarComponent {
       {link:'/forms/examples',label:'Form Examples',icon:'se'}
     ]},
     {link:'/tables', label:'tables',icon:'grid_on'}, 
-    {link:'#', label:'charts',icon:'show_chart'}, 
+    {link:'/charts', label:'charts',icon:'show_chart'}, 
     {link:'#', label:'maps',icon:'place'}, 
     {link:'#', label:'editors',icon:'edit'}, 
     {link:'#', label:'pages',icon:'pages'}, 
