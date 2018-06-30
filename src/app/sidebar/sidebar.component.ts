@@ -28,7 +28,7 @@ export class SidebarComponent {
     {link:'/tables', label:'tables',icon:'grid_on'}, 
     {link:'/charts', label:'charts',icon:'show_chart'}, 
     {link:'/maps', label:'maps',icon:'place'}, 
-    {link:'#', label:'editors',icon:'edit'}, 
+    {link:'/editors', label:'editors',icon:'edit'}, 
     {link:'#', label:'pages',icon:'pages'}, 
     {link:'#', label:'calendar',icon:'date_range'} 
   ];
