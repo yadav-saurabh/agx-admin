@@ -3,7 +3,7 @@
     <app-sidebar  [sidebarToggle]="closeSidebar"></app-sidebar>
   </div>
   <div class="main-panel">
-    <app-navbar  (emitEvent)="navBarEvent($event)"></app-navbar>
+    <app-navbar  (emitEvent)="navBarEvent($event)" [navbarToggle]="hideNavbar"></app-navbar>
     <div class="panel-content">
       <router-outlet></router-outlet>
     </div>
@@ -14,8 +14,3 @@
 <ng-template #fullView>
   <router-outlet ></router-outlet>
 </ng-template>
-
-
-<!-- <ng-notifications></ng-notifications> -->
-<!-- <simple-notifications ></simple-notifications> -->
-<!-- <simple-notifications [option]="{maxStack:5}" ></simple-notifications> -->

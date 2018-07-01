@@ -1,5 +1,5 @@
 import { Component, ViewChild, OnInit } from '@angular/core';
-import { Router, RouteConfigLoadStart, RouteConfigLoadEnd } from '@angular/router';
+import { Router, RouteConfigLoadStart, RouteConfigLoadEnd, NavigationEnd } from '@angular/router';
 import * as NProgress from 'nprogress';
 
 @Component({
@@ -11,6 +11,7 @@ export class AppComponent implements OnInit {
 
   closeSidebar = true;
   pagesRoute = false;
+  hideNavbar;
 
   constructor(private router: Router) { }
 
@@ -26,6 +27,9 @@ export class AppComponent implements OnInit {
           NProgress.done();
           NProgress.remove();
         }, 500);
+      } else if (obj instanceof NavigationEnd){
+        window.scrollTo(0, 0);
+        this.hideNavbar = !this.hideNavbar;
       }
     });
   }

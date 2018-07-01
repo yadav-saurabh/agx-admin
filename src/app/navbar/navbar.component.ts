@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, Input, OnChanges } from '@angular/core';
 import { HostListener } from "@angular/core";
 
 declare var $: any;
@@ -9,15 +9,19 @@ declare var $: any;
   styleUrls: ['./navbar.component.scss']
 })
 
-export class NavbarComponent {
+export class NavbarComponent implements OnChanges{
   
-  navbarHidden = false;
   sidebarToggler = true;
   previousScroll = 0;
-  
+  @Input()
+  navbarToggle;
   @Output()
   emitEvent = new EventEmitter();
   
+  constructor() {
+    this.navbarToggle = false;
+   }
+
   @HostListener("window:scroll", ['$event'])
   onWindowScroll(event) {
     let currentScroll = window.pageYOffset;
@@ -31,15 +35,19 @@ export class NavbarComponent {
     }
   }
   
-  hideNavbar = () => {
-    setTimeout(() => {
-      this.navbarHidden = true;
-    }, 300);
+  ngOnChanges(){
+    this.navbarToggle = false;
   }
 
+  hideNavbar = () => {
+    setTimeout(() => {
+      this.navbarToggle = true;
+    }, 300);
+  }
+  
   showNavbar = () => {
     setTimeout(() => {
-      this.navbarHidden = false;
+      this.navbarToggle = false;
     }, 300);
   }
 
