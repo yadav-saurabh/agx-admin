@@ -13,7 +13,7 @@
           <!-- if menu contains children -->
           <a *ngIf="!item.link" data-toggle="collapse" [href]="'#'+item.label" [class.collapsed]="!temp.isActive"  ><i class="material-icons">{{item.icon}}</i><strong class="text-capitalize d-inline-block">{{item.label}}</strong></a>
           <div *ngIf="!!item.subItem" class="collapse" [class.show]="temp.isActive" [id]="item.label">
-            <li *ngFor="let subItem of item.subItem" class="sub-item" routerLinkActive="active"><a [routerLink]=[subItem.link]><span class="text-uppercase">{{subItem.icon}}</span><strong class="text-capitalize d-inline-block"> {{subItem.label}} </strong><span class="arrow"></span></a></li>
+            <li *ngFor="let subItem of item.subItem" class="sub-item" routerLinkActive="active"><a [routerLink]=subItem.link><span class="text-uppercase">{{subItem.icon}}</span><strong class="text-capitalize d-inline-block"> {{subItem.label}} </strong><span class="arrow"></span></a></li>
           </div>
         </li>
       </ul>

@@ -1,4 +1,4 @@
-<div class="wrapper">
+<div class="wrapper" *ngIf="!pagesRoute;else fullView">
   <div class="sidebar-panel">
     <app-sidebar  [sidebarToggle]="closeSidebar"></app-sidebar>
   </div>
@@ -11,6 +11,11 @@
     <!-- <lib-notify-ng></lib-notify-ng> -->
   </div>
 </div>
+<ng-template #fullView>
+  <router-outlet ></router-outlet>
+</ng-template>
+
+
 <!-- <ng-notifications></ng-notifications> -->
 <!-- <simple-notifications ></simple-notifications> -->
 <!-- <simple-notifications [option]="{maxStack:5}" ></simple-notifications> -->
