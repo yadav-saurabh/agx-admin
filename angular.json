@@ -28,7 +28,8 @@
             ],
             "styles": [
               "src/styles.scss",
-              "node_modules/fullcalendar/dist/fullcalendar.min.css"
+              "node_modules/fullcalendar/dist/fullcalendar.min.css",
+              "node_modules/nprogress/nprogress.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.slim.min.js",
@@ -37,7 +38,8 @@
               "node_modules/moment/min/moment.min.js",
               "node_modules/chart.js/dist/Chart.min.js",
               "node_modules/@ckeditor/ckeditor5-build-classic/build/ckeditor.js",
-              "node_modules/fullcalendar/dist/fullcalendar.min.js"
+              "node_modules/fullcalendar/dist/fullcalendar.min.js",
+              "node_modules/nprogress/nprogress.js"
             ]
           },
           "configurations": {
