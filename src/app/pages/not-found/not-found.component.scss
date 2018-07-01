@@ -1,16 +1,17 @@
-$bgColor: #f7f7f7;
+@import '../../../assets/style/variables';
+
+
 $jaggedDistance: 32px;
 
 // boo
 $booSize: $jaggedDistance * 5;
-$booBg: $bgColor;
+$booBg: $body-bg;
 $booShadow: darken($booBg, 5%);
 
 // face
 $booFaceSize: round($jaggedDistance / 1.3333);
 $booFaceColor: #9b9b9b;
 
-// ===========
 
 @keyframes floating {
 	0% {
@@ -42,8 +43,6 @@ $booFaceColor: #9b9b9b;
 	}			
 }
 
-// ===========
-
 @mixin border-bottom-jagged($size, $color-outer) {
   position: relative;
   padding-bottom: $size; 
@@ -59,27 +58,16 @@ $booFaceColor: #9b9b9b;
     background-repeat: repeat-x;
     background-size: $size $size;
     background-position: left bottom;
-    background-image: linear-gradient(-45deg, $color-outer ($size / 2), transparent 0),
-                      linear-gradient(45deg, $color-outer ($size / 2), transparent 0),
-                      linear-gradient(-45deg, $booFaceColor ($size / 1.7), transparent 0),
-                      linear-gradient(45deg, $booFaceColor ($size / 1.7), transparent 0);
+    background-image: linear-gradient(-45deg, $color-outer ($size / 2), transparent 0),linear-gradient(45deg, $color-outer ($size / 2), transparent 0),linear-gradient(-45deg, $booFaceColor ($size / 1.7), transparent 0),linear-gradient(45deg, $booFaceColor ($size / 1.7), transparent 0);
   }
 }
 
-// ===========
-
-body {
-  background-color: $bgColor;
-}
-
 .container {
-  font-family: 'Varela Round', sans-serif;
   color: $booFaceColor;
   position: relative;
   height: 100vh;
   text-align: center;
   font-size: $jaggedDistance / 2;
-  
   h1 {
     font-size: $jaggedDistance;
     margin-top: $jaggedDistance;
@@ -107,7 +95,7 @@ body {
   overflow: hidden;
   border-radius: ($booSize / 2) ($booSize / 2) 0 0;
   box-shadow: -($jaggedDistance / 2) 0 0 2px rgba($booShadow, .5) inset;
-  @include border-bottom-jagged($jaggedDistance, $bgColor);
+  @include border-bottom-jagged($jaggedDistance, $body-bg);
   animation: floating 3s ease-in-out infinite;
 
   .face {
