@@ -3,15 +3,27 @@
 .w-13{
   width: 13%;
 }
+.w-30{
+  width: 30%;
+}
+.show-sm{
+  display: none;
+}
 
 @include media-breakpoint-down(md) {
-  .w-13, .w-25 {
-    width: auto !important;
+  .w-13, .w-25 ,.w-30{
+    width: 45% !important;
+  }
+  .w-sm-80{
+    width: 80% !important;
   }
   .m-lg-3 {
     margin: .3rem;
   }
   .hide-sm{
     display:none;
+  }
+  .show-sm{
+    display: block;
   }
 }

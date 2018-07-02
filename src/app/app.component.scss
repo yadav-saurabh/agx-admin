@@ -1,4 +1,7 @@
-@import '../styles.scss';
+// @import '../styles.scss';
+@import '../assets/style/mixins';
+@import '../assets/style/variables';
+
 
 .wrapper{
   display: flex;
@@ -14,7 +17,27 @@
   }
 }
 
-@media only screen and (max-device-width : $mobile-screen) {
+// @media only screen and (max-device-width : $mobile-screen) {
+   
+// }
+.navigation-bar{
+  left: 0;
+  padding: 10px 15px;
+  ul{
+    display: none;
+  }
+  .navbar-brand{
+    display: initial;
+    width: 100%;
+    text-align: center;
+  }
+}
+.nav-toggle-btn{
+  display: initial;
+}
+
+
+@include media-breakpoint-down(md) {
   .sidebar-panel{
     width: 0;
   }
@@ -24,5 +47,5 @@
       margin: $navbar-height / 2;
       margin-top: ($navbar-height * 2) - 20px ;
     }
-  } 
+  }
 }

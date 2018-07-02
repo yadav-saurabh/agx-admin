@@ -1,3 +1,4 @@
+@import "../../assets/style/mixins";
 @import '../../assets/style/variables';
 
 .sidebar{
@@ -146,7 +147,11 @@ span.arrow {
 }
 
 
-@media only screen and (max-device-width : $mobile-screen) {
+// @media only screen and (max-device-width : $mobile-screen) {
+// }
+
+
+@include media-breakpoint-down(md) {
   .sidebar{
     width: $sidebar-width-mob;
     &.hide {
