@@ -1,4 +1,4 @@
-<div class="sidebar" [class.hide]="cs.sidebarToggle">
+<div class="sidebar" [class.hide]="cs.sidebarToggleValue">
   <div class="sidebar-header align-middle">
     <!-- <img class="brandImg" src="http://via.placeholder.com/60x60" alt="brandImg"> -->
     <strong class="text-uppercase d-inline-block">ANGULAR ADMIN</strong>
@@ -19,3 +19,4 @@
     </ul>
   </div>
 </div>
+<div *ngIf="!cs.sidebarToggleValue" class="sidebarOutside" (click)="cs.sidebarToggle()" ></div>

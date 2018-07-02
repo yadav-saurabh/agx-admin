@@ -10,15 +10,13 @@ import { CommonService } from './common.service';
 })
 export class AppComponent implements OnInit {
 
-  // closeSidebar = true;
-  pagesRoute = false;
-  // hideNavbar;
+  pagesComponentRoute = false;
 
-  constructor(private router: Router,private cs:CommonService) { }
+  constructor(private router: Router, private cs: CommonService) { }
 
   ngOnInit() {
     this.router.events.subscribe((obj: any) => {
-      this.pagesRoute = (!!obj.url && obj.url.includes('/pages')) ? true : false;
+      this.pagesComponentRoute = (!!obj.url && obj.url.includes('/pages')) ? true : false;
       if (obj instanceof RouteConfigLoadStart) {
         NProgress.start();
         NProgress.set(0.4);
@@ -28,19 +26,12 @@ export class AppComponent implements OnInit {
           NProgress.done();
           NProgress.remove();
         }, 500);
-      } else if (obj instanceof NavigationEnd){
-        this.cs.navbarToggle = !this.cs.navbarToggle;
-        this.cs.sidebarToggle = !this.cs.sidebarToggle;
-        // this.cs.sidebarToggle = false;
-        // this.closeSidebar = !this.closeSidebar; 
+      } else if (obj instanceof NavigationEnd) {
+        this.cs.navbarToggleValue = false;
+        this.cs.sidebarToggleValue = true;
         window.scrollTo(0, 0);
-        // this.hideNavbar = !this.hideNavbar;
       }
     });
   }
-
-  // navBarEvent(event) {
-  //   this.closeSidebar = event;
-  // }
 
 }

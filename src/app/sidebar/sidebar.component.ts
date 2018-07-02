@@ -7,7 +7,7 @@ import { CommonService } from '../common.service';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent {
-
+  
   constructor(private cs:CommonService){}
 
   sidebarItems = [
@@ -36,5 +36,5 @@ export class SidebarComponent {
     {link:'/editors', label:'editors',icon:'edit'}, 
     {link:'/calendar', label:'calendar',icon:'date_range'} 
   ];
-
+  
 }

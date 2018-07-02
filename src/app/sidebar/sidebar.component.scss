@@ -5,7 +5,7 @@
   height: 100vh;
   position: fixed;
   overflow: hidden;
-  z-index: 99;
+  z-index: $sidebar-zindex;
   width:$sidebar-width;
   background-color: rgba($black,.9);
   transition-property: top,bottom,width;
@@ -146,9 +146,17 @@ span.arrow {
   border-right: 2rem solid;
 }
 
-
-// @media only screen and (max-device-width : $mobile-screen) {
-// }
+.sidebarOutside{
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color:rgba(lighten($black,50%),.5);
+  opacity: 50%;
+  z-index: $sidebar-zindex - 1;
+  display: none;
+}
 
 
 @include media-breakpoint-down(sm) {
@@ -171,6 +179,9 @@ span.arrow {
 @include media-breakpoint-down(lg) {
   .sidebar{
     width:100px;
+  }
+  .sidebarOutside{
+    display: block;
   }
   .sidebar-item {
     a  {

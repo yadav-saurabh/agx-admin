@@ -32,18 +32,14 @@ export class NavbarComponent {
 
   hideNavbar = () => {
     setTimeout(() => {
-      this.cs.navbarToggle = true;
+      this.cs.navbarToggleValue = true;
     }, 300);
   }
   
   showNavbar = () => {
     setTimeout(() => {
-      this.cs.navbarToggle = false;
+      this.cs.navbarToggleValue = false;
     }, 300);
   }
-
-  toggleSidebar() {
-    this.cs.sidebarToggle = !this.cs.sidebarToggle;
-  }
-
+  
 }

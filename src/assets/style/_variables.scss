@@ -33,11 +33,13 @@ $pagination-active-color:$primary;
 
 $btn-round-br : 1.5rem;
 
-$navbar-height: 50px;
 
 $sidebar-width: 20%;
 $sidebar-width-mob: 65%;
 $sidebar-width-ipad: 30%;
+$sidebar-zindex:999;
 
-$mobile-screen: 480px;
+$navbar-height: 50px;
+$navbar-zindex:$sidebar-zindex + 10;
+
 

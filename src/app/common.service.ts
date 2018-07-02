@@ -5,12 +5,20 @@ import { Injectable } from '@angular/core';
 })
 export class CommonService {
 
-  navbarToggle:boolean;
-  sidebarToggle:boolean;
+  navbarToggleValue:boolean;
+  sidebarToggleValue:boolean;
 
   constructor() { 
-    this.sidebarToggle = false;
-    this.navbarToggle = false;
+    this.navbarToggleValue = false;
+    this.navbarToggleValue = false;
+  }
+
+  sidebarToggle():void {
+    this.sidebarToggleValue = !this.sidebarToggleValue;
+  }
+
+  navbarToggle():void{
+    this.navbarToggleValue = !this.navbarToggleValue;
   }
   
 }

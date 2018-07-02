@@ -1,5 +1,5 @@
-<nav class="navbar navigation-bar"  [class.hidden]="navbarToggle">
-  <div class="nav-toggle-btn" [class.open]="!cs.sidebarToggle" (click)="toggleSidebar()">
+<nav class="navbar navigation-bar"  [class.hidden]="cs.navbarToggleValue">
+  <div class="nav-toggle-btn" [class.open]="!cs.sidebarToggleValue" (click)="cs.sidebarToggle()">
     <span *ngFor="let number of [0,1,2,3,4,5]"></span>
   </div>
   <div class="navbar-brand">
