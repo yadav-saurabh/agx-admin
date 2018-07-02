@@ -37,7 +37,7 @@
 }
 
 
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(lg) {
   .sidebar-panel{
     width: 0;
   }

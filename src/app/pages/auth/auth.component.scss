@@ -16,17 +16,6 @@ $ff-regular: 400;
 $ff-medium: 500;
 
 
-/**
-* General configs
-*/
-//  *
-//    box-sizing: border-box;
-
-//  body
-//    font-family: $ff
-//    font-size: $ff-body
-//    line-height: 1em
-  
 button{
   background-color: transparent;
   padding: 0;
@@ -100,8 +89,9 @@ input{
 
   width: 100%;
   height: 100vh;
-  background: url('https://goo.gl/YRxqs1') no-repeat center;
-  background-size: cover;
+  // background-color: #fff;
+  // background: url('https://goo.gl/YRxqs1') no-repeat center;
+  // background-size: cover;
 
   &_options-container{
     position: relative;

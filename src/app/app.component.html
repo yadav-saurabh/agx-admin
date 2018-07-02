@@ -1,9 +1,9 @@
 <div class="wrapper" *ngIf="!pagesRoute;else fullView">
   <div class="sidebar-panel">
-    <app-sidebar  [sidebarToggle]="closeSidebar"></app-sidebar>
+    <app-sidebar></app-sidebar>
   </div>
   <div class="main-panel">
-    <app-navbar  (emitEvent)="navBarEvent($event)" [navbarToggle]="hideNavbar"></app-navbar>
+    <app-navbar></app-navbar>
     <div class="panel-content">
       <router-outlet></router-outlet>
     </div>
@@ -12,5 +12,5 @@
   </div>
 </div>
 <ng-template #fullView>
-  <router-outlet ></router-outlet>
+  <router-outlet></router-outlet>
 </ng-template>

@@ -1,10 +1,10 @@
 <nav class="navbar navigation-bar"  [class.hidden]="navbarToggle">
-  <div class="nav-toggle-btn" [class.open]="!sidebarToggler" (click)="toggleSidebar()">
+  <div class="nav-toggle-btn" [class.open]="!cs.sidebarToggle" (click)="toggleSidebar()">
     <span *ngFor="let number of [0,1,2,3,4,5]"></span>
   </div>
   <div class="navbar-brand">
     <a>
-      <!-- <img src="" width="30" height="30" class="d-inline-block align-top" alt=""> -->
+        <!-- <img class="brandImg" src="http://via.placeholder.com/60x60" alt="brandImg"> -->
       ANGULAR ADMIN
     </a>
   </div>

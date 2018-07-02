@@ -151,7 +151,7 @@ span.arrow {
 // }
 
 
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(sm) {
   .sidebar{
     width: $sidebar-width-mob;
     &.hide {
@@ -165,5 +165,19 @@ span.arrow {
   }
   .sidebar-header{
     height: $navbar-height - 1px;
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .sidebar{
+    width:100px;
+  }
+  .sidebar-item {
+    a  {
+      strong{
+        // min-width: 10.5rem;
+        display: none !important;
+      }
+    }
   }
 }

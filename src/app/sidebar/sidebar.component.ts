@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
+import { CommonService } from '../common.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,8 +8,8 @@ import { Component, Input } from '@angular/core';
 })
 export class SidebarComponent {
 
-  @Input()
-  sidebarToggle;
+  constructor(private cs:CommonService){}
+
   sidebarItems = [
     {link:'/',label:'dashboard',icon:'dashboard'},
     {label:'components',icon:'apps',subItem:[
@@ -35,4 +36,5 @@ export class SidebarComponent {
     {link:'/editors', label:'editors',icon:'edit'}, 
     {link:'/calendar', label:'calendar',icon:'date_range'} 
   ];
+
 }
