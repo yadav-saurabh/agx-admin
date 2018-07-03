@@ -1,8 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
-@import './assets/style/variables';
-@import './assets/style/mixins';
 @import './assets/style/bootstrap-override';
 
 /* custom scroller (not supported in firefox) */
@@ -37,39 +35,59 @@ h2.heading {
 //   border-radius: 50%;
 // }
 
+.sidebar-panel {
+  width: $sidebar-width;
+}
+
+.main-panel {
+  width: calc(100% - #{$sidebar-width});
+}
 
 /**sidebar minimize*/
-// .sidebar-only-icons {
-//   .sidebar-panel,.sidebar {
-//     width: $sidebar-mini-width !important;
-//     .sidebar-header > strong{
-//       display: none !important;
-//     }
-//     .sidebar-item {
-//       margin: 0;
-//       a  {
-//         margin: .5rem 0 0 .5rem !important;
-//         strong, .arrow, &:before{
-//           display: none !important;
-//         }
-//       }
-//       .sub-item{
-//         a{
-//           margin: .3rem 0 .3rem .8rem !important;
-//         }
-//       }
-//     }
-//     &:hover{
-//       width: $sidebar-width !important;
-//     }
-//   }
-//   .main-panel {
-//     width: 100% - $sidebar-mini-width !important;
-//   }
-//   .navigation-bar{
-//     left: $sidebar-mini-width !important;
-//   }
-// }
+.sidebar-only-icons {
+  .sidebar-panel, .sidebar{
+    width: $sidebar-mini-width;
+  }
+  .sidebar {
+    .sidebar-header > strong{
+      display: none !important;
+    }
+    .sidebar-item {
+      margin: 0;
+      a {
+        margin: .5rem 0 0 .5rem;
+        strong, .arrow,{
+          display: none !important;
+        }
+        i.toggle-icon{
+          right: .2rem !important;
+          font-size: 1rem;
+          top: .8rem !important;
+        }
+      }
+    }
+  }
+  .main-panel {
+    width: 100% - $sidebar-mini-width;
+  }
+  .navigation-bar{
+    left: $sidebar-mini-width;
+  }
+}
+
+/* nav bar*/
+.navigation-bar {
+  left: $sidebar-width;
+  transition: top .25s ease;
+}
+/*sidebar*/
+.sidebar {
+  width:$sidebar-width;
+  transition-property: top,bottom,width;
+  transition-duration: .2s,.2s,.35s;
+  transition-timing-function: linear,linear,ease;
+  // transition: width .25s ease;
+}
 
 /* material icons position fix */
 i.material-icons {

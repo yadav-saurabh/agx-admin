@@ -1,56 +1,41 @@
 @import "../../assets/style/mixins";
-@import '../../assets/style/variables';
 
 .navigation-bar {
+  position: fixed;
   top: 0;
   right: 0;
-  opacity: 1;
   z-index: $navbar-zindex;
-  position: fixed;
-  left: $sidebar-width;
   height: $navbar-height;
   background-color: $white;
-  padding: 0 15px;
-  transition-duration: .2s,.2s,.35s;
-  transition-timing-function: linear,linear,ease;
-  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+  padding: 0 1rem;
+  box-shadow: $box-shadow;
   &.hidden {
-    opacity: 0;
-    height: $navbar-height - 10px;
-    z-index: -1;
+    top: -$navbar-height;
   }
   ul {
-    list-style: none;
+    display: flex;
     margin: 0;
     padding: 0;    
-    display: flex;
     align-items: center;
-    #minimizeSidebar{
-      // background-color: $white;
-    }
     li {
       display: flex;
       padding: 0.5em;
     }
   }
-  .navbar-brand{
+  .navbar-brand {
     display: none;
   }
 }
 
+/* navbar burger button */
 .nav-toggle-btn {
   display: none;
-  width: 30px;
-  height: 100%;
-  padding: 10px 0;
+  width: 2rem;
+  padding: 1rem 0;
   position: absolute;
-  top: 15%;
-  cursor: pointer;
   span {
     width: 50%;
     height: 2px;
-    opacity: 1;
-    display: block;
     position: absolute;
     background: $black;
     transform: rotate(0deg);
@@ -69,8 +54,8 @@
     }
   }
 }
-
-.nav-toggle-btn.open{
+/* navbar burger button animation*/
+.nav-toggle-btn.open {
   span{
     &:nth-child(1),&:nth-child(6) {
       transform: rotate(45deg);
@@ -105,8 +90,16 @@
   }
 }
 
+@include media-breakpoint-down(lg) {
+  .navigation-bar{
+    left: 10%;
+    padding: 10px 15px;
+  }
+}
+
 @include media-breakpoint-down(sm) {
   .navigation-bar{
+    left: 0;
     ul{
       display: none;
     }
@@ -121,9 +114,3 @@
   }
 }
 
-@include media-breakpoint-down(lg) {
-  .navigation-bar{
-    left: 0;
-    padding: 10px 15px;
-  }
-}

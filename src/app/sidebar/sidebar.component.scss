@@ -1,17 +1,14 @@
 @import "../../assets/style/mixins";
-@import '../../assets/style/variables';
 
 .sidebar{
   height: 100vh;
   position: fixed;
   overflow: hidden;
   z-index: $sidebar-zindex;
-  width:$sidebar-width;
   background-color: rgba($black,.9);
-  transition-property: top,bottom,width;
-  transition-duration: .2s,.2s,.35s;
-  transition-timing-function: linear,linear,ease;
-  box-shadow: 0 16px 38px -12px rgba(0,0,0,.56), 0 4px 25px 0 rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.2);
+  box-shadow: 0 1rem 2.1rem -.9rem rgba($black,.6),
+              0 .2rem 1.2rem 0 rgba($black,.12), 
+              0 .5rem .6rem .25rem rgba($black,.2);
   hr {
     width: 90%;
     left: 5%;
@@ -26,13 +23,14 @@
   color: $white;
   align-items: center;
   justify-content: center;
-  height: $navbar-height + 10px;
+  height: $navbar-height;
   p{
     margin: 0;
   }
 }
+
 .sidebar-body{
-  /*custom scrollbar*/
+  /*custom scrollbar webkit browser (not supported in firefox)*/
   &::-webkit-scrollbar {
     width: .3rem;
   }
@@ -47,7 +45,7 @@
   }
   
   color: $white;
-  height: calc(100% - #{($navbar-height + 10px)});
+  height: calc(100% - #{($navbar-height)});
   overflow: hidden;
   overflow-y: auto;
   ul{
@@ -58,44 +56,23 @@
     }
   }
 }
-
+/*sidebar item inside sidebar-body*/
 .sidebar-item {
-  margin: 5px;
+  margin: .25rem;
   margin-right: 0px;
   a{
     color: $white;
     display: block;
-    text-decoration: none;
-    background-color: transparent;
-    margin: 15px 0 0 10px;
+    margin: .9rem 0 0 .6rem;
     border-radius: 3px 0 0 3px;
     padding:.5rem .8rem;
-    cursor: pointer;
-    text-transform: capitalize;
-    strong{
+    strong {
       padding-left: 1.2rem;
-    }
-  }
-  &:hover, &.active, .sub-item:hover, .sub-item.active {
-    &:not(.active) > a {
-      background-color: rgba($white,.2);
-      span.arrow{
-        border-right-color: rgba($white,.3);
-      }
-    }
-    & > a {
-      background-color: rgba($white,.4);
-      span.arrow{
-        border-right-color: rgba($white,.6);
-      }
-    }
-     span.arrow {
-      display: inline-block;
     }
   }
   .sub-item {
     &:first-child {
-      margin-top: 10px;
+      margin-top: .8rem;
     } 
     a {
       margin: .3rem 0 .3rem 1rem;
@@ -110,42 +87,54 @@
       border: 1rem solid transparent;
       border-right: 1.5rem solid;
     }
-  }
-  &.active, .sub-item.active {
-    & > a:not([data-toggle=collapse]){
-      background-color: $primary;
-    }
-  }
-  &, .sub-item{
-   & > a[data-toggle=collapse] {
-      &:before{
-        content: '\e316';
-        font-size: 2rem;
-        position: absolute;
-        font-family: 'Material Icons';
-        right: 5px;
-        top: 0;
-        transform: rotate(0deg);
-        transition: all 0.5s;
-      }
-      &.collapsed:before{
-        transform: rotate(180deg);
-        transition: all 0.5s;
-      }
-    }  
   } 
 }
 
+.sidebar-item,.sub-item{
+  /*hover bg color*/
+  &:hover:not(.active) > a {
+    background-color: rgba($white,.2);
+    span.arrow{
+      display: inline-block;
+      border-right-color: rgba($white,.3);
+    }
+  }
+  /*active bg color*/
+  &.active > a{
+    background-color: rgba($white,.4);
+    span.arrow{
+      border-right-color: rgba($white,.6);
+      display: inline-block;
+    }
+    &:not([data-toggle=collapse]){
+      background-color: $primary;
+    }
+  }
+  /*toggle button animation*/
+  & > a[data-toggle=collapse] {
+    i.toggle-icon{
+      position: absolute;
+      right: .5rem;
+      top: .5rem;
+      transition: all 0.5s;
+    }
+    &.collapsed i.toggle-icon{
+      transform: rotate(180deg);
+      transition: all 0.5s;
+    }
+  }
+}
 
 span.arrow {
   border: 1.3rem solid transparent;
   display: none;
   position: absolute;
-  right: 0px;
-  top: 0px;
+  right: -.5rem;
+  top: 0;
   border-right: 2rem solid;
 }
 
+/*sidebar outside div (onclick close)*/
 .sidebarOutside{
   height: 100vh;
   width: 100vw;

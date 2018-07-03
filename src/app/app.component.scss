@@ -6,11 +6,7 @@
 .wrapper{
   display: flex;
 }
-.sidebar-panel{
-  width: $sidebar-width;
-}
 .main-panel{
-  width: calc(100% - #{$sidebar-width});
   .panel-content{
     margin: $navbar-height;
     margin-top: $navbar-height *2;

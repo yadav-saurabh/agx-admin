@@ -5,20 +5,26 @@ import { Injectable } from '@angular/core';
 })
 export class CommonService {
 
-  navbarToggleValue:boolean;
-  sidebarToggleValue:boolean;
+  navbarToggleValue: boolean;
+  sidebarToggleValue: boolean;
+  sidebarMiniToggleValue: boolean;
 
-  constructor() { 
+  constructor() {
     this.navbarToggleValue = false;
-    this.navbarToggleValue = false;
+    this.sidebarToggleValue = false;
+    this.sidebarMiniToggleValue = false;
   }
 
-  sidebarToggle():void {
+  sidebarToggle(): void {
     this.sidebarToggleValue = !this.sidebarToggleValue;
   }
 
-  navbarToggle():void{
+  sidebarMiniToggle(): void {
+    this.sidebarMiniToggleValue = !this.sidebarMiniToggleValue;
+  }
+
+  navbarToggle(): void {
     this.navbarToggleValue = !this.navbarToggleValue;
   }
-  
+
 }
