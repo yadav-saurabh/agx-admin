@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, NgForm } from '@angular/forms';
+// import { FormBuilder, FormGroup, NgForm } from '@angular/forms';
 // import { NotificationsService } from 'angular2-notifications';
-import { NotificationsService } from 'projects/angular6-notifications/src/public_api';
+// import { NotificationsService } from 'projects/angular6-notifications/src/public_api';
 
 @Component({
   selector: 'app-notifications',
@@ -9,7 +9,7 @@ import { NotificationsService } from 'projects/angular6-notifications/src/public
   styles: ['']
 })
 export class NotificationsComponent implements OnInit {
-
+/*
 	form: FormGroup;
   types = ['alert', 'error', 'info', 'warn', 'success'];
 	animationTypes = ['fromRight', 'fromLeft', 'scale', 'rotate'];
@@ -44,11 +44,11 @@ export class NotificationsComponent implements OnInit {
     maxWidth: 300,
   };
 
-
-  constructor(private notify:NotificationsService, private fb: FormBuilder) { }
+*/
+constructor(/*private notify:NotificationsService, private fb: FormBuilder*/) { }
 
   ngOnInit() {
-		this.form = this.fb.group({
+	/*	this.form = this.fb.group({
 			type: 'success',
 			title: 'This is just a title',
 			content: 'This is just some content',
@@ -60,9 +60,9 @@ export class NotificationsComponent implements OnInit {
 			clickToClose: true,
 			maxStack : 5,
 			animate: 'fromRight'
-		});
+		});*/
 	}
-
+/*
 	create() {
 		const temp = this.form.getRawValue();
 		const title = temp.title;
@@ -79,5 +79,5 @@ export class NotificationsComponent implements OnInit {
 		this.notify.success(title, content, this.options);
 		// this.notifications.create(title, content, type, temp);
 	}
-
+*/
 }

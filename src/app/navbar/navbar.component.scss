@@ -10,7 +10,7 @@
   left: $sidebar-width;
   height: $navbar-height;
   background-color: $white;
-  padding: 0 $navbar-height;
+  padding: 0 15px;
   transition-duration: .2s,.2s,.35s;
   transition-timing-function: linear,linear,ease;
   box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
@@ -25,6 +25,9 @@
     padding: 0;    
     display: flex;
     align-items: center;
+    #minimizeSidebar{
+      // background-color: $white;
+    }
     li {
       display: flex;
       padding: 0.5em;
@@ -102,12 +105,8 @@
   }
 }
 
-
-
-@include media-breakpoint-down(lg) {
+@include media-breakpoint-down(sm) {
   .navigation-bar{
-    left: 0;
-    padding: 10px 15px;
     ul{
       display: none;
     }
@@ -118,7 +117,13 @@
     }
   }
   .nav-toggle-btn{
-    display: initial;
+    display: inline-block;
   }
+}
 
+@include media-breakpoint-down(lg) {
+  .navigation-bar{
+    left: 0;
+    padding: 10px 15px;
+  }
 }

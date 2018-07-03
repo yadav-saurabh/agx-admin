@@ -36,5 +36,5 @@ export class SidebarComponent {
     {link:'/editors', label:'editors',icon:'edit'}, 
     {link:'/calendar', label:'calendar',icon:'date_range'} 
   ];
-  
+
 }

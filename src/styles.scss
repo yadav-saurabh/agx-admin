@@ -37,6 +37,40 @@ h2.heading {
 //   border-radius: 50%;
 // }
 
+
+/**sidebar minimize*/
+// .sidebar-only-icons {
+//   .sidebar-panel,.sidebar {
+//     width: $sidebar-mini-width !important;
+//     .sidebar-header > strong{
+//       display: none !important;
+//     }
+//     .sidebar-item {
+//       margin: 0;
+//       a  {
+//         margin: .5rem 0 0 .5rem !important;
+//         strong, .arrow, &:before{
+//           display: none !important;
+//         }
+//       }
+//       .sub-item{
+//         a{
+//           margin: .3rem 0 .3rem .8rem !important;
+//         }
+//       }
+//     }
+//     &:hover{
+//       width: $sidebar-width !important;
+//     }
+//   }
+//   .main-panel {
+//     width: 100% - $sidebar-mini-width !important;
+//   }
+//   .navigation-bar{
+//     left: $sidebar-mini-width !important;
+//   }
+// }
+
 /* material icons position fix */
 i.material-icons {
   vertical-align: middle;
