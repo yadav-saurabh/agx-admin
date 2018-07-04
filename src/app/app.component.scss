@@ -34,6 +34,18 @@
 
 
 @include media-breakpoint-down(lg) {
+  // .sidebar-panel{
+  //   width: 0;
+  // }
+  // .main-panel{
+  //   width: 100%;
+  //   .panel-content{
+  //     margin: $navbar-height / 2;
+  //     margin-top: ($navbar-height * 2) - 20px ;
+  //   }
+  // }
+}
+@include media-breakpoint-down(sm) {
   .sidebar-panel{
     width: 0;
   }

@@ -35,18 +35,32 @@ h2.heading {
 //   border-radius: 50%;
 // }
 
-.sidebar-panel {
-  width: $sidebar-width;
-}
 
-.main-panel {
-  width: calc(100% - #{$sidebar-width});
+/* nav bar*/
+.navigation-bar {
+  left: $sidebar-width;
+  transition: all .25s ease;
+}
+/*sidebar*/
+.sidebar,.sidebar-panel {
+  width:$sidebar-width;
+  transition: all .25s ease;
+}
+/**main panel*/
+.main-panel{
+  width: 100% - $sidebar-width;
 }
 
 /**sidebar minimize*/
-.sidebar-only-icons {
+.sidebar-mini {
   .sidebar-panel, .sidebar{
     width: $sidebar-mini-width;
+  }
+  .main-panel {
+    width: 100% - $sidebar-mini-width;
+  }
+  .navigation-bar{
+    left: $sidebar-mini-width;
   }
   .sidebar {
     .sidebar-header > strong{
@@ -66,27 +80,58 @@ h2.heading {
         }
       }
     }
-  }
-  .main-panel {
-    width: 100% - $sidebar-mini-width;
-  }
-  .navigation-bar{
-    left: $sidebar-mini-width;
-  }
+  } 
 }
-
-/* nav bar*/
-.navigation-bar {
-  left: $sidebar-width;
-  transition: top .25s ease;
-}
-/*sidebar*/
-.sidebar {
-  width:$sidebar-width;
-  transition-property: top,bottom,width;
-  transition-duration: .2s,.2s,.35s;
-  transition-timing-function: linear,linear,ease;
-  // transition: width .25s ease;
+/*sidebar for md devices*/
+@include media-breakpoint-between(sm,lg) {
+  .wrapper{
+    .sidebar-panel, .sidebar.hide{
+      width: $sidebar-mini-width-md;
+    }
+    .sidebar{
+      width: $sidebar-width-md;
+    }
+    .main-panel {
+      width: 100% - $sidebar-mini-width-md;
+    }
+    .navigation-bar{
+      left: $sidebar-mini-width-md;
+      z-index: $sidebar-zindex - 10 !important;
+    }
+    .sidebar.hide {
+      .sidebar-header > strong{
+        display: none !important;
+      }
+      .sidebar-item {
+        margin: 0;
+        a {
+          margin: .5rem 0 0 .5rem;
+          strong, .arrow,{
+            display: none !important;
+          }
+          i.toggle-icon{
+            right: .2rem !important;
+            font-size: 1rem;
+            top: .8rem !important;
+          }
+        }
+      }
+    }
+  }
+  #minimizeSidebar{
+    display: none;
+  }
+  .nav-toggle-btn{
+    display: inline-block !important;
+    z-index: $sidebar-zindex + 10 !important;
+    &.open{
+      left: $sidebar-width-md;
+      span{
+        z-index: $sidebar-zindex + 10 !important;
+        background-color: darken($black,100%) !important;
+      }
+    }
+  }
 }
 
 /* material icons position fix */

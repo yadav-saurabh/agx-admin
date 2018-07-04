@@ -1,13 +1,14 @@
 <div class="sidebar" [class.hide]="cs.sidebarToggleValue">
   <div class="sidebar-header align-middle">
     <!-- <img class="brandImg" src="http://via.placeholder.com/60x60" alt="brandImg"> -->
+    <span class="text-uppercase sw-hiiden p-3">ad</span>
     <strong class="text-uppercase d-inline-block">ANGULAR ADMIN</strong>
   </div>
   <hr>
   <div class="sidebar-body">
     <ul>
       <li *ngFor="let item of sidebarItems;let i = index;" class="sidebar-item" [class.active]="temp.isActive" #temp="routerLinkActive" routerLinkActive  [routerLinkActiveOptions]="{exact: true}">
-        <a *ngIf="!item.subItem" [routerLink]="item.link" ><i class="material-icons">{{item.icon}}</i><strong class="text-capitalize sw-hiiden ">{{item.label}}</strong>
+        <a *ngIf="!item.subItem" [routerLink]="item.link" ><i class="material-icons">{{item.icon}}</i><strong class="text-capitalize ">{{item.label}}</strong>
           <span class="arrow"></span>
         </a>
         <!-- if menu contains children -->
@@ -18,5 +19,5 @@
       </li>
     </ul>
   </div>
+  <div *ngIf="!cs.sidebarToggleValue" class="sidebarOutside" (click)="cs.sidebarToggle()" ></div>
 </div>
-<div *ngIf="!cs.sidebarToggleValue" class="sidebarOutside" (click)="cs.sidebarToggle()" ></div>

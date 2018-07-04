@@ -4,6 +4,8 @@
   height: 100vh;
   position: fixed;
   overflow: hidden;
+  left: 0;
+  top: 0;
   z-index: $sidebar-zindex;
   background-color: rgba($black,.9);
   box-shadow: 0 1rem 2.1rem -.9rem rgba($black,.6),
@@ -29,7 +31,7 @@
   }
 }
 
-.sidebar-body{
+.sidebar-body {
   /*custom scrollbar webkit browser (not supported in firefox)*/
   &::-webkit-scrollbar {
     width: .3rem;
@@ -89,7 +91,7 @@
     }
   } 
 }
-
+/*hover and active*/
 .sidebar-item,.sub-item{
   /*hover bg color*/
   &:hover:not(.active) > a {
@@ -124,7 +126,7 @@
     }
   }
 }
-
+/*arrow on hover and selection*/
 span.arrow {
   border: 1.3rem solid transparent;
   display: none;
@@ -149,27 +151,27 @@ span.arrow {
 
 
 @include media-breakpoint-down(lg) {
-  .sidebar{
-    width:100px;
-  }
+  // .sidebar{
+  //   width:100px;
+  // }
   .sidebarOutside{
     display: block;
   }
-  .sidebar-item {
-    a  {
-      strong.sw-hide{
-        display: none;
-      }
-    }
-  }
+  // .sidebar-item {
+  //   a  {
+  //     strong.sw-hide{
+  //       display: none;
+  //     }
+  //   }
+  // }
 }
 
 
 @include media-breakpoint-down(sm) {
   .sidebar{
-    width: $sidebar-width-mob;
+    width: $sidebar-width-sm;
     &.hide {
-      width:0;
+      left: -$sidebar-width-sm - 5%;
     }
     .sidebar-item {
       a {
