@@ -1,4 +1,4 @@
-<nav class="navbar navigation-bar"  [class.hidden]="cs.navbarToggleValue">
+<nav class="navbar navigation-bar"  [class.hidden]="cs.navbarToggleValue" [class.sidebar-hidden]="cs.sidebarToggleValue">
   <div class="nav-toggle-btn" [class.open]="!cs.sidebarToggleValue" (click)="cs.sidebarToggle()">
     <span *ngFor="let number of [0,1,2,3,4,5]"></span>
   </div>
@@ -9,7 +9,7 @@
     </a>
   </div>
   
-  <ul>
+  <ul class="left-ul">
     <li>
       <button id="minimizeSidebar" class="btn btn-just-icon btn-round btn-light" (click)="cs.sidebarMiniToggle()">
         <i *ngIf="!cs.sidebarMiniToggleValue" class="material-icons sd-visible">more_vert</i>
@@ -18,7 +18,7 @@
     </li>
     <li class="nav-item">Dashboard</li>
   </ul>
-  <ul>
+  <ul class="right-ul">
     <li>
       <form class="form-inline">
         <input class="form-control mr-sm-2 no-border" type="search" placeholder="Search" aria-label="Search">

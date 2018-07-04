@@ -46,9 +46,31 @@ h2.heading {
   width:$sidebar-width;
   transition: all .25s ease;
 }
+
 /**main panel*/
 .main-panel{
   width: 100% - $sidebar-width;
+}
+
+/** sidebar mini mixin*/
+@mixin sidebar-mini-mixin() {
+  .sidebar-header > strong{
+    display: none !important;
+  }
+  .sidebar-item {
+    margin: 0;
+    a {
+      margin: .5rem 0 0 .5rem;
+      strong, .arrow,{
+        display: none !important;
+      }
+      i.toggle-icon{
+        right: 0 !important;
+        font-size: 1rem;
+        top: .8rem !important;
+      }
+    }
+  }
 }
 
 /**sidebar minimize*/
@@ -62,75 +84,19 @@ h2.heading {
   .navigation-bar{
     left: $sidebar-mini-width;
   }
-  .sidebar {
-    .sidebar-header > strong{
-      display: none !important;
-    }
-    .sidebar-item {
-      margin: 0;
-      a {
-        margin: .5rem 0 0 .5rem;
-        strong, .arrow,{
-          display: none !important;
-        }
-        i.toggle-icon{
-          right: .2rem !important;
-          font-size: 1rem;
-          top: .8rem !important;
-        }
+  .sidebar{
+    @include sidebar-mini-mixin();
+    @include media-breakpoint-down(lg) {
+      .sidebar-item  a strong {
+        display: inline-block !important;
       }
     }
-  } 
+  }
 }
 /*sidebar for md devices*/
-@include media-breakpoint-between(sm,lg) {
-  .wrapper{
-    .sidebar-panel, .sidebar.hide{
-      width: $sidebar-mini-width-md;
-    }
-    .sidebar{
-      width: $sidebar-width-md;
-    }
-    .main-panel {
-      width: 100% - $sidebar-mini-width-md;
-    }
-    .navigation-bar{
-      left: $sidebar-mini-width-md;
-      z-index: $sidebar-zindex - 10 !important;
-    }
-    .sidebar.hide {
-      .sidebar-header > strong{
-        display: none !important;
-      }
-      .sidebar-item {
-        margin: 0;
-        a {
-          margin: .5rem 0 0 .5rem;
-          strong, .arrow,{
-            display: none !important;
-          }
-          i.toggle-icon{
-            right: .2rem !important;
-            font-size: 1rem;
-            top: .8rem !important;
-          }
-        }
-      }
-    }
-  }
-  #minimizeSidebar{
-    display: none;
-  }
-  .nav-toggle-btn{
-    display: inline-block !important;
-    z-index: $sidebar-zindex + 10 !important;
-    &.open{
-      left: $sidebar-width-md;
-      span{
-        z-index: $sidebar-zindex + 10 !important;
-        background-color: darken($black,100%) !important;
-      }
-    }
+@include media-breakpoint-between(md,lg) {
+  .sidebar.hide {
+    @include sidebar-mini-mixin();
   }
 }
 

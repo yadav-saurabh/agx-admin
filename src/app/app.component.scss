@@ -1,49 +1,27 @@
-// @import '../styles.scss';
 @import '../assets/style/mixins';
-@import '../assets/style/variables';
-
 
 .wrapper{
   display: flex;
 }
 .main-panel{
+  // width: 100% - $sidebar-width;
   .panel-content{
     margin: $navbar-height;
     margin-top: $navbar-height *2;
   }
 }
 
-// @media only screen and (max-device-width : $mobile-screen) {
-   
-// }
-.navigation-bar{
-  left: 0;
-  padding: 10px 15px;
-  ul{
-    display: none;
-  }
-  .navbar-brand{
-    display: initial;
-    width: 100%;
-    text-align: center;
-  }
-}
-.nav-toggle-btn{
-  display: initial;
-}
-
-
 @include media-breakpoint-down(lg) {
-  // .sidebar-panel{
-  //   width: 0;
-  // }
-  // .main-panel{
-  //   width: 100%;
-  //   .panel-content{
-  //     margin: $navbar-height / 2;
-  //     margin-top: ($navbar-height * 2) - 20px ;
-  //   }
-  // }
+  .sidebar-panel{
+    width: $sidebar-mini-width-md;
+  }
+  .main-panel {
+    width: 100% - $sidebar-mini-width-md;
+    .panel-content{
+      margin: $navbar-height / 2;
+      margin-top: ($navbar-height * 2) - 20px ;
+    }
+  }
 }
 @include media-breakpoint-down(sm) {
   .sidebar-panel{
@@ -51,9 +29,5 @@
   }
   .main-panel{
     width: 100%;
-    .panel-content{
-      margin: $navbar-height / 2;
-      margin-top: ($navbar-height * 2) - 20px ;
-    }
   }
 }
