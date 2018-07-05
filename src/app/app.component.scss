@@ -12,7 +12,11 @@
 }
 
 @include media-breakpoint-down(lg){
+  .sidebar-panel{
+    width: $sidebar-width-lg;
+  }
   .main-panel{
+    width: calc(100% - #{$sidebar-width-lg});
     .panel-content{
       margin: $navbar-height / 2;
       margin-top: $navbar-height  + 20px;

@@ -56,13 +56,13 @@ h2.heading {
 /**sidebar minimize*/
 .sidebar-mini {
   .sidebar-panel, .sidebar{
-    width: $sidebar-mini-width;
+    width: $sidebar-mini-width !important;
   }
   .main-panel {
-    width: calc(100% - #{$sidebar-mini-width});
+    width: calc(100% - #{$sidebar-mini-width}) !important;
   }
   .navigation-bar{
-    left: $sidebar-mini-width;
+    left: $sidebar-mini-width !important;
   }
   .sidebar{
     @include sidebar-mini-mixin();

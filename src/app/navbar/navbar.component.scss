@@ -91,6 +91,12 @@
   }
 }
 
+@include media-breakpoint-down(lg){
+  .navigation-bar{
+    left: $sidebar-width-lg;
+  }
+}
+
 @include media-breakpoint-down(md) {
   #minimizeSidebar{
     display: none;

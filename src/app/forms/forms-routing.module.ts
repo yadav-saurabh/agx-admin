@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ElementsComponent } from './elements/elements.component';
+import { BasicComponent } from './basic/basic.component';
 import { ValidationsComponent } from './validations/validations.component';
-import { ExamplesComponent } from './examples/examples.component';
+import { AdvanceComponent } from './advance/advance.component';
 
 
 const routes: Routes = [
-  { path: 'elements', component: ElementsComponent },
+  { path: 'basic', component: BasicComponent },
   { path: 'validations', component: ValidationsComponent },
-  { path: 'examples', component: ExamplesComponent }
+  { path: 'advance', component: AdvanceComponent }
 ];
 
 

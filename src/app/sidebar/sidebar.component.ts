@@ -24,9 +24,9 @@ export class SidebarComponent {
       {link:'/components/typography',label:'typography',icon:'t'},
     ]},
     {label:'Forms',icon:'ballot', subItem:[
-      {link:'/forms/elements',label:'Form Elemets',icon:'fe'},
-      {link:'/forms/validations',label:'Form Validation',icon:'fv'},
-      {link:'/forms/examples',label:'Form Examples',icon:'se'}
+      {link:'/forms/basic',label:'basic form',icon:'bf'},
+      {link:'/forms/advance',label:'advanced form',icon:'af'},
+      {link:'/forms/validations',label:'Form Validation',icon:'fv'}
     ]},
     {label:'Pages',icon:'pages',subItem:[
       {link:'/pages/notfound',label:'Not Found',icon:'nf'},
