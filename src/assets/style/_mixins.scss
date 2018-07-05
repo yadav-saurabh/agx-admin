@@ -2,3 +2,31 @@
 @import "variables";
 @import "node_modules/bootstrap/scss/variables";
 @import "node_modules/bootstrap/scss/mixins";
+
+/** sidebar mini mixin*/
+@mixin sidebar-mini-mixin() {
+  .sidebar-header > strong{
+    display: none !important;
+  }
+  .sidebar-item {
+    margin: 0;
+    a {
+      margin: .5rem 0 0 .5rem;
+      strong, .arrow,{
+        display: none !important;
+      }
+      i.toggle-icon{
+        right: 0 !important;
+        font-size: 1rem;
+        top: .8rem !important;
+      }
+    }
+  }
+}
+
+/**  hover effect with primary color */
+@mixin primary-hover {
+  color: $white;
+  background: lighten($primary,45%);
+  border-color: lighten($primary, 40%)
+}

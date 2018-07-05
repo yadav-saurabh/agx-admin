@@ -2,20 +2,20 @@
 $font-family-base: 'Open Sans', sans-serif;
 
 //color
-$black : #191919;
-$white : #fff;
+$black :    #191919;
+$white :    #fff;
 
-$body-bg: #eee;
+$body-bg:   #eee;
 
-$default: #999;
-$primary: #6200ea;
+$default:   #999;
+$primary:   #6200ea;
 $secondary: #a6c;
-$sucess: #00c853;
-$info: #33b5e5;
-$warning: #ffa000;
-$danger: #ff5252;
-$error: #ff5252;
-$alert: #ffdb5b;
+$sucess:    #00c853;
+$info:      #33b5e5;
+$warning:   #ffa000;
+$danger:    #ff5252;
+$error:     #ff5252;
+$alert:     #ffdb5b;
 
 
 // Pagination
@@ -29,19 +29,23 @@ $pagination-active-color:$primary;
 
 
 
-
+//btns
 $btn-round-br : 1.5rem;
 
 //sidebar
-$sidebar-width: 20%;
-$sidebar-width-sm: 70%;
-$sidebar-width-md: 35%;
+$sidebar-width: 272px;
+$sidebar-width-sm: 240px;
+$sidebar-width-md: 300px;
 
-$sidebar-mini-width: 5%;
-$sidebar-mini-width-md: 8%;
+$sidebar-mini-width: 68px;
+$sidebar-mini-width-md: 62px;
 
 $sidebar-zindex:999;
 
 // navbar
 $navbar-height: 50px;
 $navbar-zindex:$sidebar-zindex + 10;
+
+
+//shadows
+$enable-shadows: true;

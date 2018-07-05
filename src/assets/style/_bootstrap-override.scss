@@ -68,6 +68,30 @@ a, a:hover, .btn-link:hover {
   }
 }
 
+//tabs
+.nav-tabs {
+  display: table;
+  width: 100%;
+  text-align: center;
+  .nav-item {
+    display: table-cell;
+    .nav-link{
+      &.active{
+        color: $white;
+        background: $primary;
+        border-color: darken($primary, 10%);
+      }
+      &:hover:not(.active){
+        @include primary-hover();
+      }
+    }
+  }
+}
+.nav-pills{
+  .nav-link:hover:not(.active){
+    @include primary-hover();
+  }
+}
 //accordion
 .accordion{
   .card, .card-header{
@@ -84,6 +108,13 @@ a, a:hover, .btn-link:hover {
       border: none;
       box-shadow: none;
       border-radius: unset;
+      // &:not(.collapsed){
+      //   color: $white;
+      //   background:$primary;
+      // }
+      // &.collapsed:hover{
+      //   @include primary-hover();
+      // }
       &:after{
         content: "";
         width: 100%;

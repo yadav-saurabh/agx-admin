@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
+@import './assets/style/mixins';
 @import './assets/style/bootstrap-override';
 
 /* custom scroller (not supported in firefox) */
@@ -39,38 +40,17 @@ h2.heading {
 /* nav bar*/
 .navigation-bar {
   left: $sidebar-width;
-  transition: all .25s ease;
+  transition: $transition-base;
 }
 /*sidebar*/
 .sidebar,.sidebar-panel {
   width:$sidebar-width;
-  transition: all .25s ease;
+  transition: $transition-base;
 }
 
 /**main panel*/
 .main-panel{
-  width: 100% - $sidebar-width;
-}
-
-/** sidebar mini mixin*/
-@mixin sidebar-mini-mixin() {
-  .sidebar-header > strong{
-    display: none !important;
-  }
-  .sidebar-item {
-    margin: 0;
-    a {
-      margin: .5rem 0 0 .5rem;
-      strong, .arrow,{
-        display: none !important;
-      }
-      i.toggle-icon{
-        right: 0 !important;
-        font-size: 1rem;
-        top: .8rem !important;
-      }
-    }
-  }
+  width: calc(100% - #{$sidebar-width});
 }
 
 /**sidebar minimize*/
@@ -79,7 +59,7 @@ h2.heading {
     width: $sidebar-mini-width;
   }
   .main-panel {
-    width: 100% - $sidebar-mini-width;
+    width: calc(100% - #{$sidebar-mini-width});
   }
   .navigation-bar{
     left: $sidebar-mini-width;
@@ -139,7 +119,7 @@ i.material-icons {
   }
 }
 
-/* paginatons styles */
+/* custom paginatons styles */
 .pagination-round {
   @extend .pagination;
   .page-item {
@@ -164,6 +144,25 @@ i.material-icons {
   }
 }
 
+/*custom tabs*/
+.custom-tab {
+  .tab-content{
+    margin-top: -1px;
+    background-color: $white;
+    border-color: $white;
+    padding: 1rem;
+  }
+  .nav-tabs >li{
+    .nav-link {
+      padding: 1rem;
+      &.active{
+        color: $black;
+        background-color:$white;
+        border-color:$white;
+      }
+    }
+  }   
+}
 
 
 /** form input */
