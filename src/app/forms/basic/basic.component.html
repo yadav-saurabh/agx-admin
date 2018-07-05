@@ -1,44 +1,192 @@
-<h2 class="heading text-center">Forms Elements</h2>
-<br>
-<div class="row">
-  <div class="col-lg-6">
-    <h4>Inputs</h4>
+<h2 class="heading text-center">Basic Form </h2>
+
+<div class="row mt-4">
+  <div class="col-xl">
+    <h4 >Horizontal form</h4>
+    <div class="card">
+      <div class="card-body">
+        <form class="mb-xl-4">
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Email</label>
+            <div class="col-sm-9">
+              <input type="email" class="form-control" placeholder="Enter Email">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Password</label>
+            <div class="col-sm-9">
+              <input type="password" class="form-control" placeholder="Password">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-9 offset-sm-3">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" id="rme1" class="custom-control-input" checked>
+                <label class="custom-control-label" for="rme1">Remember Me</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-9 offset-sm-3">
+              <button type="submit" class="btn btn-primary px-4">Sign in</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>    
+  </div>
+  <div class="col-xl">
+    <h4 class="mt-4 mt-xl-0">Stacked Form</h4>
+    <div class="card">
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <label>Email address</label>
+            <input type="email" class="form-control rounded-border" aria-describedby="emailHelp" placeholder="Enter email">
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control rounded-border" placeholder="Password">
+          </div>
+          <button type="submit" class="btn btn-primary px-4">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="row">
+  <div class="col-lg">
+    <h6>Example #1</h6>
+    <div class="card">
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <label>Email address</label>
+            <input type="email" class="form-control rounded-border" aria-describedby="emailHelp" placeholder="Enter email">
+            <small class="form-text text-muted">Example block-level help text here.</small>
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control rounded-border" placeholder="Password">
+          </div>
+          <button type="submit" class="btn btn-primary px-4">Submit</button>
+        </form>
+      </div>
+    </div>
+    <span class="text-muted float-right">rounded border, help text</span>
+  </div>
+  <div class="col-lg">
+    <h6 class="mt-4 mt-lg-0">Example #2</h6>
+    <div class="card">
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <input type="email" class="no-border form-control" aria-describedby="emailHelp" placeholder="Enter email">
+            <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <input type="password" class="no-border form-control" placeholder="Password">
+            <small class="form-text text-muted">Password must be minimun 8 characters.</small>
+          </div>
+          <div class="form-group">
+            <input type="text" class="no-border form-control" placeholder="User Name">
+          </div>
+          <button type="submit" class="btn btn-primary px-4">Submit</button>
+        </form>
+      </div>
+    </div>
+    <span class="text-muted float-right">no Border, no label, help text</span>
+  </div>
+</div> -->
+
+<h4 class="mt-4">Inline Form</h4>
+<div class="card">
+  <div class="card-body">
+    <form class="form-inline">
+      <div class="form-group  ">
+        <input type="text" class="form-control" value="email@example.com" placeholder="Email">
+      </div>
+      <div class="form-group input-group ml-3">
+          <div class="input-group-prepend">
+            <div class="input-group-text">@</div>
+          </div>
+          <input type="text" class="form-control" placeholder="Username">
+        </div>
+      <div class="form-group ml-3 d-none d-xl-block ">
+        <input type="password" class="form-control" placeholder="Password">
+      </div>
+      <button type="submit" class="btn btn-primary ml-3 px-lg-4">Confirm </button>
+    </form>
+  </div>
+</div>
+
+
+<h4 class="mt-4">Form Elements</h4>
+<div class="card">
+  <div class="card-body">
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label">Default Input</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" placeholder="Default">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label">Input With Help Text</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" placeholder="Help Text">
+        <small class="form-text text-muted">Some Help Text Block</small>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label">Password</label>
+      <div class="col-sm-9">
+        <input type="password" class="form-control" placeholder="Password">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label">Placeholder</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" placeholder="Placeholder">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label">Disabled</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" placeholder="Disabled" disabled>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label">Static</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control-plaintext" value="email@example.com" readonly>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row mt-4">
+  <div class="col-lg">
+    <h4>Types</h4>
     <div class="card">
       <div class="card-body">
         <div class="form-group">
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
-        </div>
-        <div class="form-row">
-          <div class="col">
-            <input type="text" class="form-control" placeholder="First name">
-          </div>
-          <div class="col">
-            <input type="text" class="form-control" placeholder="Last name">
-          </div>
+          <input class="form-control" type="text" placeholder="Default">
         </div>
         <div class="form-group">
-          <input type="password" class="form-control" placeholder="Password">
+          <input class="form-control rounded-border" type="text" placeholder="rounded border">
         </div>
-        <div class="form-group">
-          <input type="Number" class="form-control" placeholder="Age">
-        </div>
-        <div class="form-group">
-          <input type="date" class="form-control" placeholder="Date">
-        </div>
-        <div class="form-group">
-          <input type="text" disabled class="form-control" placeholder="Disabled">
-        </div>
-        <div class="form-group">
-          <textarea class="form-control" rows="3" placeholder="Text Area"></textarea>
+        <div class="form-group mb-lg-4">
+          <input class="form-control no-border" type="text" placeholder="no border">
         </div>
       </div>
     </div>
   </div>
-  <div class="col-lg-6">
-    <h4>Size And Types</h4>
+  <div class="col-lg">
+    <h4 class="mt-4 mt-lg-0">Sizes</h4>
     <div class="card">
       <div class="card-body">
-        <h6>Sizes</h6>
         <div class="form-group">
           <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg">
         </div>
@@ -48,42 +196,29 @@
         <div class="form-group">
           <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm">
         </div>
-        <h6>Types</h6>
-        <div class="form-group">
-          <input class="form-control" type="text" placeholder="Default">
-        </div>
-        <div class="form-group">
-          <input class="form-control rounded-border" type="text" placeholder="rounded border">
-        </div>
-        <div class="form-group">
-          <input class="form-control no-border" type="text" placeholder="no border">
-        </div>
-        <div class="form-group input-with-icon">
-          <input class="form-control no-border" type="text" placeholder="With Icons">
-          <i class="material-icons">person</i>
-        </div>
       </div>
     </div>
   </div>
 </div>
 
+<!-- <div class="form-group input-with-icon">
+  <input class="form-control " type="text" placeholder="With Icons">
+  <i class="material-icons">person</i>
+</div> -->
 
-<br>
-<br>
-<div class="row">
+<div class="row mt-4">
   <div class="col-lg-6">
-    <h4>Validation States</h4>
+    <h4>Validation</h4>
     <div class="card">
       <div class="card-body">
         <div class="form-group">
-          <input type="text" class="form-control is-valid" id="validationServer01" placeholder="First name" value="Mark" required>
+          <input type="text" class="form-control is-valid" placeholder="First name" value="Mark" required>
           <div class="valid-feedback">
             Looks good!
           </div>
         </div>
         <div class="form-group">
-          <input type="text" class="form-control is-invalid" id="validationServerUsername" placeholder="Username" aria-describedby="inputGroupPrepend3"
-            required>
+          <input type="text" class="form-control is-invalid" placeholder="Username" required>
           <div class="invalid-feedback">
             Please choose a username.
           </div>
@@ -95,14 +230,13 @@
     <h4>Input Groups</h4>
     <div class="card">
       <div class="card-body">
-        <label class="sr-only" for="inlineFormInputGroup">Username</label>
-        <div class="input-group mb-2">
+        <label class="sr-only">Username</label>
+        <div class="input-group mb-3 mt-2">
           <div class="input-group-prepend">
             <div class="input-group-text">@</div>
           </div>
-          <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
+          <input type="text" class="form-control" placeholder="Username">
         </div>
-
         <div class="input-group mb-3">
           <div class="input-group-prepend">
             <span class="input-group-text">$</span>
@@ -110,43 +244,40 @@
           </div>
           <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
         </div>
-
         <div class="input-group mb-3">
           <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
           <div class="input-group-append">
             <button class="btn btn-outline-secondary" type="button">Button</button>
           </div>
         </div>
-        
       </div>
     </div>
   </div>
 </div>
 
-<br><br>
-<h4>Custom Elements</h4>
+<h4 class="mt-4">Custom Elements</h4>
 <div class="card">
   <div class="card-body">
     <div class="row">
       <div class="col">
-        <h5>Radio Buttons</h5>
+        <h6>Radio Buttons</h6>
         <div class="custom-control custom-radio ">
-            <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input" checked>
-            <label class="custom-control-label" for="customRadioInline1">Toggle this custom radio</label>
+            <input type="radio" id="customRadio1" name="customRadioInline1" class="custom-control-input" checked>
+            <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
         </div>
         <div class="custom-control custom-radio ">
-          <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-          <label class="custom-control-label" for="customRadioInline2">Or toggle this other custom radio</label>
+          <input type="radio" id="customRadio2" name="customRadioInline1" class="custom-control-input">
+          <label class="custom-control-label" for="customRadio2">Or toggle this other custom radio</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="radio3" name="radioDisabled" id="customRadioDisabled" class="custom-control-input" disabled>
-          <label class="custom-control-label" for="customRadioDisabled">Toggle this custom radio</label>
+          <input type="radio" name="radioDisabled" class="custom-control-input" disabled>
+          <label class="custom-control-label">Toggle this custom radio</label>
         </div>
       </div>
       <div class="col">
-        <h5>Checkboxes</h5>
+        <h6>Checkboxes</h6>
         <div class="custom-control custom-checkbox">
-          <input type="checkbox" class="custom-control-input" id="customCheck1" checked>
+          <input type="checkbox" class="custom-control-input" checked id="customCheck1">
           <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
         </div>
         <div class="custom-control custom-checkbox">
@@ -154,29 +285,68 @@
           <label class="custom-control-label" for="customCheck2">Check this custom checkbox</label>
         </div>
         <div class="custom-control custom-checkbox">
-          <input type="checkbox" class="custom-control-input" id="customCheck3" disabled>
-          <label class="custom-control-label" for="customCheck3">Check this custom checkbox</label>
+          <input type="checkbox" class="custom-control-input" disabled>
+          <label class="custom-control-label">Check this custom checkbox</label>
         </div>
       </div>
     </div>
-    <h5 class="mt-3">Select</h5>
+    <h6 class="mt-3">Select</h6>
     <select class="custom-select mb-3">
       <option selected>Open this select menu</option>
       <option value="1">One</option>
       <option value="2">Two</option>
       <option value="3">Three</option>
     </select> 
-    <h5>Multi Select</h5>
+    <h6>Multi Select</h6>
     <select class="custom-select" multiple>
       <option selected>Open this select menu</option>
       <option value="1">One</option>
       <option value="2">Two</option>
       <option value="3">Three</option>
     </select>     
-    <h5 class="mt-3">File Browser</h5>
+    <h6 class="mt-3">File Browser</h6>
     <div class="custom-file mb-3">
-      <input type="file" class="custom-file-input" id="customFile">
-      <label class="custom-file-label" for="customFile">Choose file</label>
+      <input type="file" class="custom-file-input">
+      <label class="custom-file-label">Choose file</label>
     </div>
+  </div>
+</div>
+
+<h4 class="mt-4">Custom Elements Validation</h4>
+<div class="card">
+  <div class="card-body">
+    <form class="was-validated">
+      <div class="custom-control custom-checkbox mb-3">
+        <input type="checkbox" class="custom-control-input" id="customControlValidation1" required>
+        <label class="custom-control-label" for="customControlValidation1">Check this custom checkbox</label>
+        <div class="invalid-feedback">Example invalid feedback text</div>
+      </div>
+    
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked" required>
+        <label class="custom-control-label" for="customControlValidation2">Toggle this custom radio</label>
+      </div>
+      <div class="custom-control custom-radio mb-3">
+        <input type="radio" class="custom-control-input" id="customControlValidation3" name="radio-stacked" required>
+        <label class="custom-control-label" for="customControlValidation3">Or toggle this other custom radio</label>
+        <div class="invalid-feedback">More example invalid feedback text</div>
+      </div>
+    
+      <div class="form-group">
+        <select class="custom-select" required>
+          <option value="">Open this select menu</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+        <div class="invalid-feedback">Example invalid custom select feedback</div>
+      </div>
+    
+      <div class="custom-file">
+        <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+        <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+        <div class="invalid-feedback">Example invalid custom file feedback</div>
+      </div>
+    </form>
   </div>
 </div>
