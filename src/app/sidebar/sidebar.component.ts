@@ -7,8 +7,10 @@ import { CommonService } from '../common.service';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent {
-  
-  constructor(private cs:CommonService){}
+  commonService;
+  constructor(cs:CommonService){
+    this.commonService = cs;
+  }
 
   sidebarItems = [
     {link:'/',label:'Dashboard',icon:'dashboard'},

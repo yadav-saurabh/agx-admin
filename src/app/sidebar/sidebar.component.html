@@ -1,4 +1,4 @@
-<div class="sidebar" [class.hide]="cs.sidebarToggleValue">
+<div class="sidebar" [class.hide]="commonService.sidebarToggleValue">
   <div class="sidebar-header align-middle">
     <!-- <img class="brandImg" src="http://via.placeholder.com/60x60" alt="brandImg"> -->
     <span class="text-uppercase sw-hiiden p-3">ad</span>
@@ -20,4 +20,4 @@
     </ul>
   </div>
 </div>
-<div *ngIf="!cs.sidebarToggleValue" class="sidebarOutside" (click)="cs.sidebarToggle()" ></div>
+<div *ngIf="!commonService.sidebarToggleValue" class="sidebarOutside" (click)="commonService.sidebarToggle()" ></div>

@@ -13,8 +13,10 @@ declare var $: any;
 export class NavbarComponent {
   
   previousScroll = 0;
-
-  constructor(private cs: CommonService) {  }
+  commonService;
+  constructor(private cs:CommonService) {
+    this.commonService = cs;
+  }
 
   @HostListener("window:scroll", ['$event'])
   onWindowScroll(event) {

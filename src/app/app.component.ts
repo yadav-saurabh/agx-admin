@@ -11,8 +11,10 @@ import { CommonService } from './common.service';
 export class AppComponent implements OnInit {
 
   pagesComponentRoute = false;
-
-  constructor(private router: Router, private cs: CommonService) { }
+  commonService;
+  constructor(private router: Router,private cs:CommonService) { 
+    this.commonService = cs;
+  }
 
   ngOnInit() {
     this.router.events.subscribe((obj: any) => {

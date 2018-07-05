@@ -1,5 +1,5 @@
-<nav class="navbar navigation-bar"  [class.hidden]="cs.navbarToggleValue" [class.sidebar-hidden]="cs.sidebarToggleValue">
-  <div class="nav-toggle-btn" [class.open]="!cs.sidebarToggleValue" (click)="cs.sidebarToggle()">
+<nav class="navbar navigation-bar"  [class.hidden]="commonService.navbarToggleValue" [class.sidebar-hidden]="commonService.sidebarToggleValue">
+  <div class="nav-toggle-btn" [class.open]="!commonService.sidebarToggleValue" (click)="commonService.sidebarToggle()">
     <span *ngFor="let number of [0,1,2,3,4,5]"></span>
   </div>
   <div class="navbar-brand">
@@ -11,9 +11,9 @@
   
   <ul class="left-ul">
     <li>
-      <button id="minimizeSidebar" class="btn btn-just-icon btn-round btn-light" (click)="cs.sidebarMiniToggle()">
-        <i *ngIf="!cs.sidebarMiniToggleValue" class="material-icons sd-visible">more_vert</i>
-        <i *ngIf="cs.sidebarMiniToggleValue" class="material-icons sdm-visible">view_list</i>
+      <button id="minimizeSidebar" class="btn btn-just-icon btn-round btn-light" (click)="commonService.sidebarMiniToggle()">
+        <i *ngIf="!commonService.sidebarMiniToggleValue" class="material-icons sd-visible">more_vert</i>
+        <i *ngIf="commonService.sidebarMiniToggleValue" class="material-icons sdm-visible">view_list</i>
       </button>
     </li>
     <li class="nav-item">Dashboard</li>

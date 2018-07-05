@@ -15,13 +15,19 @@
     margin: .3rem !important;
   }
   .w-25 {
-    width: 20% !important;
+    width: 30% !important;
   }
   .w-30{
     width: 45% !important;
   }
   .w-13{
     width: 15% !important;
+  }
+}
+
+@include media-breakpoint-down(md){
+  .w-25 {
+    width: 20% !important;
   }
 }
 

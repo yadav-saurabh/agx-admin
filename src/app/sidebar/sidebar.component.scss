@@ -150,8 +150,7 @@ span.arrow {
   display: none;
 }
 
-
-@include media-breakpoint-down(lg) {
+@include media-breakpoint-down(md) {
   .sidebar {
     width: $sidebar-width-md;
     &.hide{
