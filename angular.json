@@ -27,9 +27,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
               "node_modules/fullcalendar/dist/fullcalendar.min.css",
-              "node_modules/nprogress/nprogress.css"
+              "node_modules/nprogress/nprogress.css",
+              "node_modules/flatpickr/dist/flatpickr.min.css",
+              "node_modules/nouislider/distribute/nouislider.min.css",
+              "src/styles.scss"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.slim.min.js",
@@ -39,7 +41,8 @@
               "node_modules/chart.js/dist/Chart.min.js",
               "node_modules/@ckeditor/ckeditor5-build-classic/build/ckeditor.js",
               "node_modules/fullcalendar/dist/fullcalendar.min.js",
-              "node_modules/nprogress/nprogress.js"
+              "node_modules/nprogress/nprogress.js",
+              "node_modules/nouislider/distribute/nouislider.min.js"
             ]
           },
           "configurations": {

@@ -1,2 +1,42 @@
-<h2 class="heading text-center">Forms Layout</h2>
+<h2 class="heading text-center">Advance Form</h2>
 
+<div class="row mt-4">
+  <div class="col-lg">
+    <h4>Date and Time</h4>
+    <div class="card">
+      <div class="card-body">
+          <ng2-flatpickr  [config]="dateTime" placeholder="Date and Time" ></ng2-flatpickr>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg">
+    <h4 class="mt-4 mt-lg-0">Date</h4>
+    <div class="card">
+      <div class="card-body">
+          <ng2-flatpickr  placeholder="Date" ></ng2-flatpickr>
+        </div>
+    </div>
+  </div>
+  <div class="col-lg">
+    <h4 class="mt-4 mt-lg-0">Time</h4>
+    <div class="card">
+      <div class="card-body">
+          <ng2-flatpickr  [config]="time" placeholder="Time" ></ng2-flatpickr>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h4 class="mt-4">Range Slider</h4>
+<div class="card">
+  <div class="card-body">
+    <div class="row">
+      <div class="col-sm">
+        <div id="slider1"></div>
+      </div>
+      <div class="col-sm">
+          <div id="slider2"></div>
+      </div>
+    </div>
+  </div>
+</div>

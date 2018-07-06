@@ -5,13 +5,15 @@ import { AdvanceComponent } from './advance/advance.component';
 import { ValidationsComponent } from './validations/validations.component';
 import { FormsRoutingModule } from './forms-routing.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { Ng2FlatpickrModule } from 'ng2-flatpickr';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    Ng2FlatpickrModule
   ],
   declarations: [BasicComponent, AdvanceComponent, ValidationsComponent]
 })

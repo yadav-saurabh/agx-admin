@@ -195,35 +195,36 @@ i.material-icons {
 }
 
 
-/* notifications */
-.simple-notification{
-  box-shadow: 0 5px 15px 0 rgba($black,.4);
-  border-radius: 0.3rem;
-  .sn-content,.sn-title{
-    color: $white !important;
-  }
-  .sn-progress-loader > span{
-    background: rgba($white,.5) !important;
-  }
-  &.warn {
-    background-color: $warning !important;  
-  }
-  &.success {
-    background-color: $sucess !important;  
-  } 
-  &.error {
-    background-color: $error !important;  
-  }
-  &.info {
-    background-color: $info !important;  
-  }
-  &.alert{
-    background-color: $error !important;  
-  }
+/* dtaetime picker */
+.flatpickr-input{
+  @extend .form-control;
+  background-color : $white !important;
 }
 
 
 /*ckeditor editor*/
 .ck.ck-editor__main>.ck-editor__editable{
   min-height: 200px;
+}
+
+
+/*noUi Slider*/
+.noUi-horizontal{
+  height: 10px;
+  .noUi-handle{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+  }
+}
+.noUi-target{
+  background: $body-bg;
+  background: transparent;
+  border: none;
+  padding: 2px;
+  box-shadow: none;
+}
+.noUi-base, .noUi-connects{
+  cursor: pointer;
+  background: $body-bg;
 }
