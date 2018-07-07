@@ -26,6 +26,7 @@ export class SidebarComponent {
     {label:'Forms',icon:'ballot', subItem:[
       {link:'/forms/basic',label:'basic form',icon:'bf'},
       {link:'/forms/advance',label:'advanced form',icon:'af'},
+      {link:'/forms/custom',label:'custom form',icon:'cf'},
       {link:'/forms/validations',label:'Form Validation',icon:'fv'}
     ]},
     {label:'Pages',icon:'pages',subItem:[

@@ -1,0 +1,17 @@
+@import '../../../assets/style/mixins';
+
+i.material-icons{
+  font-size: .8rem;
+}
+.row {
+  height: 100%;
+}
+
+@include media-breakpoint-down(md){
+  .d-hide{
+    display: none;
+  }
+  .row{
+    min-height: 150px;
+  }
+}

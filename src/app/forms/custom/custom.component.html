@@ -1,0 +1,145 @@
+<h2 class="heading text-center">Custom Form</h2>
+
+<h4 class="mt-4">Custom Elements</h4>
+<div class="card">
+  <div class="card-body">
+    <div class="row">
+      <div class="col">
+        <h6>Radio Buttons</h6>
+        <div class="custom-control custom-radio ">
+            <input type="radio" id="customRadio1" name="customRadioInline1" class="custom-control-input" checked>
+            <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
+        </div>
+        <div class="custom-control custom-radio ">
+          <input type="radio" id="customRadio2" name="customRadioInline1" class="custom-control-input">
+          <label class="custom-control-label" for="customRadio2">Or toggle this other custom radio</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" name="radioDisabled" class="custom-control-input" disabled>
+          <label class="custom-control-label">Toggle this custom radio</label>
+        </div>
+      </div>
+      <div class="col">
+        <h6>Checkboxes</h6>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" checked id="customCheck1">
+          <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="customCheck2">
+          <label class="custom-control-label" for="customCheck2">Check this custom checkbox</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" disabled>
+          <label class="custom-control-label">Check this custom checkbox</label>
+        </div>
+      </div>
+    </div>
+    <h6 class="mt-3">Select</h6>
+    <select class="custom-select mb-3">
+      <option selected>Open this select menu</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select> 
+    <h6>Multi Select</h6>
+    <select class="custom-select" multiple>
+      <option selected>Open this select menu</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>     
+    <h6 class="mt-3">File Browser</h6>
+    <div class="custom-file mb-3">
+      <input type="file" class="custom-file-input">
+      <label class="custom-file-label">Choose file</label>
+    </div>
+  </div>
+</div>
+
+
+
+<h4 class="mt-4">Toggle</h4>
+<div class="card">
+  <div class="card-body">
+    <div>
+      <div class="checkbox mr-4">
+        <input type="checkbox" />
+        <label></label>
+      </div>
+      <span>Toggle is On</span>
+    </div>
+    <div>
+      <div class="checkbox mr-4">
+        <input type="checkbox" checked />
+        <label></label>
+      </div>
+      <span>Toggle is Off</span>
+    </div>
+
+    <div class="progress">
+      <div class="progress-bar" style="width:70%">70%</div>
+    </div>
+    <!-- Green -->
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped" style="width:20%"></div>
+    </div>
+
+    <!-- Turquoise -->
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:30%"></div>
+    </div>
+
+    <div class="progress">
+      <div class="progress-bar bg-success" style="width:40%">
+        Free Space
+      </div>
+      <div class="progress-bar bg-warning" style="width:10%">
+        Warning
+      </div>
+      <div class="progress-bar bg-danger" style="width:20%">
+        Danger
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<h4 class="mt-4">Custom Elements Validation</h4>
+<div class="card">
+  <div class="card-body">
+    <form class="was-validated">
+      <div class="custom-control custom-checkbox mb-3">
+        <input type="checkbox" class="custom-control-input" id="customControlValidation1" required>
+        <label class="custom-control-label" for="customControlValidation1">Check this custom checkbox</label>
+        <div class="invalid-feedback">Example invalid feedback text</div>
+      </div>
+    
+      <div class="custom-control custom-radio">
+        <input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked" required>
+        <label class="custom-control-label" for="customControlValidation2">Toggle this custom radio</label>
+      </div>
+      <div class="custom-control custom-radio mb-3">
+        <input type="radio" class="custom-control-input" id="customControlValidation3" name="radio-stacked" required>
+        <label class="custom-control-label" for="customControlValidation3">Or toggle this other custom radio</label>
+        <div class="invalid-feedback">More example invalid feedback text</div>
+      </div>
+    
+      <div class="form-group">
+        <select class="custom-select" required>
+          <option value="">Open this select menu</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+        <div class="invalid-feedback">Example invalid custom select feedback</div>
+      </div>
+    
+      <div class="custom-file">
+        <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+        <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+        <div class="invalid-feedback">Example invalid custom file feedback</div>
+      </div>
+    </form>
+  </div>
+</div>

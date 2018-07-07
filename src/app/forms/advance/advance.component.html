@@ -1,42 +1,115 @@
 <h2 class="heading text-center">Advance Form</h2>
 
-<div class="row mt-4">
-  <div class="col-lg">
-    <h4>Date and Time</h4>
-    <div class="card">
-      <div class="card-body">
-          <ng2-flatpickr  [config]="dateTime" placeholder="Date and Time" ></ng2-flatpickr>
+<h4 class="mt-4">Date Picker</h4>
+<div class="card">
+  <div class="card-body">
+    <div class="row ">
+      <div class="col-lg">
+        <h6>Date and Time</h6>
+        <ng2-flatpickr [config]="dateTime" placeholder="Date and Time"></ng2-flatpickr>
+      </div>
+      <div class="col-lg">
+        <h6 class="mt-4 mt-lg-0">Date</h6>
+        <ng2-flatpickr placeholder="Date"></ng2-flatpickr>
+      </div>
+      <div class="col-lg">
+        <h6 class="mt-4 mt-lg-0">Time</h6>
+        <ng2-flatpickr [config]="time" placeholder="Time"></ng2-flatpickr>
       </div>
     </div>
-  </div>
-  <div class="col-lg">
-    <h4 class="mt-4 mt-lg-0">Date</h4>
-    <div class="card">
-      <div class="card-body">
-          <ng2-flatpickr  placeholder="Date" ></ng2-flatpickr>
+    <div class="row">
+      <div class="col-5 d-hide">
+        <h6 class="mt-4 ">Inline</h6>
+        <ng2-flatpickr [config]="inline" placeholder="Inline"></ng2-flatpickr>
+      </div>
+      <div class="col">
+        <div>
+          <h6 class="mt-4 ">Date Range</h6>
+          <ng2-flatpickr [config]="range" placeholder="Date Range"></ng2-flatpickr>
         </div>
-    </div>
-  </div>
-  <div class="col-lg">
-    <h4 class="mt-4 mt-lg-0">Time</h4>
-    <div class="card">
-      <div class="card-body">
-          <ng2-flatpickr  [config]="time" placeholder="Time" ></ng2-flatpickr>
+        <div>
+          <h6 class="mt-4 ">Multiple</h6>
+          <ng2-flatpickr [config]="multiple" placeholder="Multiple"></ng2-flatpickr>
+        </div>
+        <div>
+          <h6 class="mt-4">Weeks</h6>
+          <ng2-flatpickr [config]="week" placeholder="Weeks"></ng2-flatpickr>
+        </div>
       </div>
     </div>
   </div>
 </div>
+<small class="float-right text-muted">For more info :
+  <a href="https://github.com/mezoistvan/ng2-flatpickr" target="_blank">Flatpickr
+    <i class="material-icons">launch</i>
+  </a>
+</small>
+
 
 <h4 class="mt-4">Range Slider</h4>
 <div class="card">
   <div class="card-body">
     <div class="row">
-      <div class="col-sm">
-        <div id="slider1"></div>
-      </div>
-      <div class="col-sm">
+      <div class="col-sm-7">
+        <div>
+          <div id="slider1"></div>
+        </div>
+        <div class="mt-4">
+          <div id="slider1_2"></div>
+        </div>
+        <div class="mt-4">
           <div id="slider2"></div>
+        </div>
+        <div class="my-4 mb-lg-6">
+          <div id="slider3"></div>
+        </div>
+      </div>
+      <div class="col-sm mt-5 mt-lg-0">
+        <div class="row">
+          <div class="col mr-2 ml-4">
+            <div id="slider4"></div>
+          </div>
+          <div class="col mx-2 mx-sm-0">
+            <div id="slider4_2"></div>
+          </div>
+          <div class="col mx-2 mx-sm-0">
+            <div id="slider5"></div>
+          </div>
+          <div class="col pr-lg-2  pr-5">
+            <div id="slider6"></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
+<small class="float-right text-muted">For more info :
+  <a href="https://refreshless.com/nouislider/" target="_blank">Nouislider
+    <i class="material-icons">launch</i>
+  </a>
+</small>
+
+<h4 class="mt-4">Tags</h4>
+<div class="card">
+  <div class="card-body">
+    <tag-input [(ngModel)]="tagInput" theme='bootstrap'></tag-input>
+  </div>
+</div>
+<small class="float-right text-muted">For more info :
+  <a href="https://github.com/gbuomprisco/ngx-chips/" target="_blank">Ngx-chips
+    <i class="material-icons">launch</i>
+  </a>
+</small>
+
+<h4 class="mt-4">Select</h4>
+<div class="card">
+  <div class="card-body">
+    <ng-select [items]="selectItems" placeholder="Select" class="p-1"></ng-select>
+    <ng-select [items]="selectItems" [multiple]="true" class="p-1" placeholder="Multiple select"></ng-select>
+  </div>
+</div>
+<small class="float-right text-muted">For more info :
+  <a href="https://github.com/tb/ng2-nouislider" target="_blank">Nouislider
+    <i class="material-icons">launch</i>
+  </a>
+</small>
