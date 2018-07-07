@@ -323,8 +323,14 @@ i.material-icons {
   &.ng-select-multiple{
     .ng-value-icon{
       border-right: 1px solid $white !important;
+      &:hover{
+        background-color: darken($primary,10%) !important;
+        border-top-left-radius: 5px !important;
+        border-bottom-left-radius: 5px !important;
+      }
     } 
     .ng-value{
+      font-size: 1rem !important;
       background-color: $primary !important;
       color: $white !important;
       box-shadow: $box-shadow-sm;

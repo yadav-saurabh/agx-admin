@@ -147,3 +147,12 @@ a, a:hover, .btn-link:hover {
   background-color: lighten($primary, 45%);
   border-color: lighten($primary, 40%);
 }
+
+
+//progress bar
+.progress{
+  height:10px;
+  .progress-bar{
+    box-shadow: $box-shadow-sm;
+  }
+}
