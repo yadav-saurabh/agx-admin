@@ -1,0 +1,114 @@
+<h2 class="heading text-center">Tables</h2>
+
+<div class="row">
+  <div class="col-lg">
+    <h4 class="mt-4">Default Table</h4>
+    <div class="card">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col" *ngFor="let head of defaultTable.head">{{head}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let body of defaultTable.body;let i = index;">
+            <th scope="row">{{i}}</th>
+            <td *ngFor="let data of body">{{data}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="col-lg">
+    <h4 class="mt-4">Dark Table</h4>
+    <div class="card">
+      <table class="table table-dark">
+        <thead>
+          <tr>
+            <th scope="col" *ngFor="let head of defaultTable.head">{{head}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let body of defaultTable.body;let i = index;">
+            <th scope="row">{{i}}</th>
+            <td *ngFor="let data of body">{{data}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="w-100"></div>
+  <div class="col-lg">
+    <h4 class="mt-4">Default Colored Heading</h4>
+    <div class="card">
+      <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col" *ngFor="let head of defaultTable.head">{{head}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let body of defaultTable.body;let i = index;">
+            <th scope="row">{{i}}</th>
+            <td *ngFor="let data of body">{{data}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="col-lg">
+    <h4 class="mt-4">Dark Colored Heading</h4>
+    <div class="card">
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col" *ngFor="let head of defaultTable.head">{{head}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let body of defaultTable.body;let i = index;">
+            <th scope="row">{{i}}</th>
+            <td *ngFor="let data of body">{{data}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="w-100"></div>
+  <div class="col-lg">
+    <h4 class="mt-4">Stripped Table</h4>
+    <div class="card">
+      <table class="table table-stripped">
+        <thead>
+          <tr>
+            <th scope="col" *ngFor="let head of defaultTable.head">{{head}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let body of defaultTable.body;let i = index;">
+            <th scope="row">{{i}}</th>
+            <td *ngFor="let data of body">{{data}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="col-lg">
+    <h4 class="mt-4">Bordered Table</h4>
+    <div class="card">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col" *ngFor="let head of defaultTable.head">{{head}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let body of defaultTable.body;let i = index;">
+            <th scope="row">{{i}}</th>
+            <td *ngFor="let data of body">{{data}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

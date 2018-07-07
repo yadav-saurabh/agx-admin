@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-tables',
-  templateUrl: './tables.component.html',
-  styles: ['']
+  selector: 'app-basic',
+  templateUrl: './basic.component.html',
+  styles: ['.table{margin: 0;}']
 })
-export class TablesComponent {
+export class BasicComponent {
 
   defaultTable = {
     head:['#','First','Last','Handle'],
@@ -15,5 +15,4 @@ export class TablesComponent {
       ['Larry', 'the Bird', '@twitter'] 
     ]
   };
-
 }

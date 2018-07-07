@@ -340,3 +340,18 @@ i.material-icons {
     }
   }
 }
+
+
+// datatables
+.dataTables_paginate{
+  ul.pagination{
+    li.page-item{
+      padding: 2px;
+      &:not(:first-child):not(:last-child){
+        a.page-link{
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
