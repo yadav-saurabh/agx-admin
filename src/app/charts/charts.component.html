@@ -1,41 +1,84 @@
 <h2 class="heading text-center">Charts</h2>
-<br>
 
 <div class="row">
-  <div class="col-lg">
-    <h4>Pie chart</h4>
+  <div class="col-lg-6">
+    <h4 class="mt-4">Bar Chart</h4>
     <div class="card">
       <div class="card-body">
-        <canvas id="pieChart"></canvas>
+        <canvas id="bar-chart" ></canvas>
       </div>
     </div>
   </div>
-  <div class=" col-lg">
-    <h4>Polar chart</h4>
+  <div class="col-lg-6">
+    <h4 class="mt-4">Line Chart</h4>
     <div class="card">
       <div class="card-body">
-        <canvas id="polarChart"></canvas>
+        <canvas id="line-chart" ></canvas>
       </div>
     </div>
   </div>
 </div>
 
-<br>
 <div class="row">
-  <div class="col-lg">
-    <h4>Radar chart</h4>
+  <div class="col-lg-6">
+    <h4 class="mt-4">Doughnut Chart</h4>
     <div class="card">
       <div class="card-body">
-        <canvas id="radarChart"></canvas>
+        <canvas id="doughnut-chart"></canvas>
       </div>
     </div>
   </div>
-  <div class=" col-lg">
-    <h4>Bar chart</h4>
+  <div class="col-lg-6">
+    <h4 class="mt-4">Mix Chart (Bar and Line)</h4>
     <div class="card">
       <div class="card-body">
-        <canvas id="barChart"></canvas>
+        <canvas id="mixed-chart"></canvas>
       </div>
     </div>
   </div>
 </div>
+
+<div class="row">
+  <div class="col-lg-6">
+    <h4 class="mt-4">Bubble Chart</h4>
+    <div class="card">
+      <div class="card-body">
+        <canvas id="bubble-chart"></canvas>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <h4 class="mt-4">Radar Chart</h4>
+    <div class="card">
+      <div class="card-body">
+        <canvas id="radar-chart"></canvas>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h4 class="mt-4">Example</h4>
+<div class="card">
+  <div class="card-body">
+    <div class="form-group row mb-4">
+      <div class="col-sm-2">
+        <label for="">Select Type</label>
+      </div>
+      <div class="col-sm-4">
+        <ng-select [items]="['line','pie','bar','horizontalBar','radar','polarArea','doughnut']" (change)="updateChartType()" placeholder="Select"
+          [(ngModel)]="exampleChartType"></ng-select>
+      </div>
+      <div class="col-sm">
+        <button class="btn btn-secondary " (click)="randomizeData()">Randomize Data!</button>
+      </div>
+    </div>
+    <hr>
+    <canvas id="exampleChart"></canvas>
+  </div>
+</div>
+<small class="float-right text-muted">for more info:
+  <a href="https://www.chartjs.org/">Chartjs
+    <i class="material-icons" style="font-size: .9rem">launch</i>
+  </a>
+</small>
+<div class="clearfix"></div>

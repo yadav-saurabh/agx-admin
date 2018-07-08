@@ -308,12 +308,12 @@ i.material-icons {
   }
   .ng-option{
     border-radius: 5px !important;
+    margin: 5px;  
   }
   .ng-option-selected{
     color: $white !important;
     background-color: $primary !important;
     box-shadow: $box-shadow-sm !important;
-    margin: 5px 0;  
   }
   .ng-option-marked:not(.ng-option-selected){
     color: $white !important;
