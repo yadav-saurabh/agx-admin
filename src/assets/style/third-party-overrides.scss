@@ -136,7 +136,7 @@
   }
   .ng-option-marked:not(.ng-option-selected){
     color: $white !important;
-    font-weight: 600;
+    // font-weight: 600;
     background-color: lighten($primary,40%) !important;
   }
   &.ng-select-multiple{
@@ -155,7 +155,7 @@
       box-shadow: $box-shadow-sm;
       border-radius: 5px !important;
       border: none !important;
-      font-weight: 600;
+      // font-weight: 600;
     }
   }
 }

@@ -1,5 +1,7 @@
 //font
-$font-family-sans-serif: 'Open Sans', sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300|Quicksand');
+
+$font-family-sans-serif: 'Open Sans','Quicksand', sans-serif;
 $font-family-base: $font-family-sans-serif;
 
 //color
