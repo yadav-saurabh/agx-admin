@@ -64,10 +64,10 @@
     }
   }
   .noUi-handle {
-    height: 20px;
-    width: 20px;
+    height: 20px !important;
+    width: 20px !important;
     box-shadow: $box-shadow;
-    border-radius: 50%;
+    border-radius: 50% ;
     top : -7px;
     cursor: pointer;
     &:after,&:before{
@@ -170,6 +170,73 @@
         a.page-link{
           border-radius: 50%;
         }
+      }
+    }
+  }
+}
+
+/*full calendar*/
+.fc{
+  .fc-month-view{
+    *{
+      border: none !important;
+    }
+  }
+  .fc-toolbar.fc-header-toolbar{
+    padding-top: 1rem;
+    .fc-next-button,.fc-prev-button, .fc-today-button {
+      height:2.2rem;
+      width: 2.2rem;
+      border-radius: 50%;
+    }
+    .fc-today-button{
+      margin-right: 1rem;
+      &:before{
+        content: "\f133"; 
+        font-family: FontAwesome;
+        left:7.5px;
+        font-weight: 600;
+        font-size: 1.15rem;
+        position:absolute;
+        top:2.5px;
+      }
+    }
+  }
+  .fc-view-container{
+    .fc-head{
+      .fc-day-header{
+        padding:.5rem;
+      }
+    }
+    .fc-row{
+      min-height: 3rem;
+    }
+    .fc-day-number{
+      display: block;
+      text-align: center;
+      float: none !important;
+    }
+    .fc-today{
+      color: $white;
+      background-color: rgba($info,.4);
+    }
+    .fc-month-view{
+      .fc-event, .fc-event-dot{
+        padding: 2px;
+        border-radius: .6rem;
+        background-color: $secondary !important;
+      }
+    }
+    .fc-event, .fc-event-dot{
+      background-color: rgba($secondary, .4 )!important;
+      font-size: .8rem !important;
+      box-shadow: $box-shadow-sm;
+    }
+    .fc-more{
+      color: $secondary !important;
+      @include media-breakpoint-down(md){
+        margin-top: 0rem;
+        display: inline-block;
       }
     }
   }
