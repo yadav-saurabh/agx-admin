@@ -1,0 +1,176 @@
+
+/* dtaetime picker */
+.flatpickr-input{
+  @extend .form-control;
+  background-color : $white !important;
+}
+
+
+/*ckeditor editor*/
+.ck{
+  &.ck-toolbar{
+    background-color:$primary !important;
+    border: 1px solid darken($primary,20%) !important; 
+  }
+  &.ck-reset_all, &.ck-reset_all *{
+    color: $white !important;
+  }
+  &.ck-dropdown ul.ck-list{
+    li{
+      color: $black !important;
+    }
+  }
+  &.ck-editor__main>.ck-editor__editable{
+    min-height: 200px;
+  }
+}
+
+
+
+/*noUi Slider*/
+.noUi-target{
+  border: 1px solid darken($color: $body-bg, $amount: 20%);
+  &.noUi-horizontal{
+    height: 8px;
+    .noUi-handle{
+      &:after, &:before{
+        top: 4px;
+        height: 10px;
+      }
+      &:after{
+        left: 7px;
+      }
+      &:before{
+        left:11px;
+      }
+    }
+  }
+  &.noUi-vertical{
+    height: 100%;
+    min-height: 50px;    
+    width: 8px;
+    .noUi-handle{
+      &:after,&:before{
+        width: 10px;
+        left: 4px;
+      }
+      &:after{
+        top: 7px;
+        // height: 8px;
+      }
+      &:before{
+        top:11px;
+      }
+    }
+  }
+  .noUi-handle {
+    height: 20px;
+    width: 20px;
+    box-shadow: $box-shadow;
+    border-radius: 50%;
+    top : -7px;
+    cursor: pointer;
+    &:after,&:before{
+      background:$primary;
+    }
+    &:focus{
+      outline: none;
+    }
+  }
+  .noUi-base, .noUi-connects{
+    cursor: pointer;
+    background: $body-bg;
+    box-shadow: $box-shadow-sm;
+  }
+  .noUi-connect{
+    background-color: $primary;
+  }
+}
+
+/*date picker*/
+.flatpickr-calendar{
+  .flatpickr-months{
+    padding: .5rem;
+    .flatpickr-month{
+      height:30px;
+    }
+    .flatpickr-prev-month,.flatpickr-next-month{
+      margin: .5rem;
+    }
+  }
+  .flatpickr-day{
+    &.selected,&.selected:hover,&.endRange,&.startRange{
+      background: $primary;
+      border: none;
+      box-shadow: $box-shadow !important;
+    }
+    &.today{
+      border: 2px solid rgba($color: $primary, $alpha: .5);
+      box-shadow: $box-shadow-sm;
+    }
+  }
+}
+
+/*tag*/
+.ng2-tag-input{
+  tag{
+    color: $white !important;
+    background: $primary !important;
+    box-shadow: $box-shadow-sm;
+  }
+}
+
+/*select*/
+.ng-select{
+  &.ng-select-focused:not(.ng-select-opened)>.ng-select-container{
+    border-color: $primary;
+  }
+  .ng-option{
+    border-radius: 5px !important;
+    margin: 5px;  
+  }
+  .ng-option-selected{
+    color: $white !important;
+    background-color: $primary !important;
+    box-shadow: $box-shadow-sm !important;
+  }
+  .ng-option-marked:not(.ng-option-selected){
+    color: $white !important;
+    font-weight: 600;
+    background-color: lighten($primary,40%) !important;
+  }
+  &.ng-select-multiple{
+    .ng-value-icon{
+      border-right: 1px solid $white !important;
+      &:hover{
+        background-color: darken($primary,10%) !important;
+        border-top-left-radius: 5px !important;
+        border-bottom-left-radius: 5px !important;
+      }
+    } 
+    .ng-value{
+      font-size: 1rem !important;
+      background-color: $primary !important;
+      color: $white !important;
+      box-shadow: $box-shadow-sm;
+      border-radius: 5px !important;
+      border: none !important;
+      font-weight: 600;
+    }
+  }
+}
+
+
+// datatables
+.dataTables_paginate{
+  ul.pagination{
+    li.page-item{
+      padding: 2px;
+      &:not(:first-child):not(:last-child){
+        a.page-link{
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}

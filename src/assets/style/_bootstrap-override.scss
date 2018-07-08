@@ -1,12 +1,7 @@
-@import 'variables';
-
-/*override bootstrap variables*/
 @import "node_modules/bootstrap/scss/bootstrap";
 
-/* other overrides */
 
 // card
-
 .card {
   border-radius: $border-radius-lg;
   box-shadow: $box-shadow-sm;

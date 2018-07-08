@@ -40,13 +40,8 @@
               "node_modules/popper.js/dist/umd/popper.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
               "node_modules/moment/min/moment.min.js",
-              "node_modules/chart.js/dist/Chart.min.js",
-              "node_modules/@ckeditor/ckeditor5-build-classic/build/ckeditor.js",
-              "node_modules/fullcalendar/dist/fullcalendar.min.js",
-              "node_modules/nprogress/nprogress.js",
               "node_modules/datatables.net/js/jquery.dataTables.min.js",
-              "node_modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js",
-              "node_modules/nouislider/distribute/nouislider.min.js"
+              "node_modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js"
             ]
           },
           "configurations": {
