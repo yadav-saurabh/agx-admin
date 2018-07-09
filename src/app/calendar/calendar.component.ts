@@ -25,9 +25,9 @@ export class CalendarComponent implements OnInit {
       themeSystem: 'bootstrap4',
       defaultView: $(window).width() < 765 ? 'listWeek' : 'month',
       header: {
-        left: '',
-        center: 'prev title next',
-        right: 'today '
+        left: ' ',
+        center: 'title  ' ,
+        right: 'prev next today'
       },
       footer: {
         center: 'month,agendaWeek,agendaDay,listWeek'
@@ -61,9 +61,9 @@ export class CalendarComponent implements OnInit {
       defaultView: 'basicWeek',
       themeSystem: 'bootstrap4',
       header: {
-        left: '',
-        center: 'prev title next',
-        right: 'today '
+        left: '  ',
+        center: ' title ',
+        right: 'prev next today'
       },
       buttonText: {
         today: ' '
@@ -75,9 +75,9 @@ export class CalendarComponent implements OnInit {
     $('#calendar-month').fullCalendar({
       themeSystem: 'bootstrap4',
       header: {
-        left: '',
-        center: 'prev title next',
-        right: 'today '
+        left: '  ',
+        center: ' title ',
+        right: 'prev next today'
       },
       buttonText: {
         today: ' '

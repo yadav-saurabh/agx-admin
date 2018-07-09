@@ -3,6 +3,7 @@ import * as Chart from 'chart.js'
 
 @Component({
   selector: 'app-charts',
+  styles: ['.card-body,.exampleChart{  position: relative;   min-height:45vh; }'],
   templateUrl: './charts.component.html'
 })
 export class ChartsComponent implements OnInit {
@@ -17,8 +18,6 @@ export class ChartsComponent implements OnInit {
   constructor() { }
   
   ngOnInit() {
-    //example
-    this.setExample();
     // Bar chart
     this.barChart();
     //Line Chart
@@ -31,6 +30,10 @@ export class ChartsComponent implements OnInit {
     this.bubbleChart();
     //Radar Chart
     this.radarChart();
+    //example
+    this.setExample();
+    // randomize chart data 
+    this.randomizeData()
   }
 
   private radarChart() {
@@ -62,7 +65,9 @@ export class ChartsComponent implements OnInit {
         title: {
           display: true,
           text: 'Distribution in % of world population'
-        }
+        },
+        maintainAspectRatio : false,
+        responsive: true
       }
     });
   }
@@ -130,7 +135,9 @@ export class ChartsComponent implements OnInit {
               labelString: "GDP (PPP)"
             }
           }]
-        }
+        },
+        maintainAspectRatio : false,
+        responsive: true
       }
     });
   }
@@ -171,7 +178,9 @@ export class ChartsComponent implements OnInit {
           display: true,
           text: 'Population growth (millions): Europe & Africa'
         },
-        legend: { display: false }
+        legend: { display: false },
+        maintainAspectRatio : false,
+        responsive: true
       }
     });
   }
@@ -193,7 +202,9 @@ export class ChartsComponent implements OnInit {
         title: {
           display: true,
           text: 'Predicted world population (millions) in 2050'
-        }
+        },
+        maintainAspectRatio : false,
+        responsive: true
       }
     });
   }
@@ -235,7 +246,9 @@ export class ChartsComponent implements OnInit {
         title: {
           display: true,
           text: 'World population per region (in millions)'
-        }
+        },
+        maintainAspectRatio : false,
+        responsive: true
       }
     });
   }
@@ -258,7 +271,9 @@ export class ChartsComponent implements OnInit {
         title: {
           display: true,
           text: 'Predicted world population (millions) in 2050'
-        }
+        },
+        maintainAspectRatio : false,
+        responsive: true
       }
     });
   }
@@ -289,7 +304,11 @@ export class ChartsComponent implements OnInit {
     this.exampleChartCanvas = document.getElementById('exampleChart');
     this.exampleChart = new Chart(this.exampleChartCanvas, {
       type: this.exampleChartType,
-      data: this.exampleData
+      data: this.exampleData,
+      options:{
+        maintainAspectRatio : false,
+        responsive: true
+      }
     });
   }
   // Function runs on chart type select update
@@ -299,6 +318,10 @@ export class ChartsComponent implements OnInit {
     this.exampleChart = new Chart(this.exampleChartCanvas, {
       type: this.exampleChartType,
       data: this.exampleData,
+      options:{
+        maintainAspectRatio : false,
+        responsive: true
+      }
     });
   };
   // Randomize data button function

@@ -1,43 +1,48 @@
 <div class="auth">
   <div class="header">
-      <button  class=" btn  btn-just-icon btn-round" type="submit" [routerLink]="'/'"><i  class="material-icons">home</i></button>
+    <button class=" btn  btn-just-icon btn-round" type="submit" [routerLink]="'/'">
+      <i class="material-icons">home</i>
+    </button>
   </div>
   <div class="w-80 position-relative">
     <div class="auth-text" [ngClass]="toggleFormClass">
       <!-- sign up text div -->
-      <div class="auth-login-text" >
+      <div class="auth-login-text">
         <h2>Don't have an account?</h2>
         <p>Banjo tote bag bicycle rights, High Life sartorial cray craft beer whatever street art fap.</p>
-        <button class="btn btn-outline-light  px-5" (click)="showSignUp()" >Sign up</button>
+        <button class="btn btn-outline-light  px-5" (click)="showSignUp()">Sign up</button>
       </div>
       <!-- log in text div -->
       <div class="auth-signup-text">
         <h2>Have an account?</h2>
         <p>Banjo tote bag bicycle rights, High Life sartorial cray craft beer whatever street art fap.</p>
-        <button class="btn btn-outline-light  px-5" (click)="showLogin()" >Login</button>
+        <button class="btn btn-outline-light  px-5" (click)="showLogin()">Login</button>
       </div>
     </div>
     <!-- forms -->
     <div class="card shadow auth-forms" [ngClass]="toggleFormClass">
       <!-- login form -->
       <div class="auth-login">
-        <h2 class="mb-4 text-primary">Login</h2>
-        <form>
-          <div class="form-group">
-            <input type="email" class="form-control" placeholder="Email" required autofocus />
-          </div>
-          <div class="form-group">
-            <input type="password" class="form-control" placeholder="Password" required />
-          </div>
-          <div class="form-group">
-            <button type="submit" class="btn px-4 btn-primary">Log In</button>
-          </div>
-        </form>
+        <div class="wrapper">
+          <h2 class="mb-4 text-primary">Login</h2>
+          <form>
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="Email" required autofocus />
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" placeholder="Password" required />
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn px-4 btn-primary">Log In</button>
+            </div>
+          </form>
+        </div>
       </div>
       <!-- sign up form -->
       <div class="auth-signup">
-        <h2 class="mb-4 text-primary">Sign Up</h2>
-        <form class="forms_form">
+        <div class="wrapper">
+          <h2 class="mb-4 text-primary">Sign Up</h2>
+          <form class="forms_form">
             <div class="form-group">
               <input type="text" placeholder="Full Name" class="form-control" required />
             </div>
@@ -47,10 +52,11 @@
             <div class="form-group">
               <input type="password" placeholder="Password" class="form-control" required />
             </div>
-          <div class="form-group">
-            <button type="submit" class="btn btn-primary px-4" >Sign Up</button>
-          </div>
-        </form>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary px-4">Sign Up</button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>

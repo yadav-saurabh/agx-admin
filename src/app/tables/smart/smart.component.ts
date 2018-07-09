@@ -22,7 +22,8 @@ export class SmartComponent implements OnInit {
         { title: 'Extn' },
         { title: 'Start Date' },
         { title: 'Salary' },
-        {title: 'action', render: (data: any, type: any, full: any) => {
+        {
+          title: 'action', render: (data: any, type: any, full: any) => {
             return '<button class="btn  btn-just-icon btn-round btn-light"><i class="material-icons">edit</i></button>';
           }
         }

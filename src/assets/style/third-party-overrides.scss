@@ -162,14 +162,50 @@
 
 
 // datatables
-.dataTables_paginate{
-  ul.pagination{
-    li.page-item{
-      padding: 2px;
-      &:not(:first-child):not(:last-child){
-        a.page-link{
-          border-radius: 50%;
+.dataTables_wrapper{
+  .dataTables_paginate{
+    ul.pagination{
+      li.page-item{
+        padding: 2px;
+        &:not(:first-child):not(:last-child){
+          a.page-link{
+            border-radius: 50%;
+          }
+          @include media-breakpoint-down(md){
+            a.page-link{
+              border-radius: 50%;
+              height:1rem;
+              min-width: 1rem; 
+              // width: 100%; 
+              &:hover{
+                background: none;
+                color: $secondary!important;
+              }
+              &:active,&:focus{
+                box-shadow: none;
+              }
+            }
+            &.active{
+              a.page-link{
+                font-size: 1.3rem;
+                font-weight: 600;
+                background: none;
+                color: $primary;
+                box-shadow: none;
+              }
+            }
+          }   
         }
+      }
+    }
+  }
+  .odd , .even {
+    .sorting_1:before{
+      background-color: $info !important;
+    }
+    &.parent{
+      .sorting_1:before{
+        background-color:$danger !important; 
       }
     }
   }
@@ -183,6 +219,13 @@
     }
   }
   .fc-toolbar.fc-header-toolbar{
+    h2{
+      // margin-left: 2rem;
+      @include media-breakpoint-down(md){
+        // margin-left: .5rem;
+        font-size: 1.5rem;
+      }
+    }
     padding-top: 1rem;
     .fc-next-button,.fc-prev-button, .fc-today-button {
       height:2.2rem;

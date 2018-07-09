@@ -1,7 +1,7 @@
 <h2 class="heading text-center">Charts</h2>
 
 <div class="row">
-  <div class="col-lg-6">
+  <div class="col-xl-6">
     <h4 class="mt-4">Bar Chart</h4>
     <div class="card">
       <div class="card-body">
@@ -9,7 +9,7 @@
       </div>
     </div>
   </div>
-  <div class="col-lg-6">
+  <div class="col-xl-6">
     <h4 class="mt-4">Line Chart</h4>
     <div class="card">
       <div class="card-body">
@@ -20,7 +20,7 @@
 </div>
 
 <div class="row">
-  <div class="col-lg-6">
+  <div class="col-xl-6">
     <h4 class="mt-4">Doughnut Chart</h4>
     <div class="card">
       <div class="card-body">
@@ -28,7 +28,7 @@
       </div>
     </div>
   </div>
-  <div class="col-lg-6">
+  <div class="col-xl-6">
     <h4 class="mt-4">Mix Chart (Bar and Line)</h4>
     <div class="card">
       <div class="card-body">
@@ -39,7 +39,7 @@
 </div>
 
 <div class="row">
-  <div class="col-lg-6">
+  <div class="col-xl-6">
     <h4 class="mt-4">Bubble Chart</h4>
     <div class="card">
       <div class="card-body">
@@ -47,7 +47,7 @@
       </div>
     </div>
   </div>
-  <div class="col-lg-6">
+  <div class="col-xl-6">
     <h4 class="mt-4">Radar Chart</h4>
     <div class="card">
       <div class="card-body">
@@ -68,12 +68,14 @@
         <ng-select [items]="['line','pie','bar','horizontalBar','radar','polarArea','doughnut']" (change)="updateChartType()" placeholder="Select"
           [(ngModel)]="exampleChartType"></ng-select>
       </div>
-      <div class="col-sm">
-        <button class="btn btn-secondary " (click)="randomizeData()">Randomize Data!</button>
+      <div class="col-sm-4">
+        <button class="btn btn-secondary " (click)="randomizeData()">Randomize !</button>
       </div>
     </div>
     <hr>
-    <canvas id="exampleChart"></canvas>
+    <div class="exampleChart">
+      <canvas id="exampleChart"></canvas>
+    </div>
   </div>
 </div>
 <p class="mt-4 d-block text-muted">for more info:

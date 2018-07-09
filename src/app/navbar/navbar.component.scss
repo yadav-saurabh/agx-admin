@@ -31,7 +31,7 @@
 /* navbar burger button */
 .nav-toggle-btn {
   display: none;
-  width: 2rem;
+  width: 2.2rem;
   padding: 1rem 0;
   position: absolute;
   span {
@@ -43,31 +43,34 @@
     transition: .25s ease-in-out;
     &:nth-child(1) {
       top: 5px;
-    }  
+      transform-origin: left center;
+    }
     &:nth-child(2) {
-      top: 17px;
+      top: 15px;
+      transform-origin: left center;
     }
     &:nth-child(3) {
-      top: 29px;
-    }    
+      top: 25px;
+      transform-origin: left center;
+    }
   }
 }
 /* navbar burger button animation*/
 .nav-toggle-btn.open {
   span{
     &:nth-child(1) {
-      top: 17.5px;
-      width: 110%;
-      transform: rotate(135deg);
+      transform: rotate(45deg);
+      top: 2px;
+      left: 4px;
     }
     &:nth-child(2) {
+      width: 0%;
       opacity: 0;
-      left: -60px;
     }
     &:nth-child(3) {
-      top: 17.5px;
-      width: 110%;
-      transform: rotate(-135deg);
+      transform: rotate(-45deg);
+      top: 27px;
+      left: 4px;
     }
   }
 }
