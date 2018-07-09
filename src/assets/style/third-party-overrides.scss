@@ -1,16 +1,10 @@
 
-/* dtaetime picker */
-.flatpickr-input{
-  @extend .form-control;
-  background-color : $white !important;
-}
-
-
-/*ckeditor editor*/
+/******************ckeditor editor******************/
 .ck{
   &.ck-toolbar{
     background-color:$primary !important;
-    border: 1px solid darken($primary,20%) !important; 
+    border:none !important;
+    box-shadow: $box-shadow-sm !important;
   }
   &.ck-reset_all, &.ck-reset_all *{
     color: $white !important;
@@ -25,9 +19,7 @@
   }
 }
 
-
-
-/*noUi Slider*/
+/******************noUi Slider**********************/
 .noUi-target{
   border: 1px solid darken($color: $body-bg, $amount: 20%);
   &.noUi-horizontal{
@@ -87,7 +79,7 @@
   }
 }
 
-/*date picker*/
+/**********flatpickr calendar (date picker)**********/
 .flatpickr-calendar{
   .flatpickr-months{
     padding: .5rem;
@@ -100,18 +92,25 @@
   }
   .flatpickr-day{
     &.selected,&.selected:hover,&.endRange,&.startRange{
-      background: $primary;
+      background: $primary !important;
       border: none;
-      box-shadow: $box-shadow !important;
+      box-shadow: $box-shadow-sm !important;
     }
     &.today{
       border: 2px solid rgba($color: $primary, $alpha: .5);
       box-shadow: $box-shadow-sm;
     }
+    &.today.inRange {
+      background-color: $secondary;
+    }
   }
 }
+.flatpickr-input {
+  @extend .form-control;
+  background-color : $white !important;
+}  
 
-/*tag*/
+/**********************ng2-tag**********************/
 .ng2-tag-input{
   tag{
     color: $white !important;
@@ -120,7 +119,7 @@
   }
 }
 
-/*select*/
+/***********************ng-select********************/
 .ng-select{
   &.ng-select-focused:not(.ng-select-opened)>.ng-select-container{
     border-color: $primary;
@@ -135,9 +134,7 @@
     box-shadow: $box-shadow-sm !important;
   }
   .ng-option-marked:not(.ng-option-selected){
-    color: $white !important;
-    // font-weight: 600;
-    background-color: lighten($primary,40%) !important;
+    background-color: lighten($secondary,30%) !important;
   }
   &.ng-select-multiple{
     .ng-value-icon{
@@ -161,7 +158,7 @@
 }
 
 
-// datatables
+/******************** datatables *********************/
 .dataTables_wrapper{
   .dataTables_paginate{
     ul.pagination{
@@ -211,7 +208,7 @@
   }
 }
 
-/*full calendar*/
+/********************full calendar*******************/
 .fc{
   .fc-month-view{
     *{
@@ -219,10 +216,8 @@
     }
   }
   .fc-toolbar.fc-header-toolbar{
-    h2{
-      // margin-left: 2rem;
-      @include media-breakpoint-down(md){
-        // margin-left: .5rem;
+    @include media-breakpoint-down(md){
+      h2{
         font-size: 1.5rem;
       }
     }
@@ -261,21 +256,24 @@
     }
     .fc-today{
       color: $white;
-      background-color: rgba($info,.4);
+      background-color: $info;
     }
     .fc-month-view{
       .fc-event, .fc-event-dot{
         padding: 2px;
-        border-radius: .6rem;
-        background-color: $secondary !important;
+        border-radius: .5rem;
+        background-color: $secondary!important;
       }
     }
     .fc-event, .fc-event-dot{
-      background-color: rgba($secondary, .4 )!important;
+      font-weight: $font-weight-bold;
+      background-color: $secondary!important;
+      @include darken-border($secondary,1px);
       font-size: .8rem !important;
       box-shadow: $box-shadow-sm;
     }
     .fc-more{
+      font-weight: $font-weight-bold;
       color: $secondary !important;
       @include media-breakpoint-down(md){
         margin-top: 0rem;

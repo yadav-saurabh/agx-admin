@@ -65,7 +65,7 @@
         <label for="">Select Type</label>
       </div>
       <div class="col-sm-4">
-        <ng-select [items]="['line','pie','bar','horizontalBar','radar','polarArea','doughnut']" (change)="updateChartType()" placeholder="Select"
+        <ng-select [items]="['line','horizontalBar','bar','radar','polarArea','doughnut','pie']" (change)="updateChartType()" placeholder="Select"
           [(ngModel)]="exampleChartType"></ng-select>
       </div>
       <div class="col-sm-4">

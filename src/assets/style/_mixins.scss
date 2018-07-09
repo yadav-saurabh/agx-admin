@@ -25,9 +25,13 @@
   }
 }
 
-/**  hover effect with primary color */
-@mixin primary-hover {
+/** hover bg color **/
+@mixin basic-hover  {
+  background-color: lighten($secondary,20%);
   color: $white;
-  background: lighten($primary,45%);
-  border-color: lighten($primary, 40%)
+}
+
+/** darken the border of the element */
+@mixin darken-border($color,$size:1px,$type:solid) {
+  border: $size $type darken($color,10%);
 }

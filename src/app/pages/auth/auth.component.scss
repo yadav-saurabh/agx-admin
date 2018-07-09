@@ -8,6 +8,7 @@
   .btn{
     margin: 2rem;
     color: $white;
+    background-color: $primary;
   }
 }
 
@@ -59,7 +60,7 @@
 }
  
 .auth-text{
-  background-color: rgba($black,.75);
+  background-color: rgba($black,.65);
   border-radius: $border-radius;
   display:flex;
   box-shadow:$box-shadow;
@@ -75,11 +76,11 @@
 }
 
 .auth-forms{
+
   position: absolute;
   top: 50%;
-  left: 30px;
-
-  width: calc(50% - 30px);
+  left: 15%;
+  width: 35%;
   min-height: 420px;
   overflow: hidden;
 
@@ -107,7 +108,7 @@
     transition: opacity .4s ease-in-out, visibility .4s ease-in-out, transform .5s ease-in-out;
   }
   .auth-signup{
-    transform: translate3d(120px, 0, 0);
+    transform: translate3d(30%, 0, 0);
 
     .forms_buttons{
       justify-content: flex-end;
@@ -131,7 +132,7 @@
     .auth-login{
       opacity: 0;
       visibility: hidden;
-      transform: translate3d(-120px, 0, 0);
+      transform: translate3d(-30%, 0, 0);
     }
   }
   &.bounceRight{
@@ -157,9 +158,10 @@
   }
   .auth-text{
     position: absolute;
-    height: 60vh;
-    top: 30vh;
+    height: 60%;
+    top: 30%;
     width: 100%;
+    border-radius: 0;
     flex-direction: column-reverse;
     text-align: center;
     h2{
@@ -190,9 +192,11 @@
     }
   }
   .auth-forms{
-    min-height:60vh;
-    top: 43vh;
-    left: -84.5vw;
-    width: 90vw;
+    position: absolute;
+    min-height: 360px;
+    height: 60%;
+    top: 42%;
+    left: -85%;
+    width: 90%;
   }
 }

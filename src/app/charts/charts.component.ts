@@ -261,7 +261,7 @@ export class ChartsComponent implements OnInit {
         datasets: [
           {
             label: "Population (millions)",
-            backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850"],
+            backgroundColor: ["#3ebb8c", "#9092a5", "#f36b56", "#39a8d0", "#fed33d"],
             data: [2478, 5267, 734, 784, 433]
           }
         ]
@@ -288,15 +288,15 @@ export class ChartsComponent implements OnInit {
         {
           label: "DataSet1!",
           fill: false,
-          backgroundColor: 'rgb(111, 110, 235, 0.5)',
-          borderColor: 'rgb(111, 110, 235)',
+          backgroundColor: 'rgba(144,146,165, 0.8)',
+          borderColor: 'rgb(144,146,165)',
           data: this.exampleDataSet1,
         },
         {
           label: "DataSet2!",
           fill: true,
-          backgroundColor: 'rgba(170, 102, 204, 0.5)',
-          borderColor: 'rgb(170, 102, 204)',
+          backgroundColor: 'rgb(62,187,140, 0.8)',
+          borderColor: 'rgb(62,187,140)',
           data: this.exampleDataSet2,
         }]
     };

@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300|Quicksand');
+
 @import './assets/style/mixins';
 @import './assets/style/bootstrap-override';
 @import './assets/style/third-party-overrides';
@@ -23,38 +25,36 @@
   background: $black; 
 }
 
-/* heading with shadow effect */
+/**** heading font ****/
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+/**** heading with shadow effect ****/
 h2.heading {
   text-shadow: 2px 2px 3px rgba($black,.3);
 }
 
 
-/*Brand Images/Icons*/
-// .brandImg{
-//   height: $navbar-height;
-//   width: $navbar-height;
-//   margin: 10px;
-//   border-radius: 50%;
-// }
-
-
-/* nav bar*/
+/**** nav bar ****/
 .navigation-bar {
   left: $sidebar-width;
   transition: $transition-base;
 }
-/*sidebar*/
+
+/***** sidebar *****/
 .sidebar,.sidebar-panel {
   width:$sidebar-width;
   transition: $transition-base;
 }
 
-/**main panel*/
+/***** main panel ****/
 .main-panel{
   width: calc(100% - #{$sidebar-width});
 }
 
-/**sidebar minimize*/
+/**** sidebar minimize ****/
 .sidebar-mini {
   .sidebar-panel, .sidebar{
     width: $sidebar-mini-width !important;
@@ -74,17 +74,20 @@ h2.heading {
     }
   }
 }
-/*sidebar for md devices*/
+
+/**** sidebar for md devices ****/
 @include media-breakpoint-between(sm,md) {
   .sidebar.hide {
     @include sidebar-mini-mixin();
   }
 }
 
-/* material icons position fix */
+/**** material icons position fix ****/
 i.material-icons {
   vertical-align: middle;
 }
+
+/**** btn ****/
 .btn-just-icon {
   height: 2.5rem;
   width: 2.5rem;
@@ -93,7 +96,6 @@ i.material-icons {
     font-size: 1.2rem;
   }
 }
-
 
 /* round button */
 .btn.btn-round {
@@ -120,35 +122,38 @@ i.material-icons {
   }
 }
 
-/* custom paginatons styles */
+/***** custom paginatons styles *****/
 .pagination-round {
   @extend .pagination;
   .page-item {
     &:first-child .page-link, &:last-child .page-link , .page-link{
+      min-width: 2.2rem;
+      min-height: 2.2rem;
       border-radius: 50%;
     }
   }
 }
+
 .pagination-shwd {
   @extend .pagination;
   .page-link {
-    box-shadow: $box-shadow;
-    margin: 0 .25rem;
+    box-shadow: $box-shadow-sm;
+    margin: 0 .2rem;
   }
 }
 .pagination-round-shwd {
   @extend .pagination-round;
   .page-link {
-    box-shadow: $box-shadow;
+    box-shadow: $box-shadow-sm;
     margin: 0 .25rem;
     border-radius: 50%;
   }
 }
 
-/*custom tabs*/
+/**** custom tabs *****/
 .custom-tab {
   .tab-content{
-    margin-top: -1px;
+    margin-top: -2px;
     background-color: $white;
     border-color: $white;
     padding: 1rem;
@@ -166,8 +171,8 @@ i.material-icons {
 }
 
 
-/** form input */
-.form-control .no-border, input.no-border{
+/**** form input types ****/
+.form-control .no-border, input.no-border {
   border: none;
   box-shadow: none;
   padding-left: 0;
@@ -179,16 +184,15 @@ i.material-icons {
     background-image: linear-gradient(0deg,lighten($primary,35%) 1px,$white 0);
   }
 }
-.form-control .rounded-border, input.rounded-border{
+.form-control .rounded-border, input.rounded-border {
   border-radius: $btn-round-br;
 }
-.input-with-icon{
+.input-with-icon {
   position: relative;
   i{
     position: absolute;
     top: .2rem;
     left: 0;
-    // color: rgba(lighten($primary,.95%),0.8);
   }
   input{
     padding-left:2rem;

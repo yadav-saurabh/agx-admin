@@ -1,69 +1,74 @@
+@import "variables";
+@import "node_modules/bootstrap/scss/variables";
+
+
+/**** overriding bootstrap variables ****/
+$input-group-addon-bg:                          lighten($primary,35%); 
+$input-group-addon-border-color:                lighten($primary,20%);
+$enable-shadows:                                true;
+$link-hover-decoration:                         none;
+$progress-height:                               .6rem;
+$custom-file-button-bg:                         lighten($secondary,25%);
+$btn-box-shadow :                               $box-shadow-sm;
+$nav-tabs-link-active-bg:                       $primary;
+$nav-tabs-link-active-color :                   $white;
+$progress-box-shadow:                           $box-shadow-sm;
+$custom-control-indicator-checked-box-shadow:   $box-shadow-sm; 
+$card-border-radius:                            $border-radius-lg;
+$pagination-padding-y:                          .5rem;
+$pagination-padding-x:                           0;
+$pagination-line-height:                         1.5rem;
+$pagination-color:                               $black;
+$pagination-hover-color:                         $white;
+$pagination-hover-bg:                            lighten($secondary,20%);
+$pagination-active-color:                        $primary;
+
 @import "node_modules/bootstrap/scss/bootstrap";
 
+/**** other overrides ****/
 
-// card
-.card {
-  border-radius: $border-radius-lg;
-  box-shadow: $box-shadow-sm;
+
+/**** adding box-shadow ****/
+.btn, .input-group-text, .card{
+  box-shadow:$box-shadow-sm;
 }
 
-// button
-.btn {
-  box-shadow: $box-shadow;
-}
-
-.btn:not([class*="btn-"]) {
-  color: #fff;
-  background-color:$default;
-  border-color: darken($default,5%);
-  &:hover{
-    background-color: darken($default,7.5%);
-    border-color: darken($default,10%);
-  }
-  &:active{
-    background-color: darken($default,10%);
-    border-color: darken($default,12.5%);
-  }
-  &:focus{
-    box-shadow: 0 0 0 0.2rem rgba($default, 0.25);
-  }
-}
-
-.btn-outline-light{
+/**** btn outline light  ****/
+.btn-outline-light {
   color:$black;
 }
 
-.btn-group{
-  box-shadow: $box-shadow;
-  .btn{
+/**** btn group *****/
+.btn-group {
+  box-shadow: $box-shadow-sm;
+  .btn {
     box-shadow: none;
   }
 }
 
-a, a:hover, .btn-link:hover {
-  text-decoration: none;
-}
-
-// pagination
+/**** pagination ****/
 .pagination{  
   .page-item {
     .page-link{
       text-align: center;
-      min-width: 2.5rem;
+      min-width: 2rem;
       border: none;
       i.material-icons{
         @extend i.material-icons;
         font-size: 1.3rem;
       }
+      &:hover{
+        @include basic-hover();
+      }
     }
     &.active .page-link {
       color: $white;
-      box-shadow: $box-shadow;
+      box-shadow: $box-shadow-sm;
     }
   }
 }
 
-//tabs
+/**** tabs ****/
 .nav-tabs {
   display: table;
   width: 100%;
@@ -71,24 +76,21 @@ a, a:hover, .btn-link:hover {
   .nav-item {
     display: table-cell;
     .nav-link{
-      &.active{
-        color: $white;
-        background: $primary;
-        border-color: darken($primary, 10%);
-      }
-      &:hover:not(.active){
-        @include primary-hover();
+      border:none;
+      &:hover:not(.active) {
+        @include basic-hover();
       }
     }
   }
 }
 .nav-pills{
   .nav-link:hover:not(.active){
-    @include primary-hover();
+    @include basic-hover();
   }
 }
-//accordion
-.accordion{
+
+/**** accordion  ****/
+.accordion {
   .card, .card-header{
     border: none;
     box-shadow: none;
@@ -103,26 +105,29 @@ a, a:hover, .btn-link:hover {
       border: none;
       box-shadow: none;
       border-radius: unset;
-      // &:not(.collapsed){
-      //   color: $white;
-      //   background:$primary;
-      // }
-      // &.collapsed:hover{
-      //   @include primary-hover();
-      // }
+      &.collapsed{
+        color: $black;
+        &:before{
+          transform: rotateX(180deg);
+        }
+      }
+      &:active,&:focus,&:active:focus{
+        box-shadow: none;
+        text-decoration:none;
+      }
       &:after{
         content: "";
         width: 100%;
         height: 1px;
-        background-color: $black;
+        background-color: $secondary;
         left: 0;
         position: relative;
         display: block;
         top: 10px;
       }
-      &:before{
+      &:before {
         content: '';
-        border-top: 0.3rem solid;
+        border-bottom: 0.3rem solid;
         border-left: 0.3rem solid transparent;
         border-right: 0.3rem solid transparent;
         position: absolute;
@@ -130,24 +135,6 @@ a, a:hover, .btn-link:hover {
         margin: 1rem;
         margin-bottom: 1rem;
       }
-      &:focus{
-        text-decoration:none;
-      }
     }
-  }
-}
-
-// inputgroup
-.input-group-text {
-  background-color: lighten($primary, 45%);
-  border-color: lighten($primary, 40%);
-}
-
-
-//progress bar
-.progress{
-  height:10px;
-  .progress-bar{
-    box-shadow: $box-shadow-sm;
   }
 }
