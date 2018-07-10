@@ -8,7 +8,7 @@ import { CommonService } from '../common.service';
 })
 export class SidebarComponent {
   commonService;
-  constructor(cs:CommonService){
+  constructor(private cs:CommonService){
     this.commonService = cs;
   }
 

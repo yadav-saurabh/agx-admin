@@ -1,183 +1,174 @@
 @import "../../assets/style/mixins";
 
-.sidebar{
-  height: 100vh;
-  position: fixed;
-  overflow: hidden;
-  left: 0;
-  top: 0;
-  z-index: $sidebar-zindex;
-  background-color: rgba($dark,.9);
-  box-shadow: 0 1rem 2.1rem -.9rem rgba($black,.6),
-              0 .2rem 1.2rem 0 rgba($black,.12), 
-              0 .5rem .6rem .25rem rgba($black,.2);
-  hr {
-    width: 90%;
-    left: 5%;
-    margin: 0;
-    position: relative;
-    border-top: 1px solid $white;
+@mixin active-arrow($bdr-color) {
+  span.arrow {
+    display:              inline-block;
+    border-right-color:   $bdr-color;
   }
 }
 
-.sidebar-header{
-  display: flex;
-  color: $white;
-  align-items: center;
-  justify-content: center;
-  height: $navbar-height;
-  p{
-    margin: 0;
-  }
-}
+/**** sidebar ****/
+.sidebar {
 
-.sidebar-body {
-  /*custom scrollbar webkit browser (not supported in firefox)*/
-  &::-webkit-scrollbar {
-    width: .3rem;
-  }
-  &::-webkit-scrollbar-track {
-    background: transparent; 
-  }
-  &::-webkit-scrollbar-thumb {
-    background: rgba($white,.7); 
-  }
-  &::-webkit-scrollbar-thumb:hover {
-    background: rgba($white,.9); 
+  left:        0;
+  top:         0;
+  position:    fixed;
+  overflow:    hidden;
+
+  height:             $sidebar-height;
+  color:              $sidebar-color;
+  z-index:            $sidebar-zindex;
+  box-shadow:         $sidebar-box-shadow;
+  background-color:   $sidebar-bg-color;
+
+  /** header **/
+  &-header {
+    display:          flex;
+    align-items:      center;
+    justify-content:  center;
+    color:            $white;
+    height:           $sidebar-header-height;
+    white-space:      nowrap;
+    overflow:         hidden;
   }
 
-  color: $white;
-  height: calc(100% - #{($navbar-height)});
-  overflow: hidden;
-  overflow-y: auto;
-  ul{
-    padding: 0;
-    list-style: none;
-    li {
-      position: relative;
+  /** body **/
+  &-body {
+    @include scroll-style(rgba($white,.7),transparent,.3rem);
+    height:     calc(100% - #{$sidebar-header-height});
+    overflow:   hidden;
+    overflow-y: auto;
+    ul {
+      padding:    0;
+      list-style: none;
+      li {
+        position: relative;
+      }
     }
   }
-}
-/*sidebar item inside sidebar-body*/
-.sidebar-item {
-  margin: .25rem;
-  margin-right: 0px;
-  a{
-    color: $white;
-    display: block;
-    margin: .9rem 0 0 .6rem;
-    border-radius: 3px 0 0 3px;
-    padding:.5rem .8rem;
-    min-width: 12rem;
-    strong {
-      padding-left: 1.2rem;
-    }
-  }
-  .sub-item {
-    &:first-child {
-      margin-top: .8rem;
-    } 
+
+  /** items **/
+  &-item {
     a {
-      margin: .3rem 0 .3rem 1rem;
-      padding: .3rem .7rem;  
+      color:          $sidebar-color;
+      display:        block;
+      margin:         $sidebar-item-margin;
+      border-radius:  $sidebar-item-bdr;
+      padding:        $sidebar-item-padding;
+      white-space:    nowrap;
+      overflow:       hidden;
+      .mini-hide {
+        padding-left: 1.2rem;
+      }
     }
-    span:not(.arrow) {
-      display: inline-block;
-      width: 1.5rem;
+  }
+
+  /** sub items **/
+  &-sub-item { 
+    a {
+      margin-left:   1rem;
+      padding:      .3rem .7rem;  
     }
-    span.arrow{
-      display: none;
-      border: 1rem solid transparent;
-      border-right: 1.5rem solid;
+    span {
+      &.txt-icon {
+        display:     inline-block;
+        width:       1.5rem;
+      }
+      &.arrow {
+        display:        none;
+        border:         1rem solid transparent;
+        border-right:   1.5rem solid;
+      }
     }
   } 
-}
-/*hover and active*/
-.sidebar-item,.sub-item{
-  /*hover bg color*/
-  &:hover:not(.active) > a {
-    background-color: rgba($white,.2);
-    span.arrow{
-      display: inline-block;
-      border-right-color: rgba($white,.3);
+  
+  /** hover and active **/
+  &-item,&-sub-item {
+    &:hover:not(.active) > a {
+      @include active-arrow(rgba($white,.3));
+      background-color:      rgba($white,.2);
+    }
+    &.active > a {
+      @include active-arrow(rgba($white,.6));
+      background-color:      rgba($white,.4);
+      &:not([data-toggle = collapse]) {
+        background-color:  $sidebar-item-active-bg;
+        box-shadow:        $sidebar-item-active-box-shadow;
+      }
+    }
+    /* collapse icon anim */
+    & > a[data-toggle=collapse] {
+      i.toggle-icon {
+        position:     absolute;
+        right:        .5rem;
+        top:          .5rem;
+        transition:   $transition-base;
+      }
+      &.collapsed i.toggle-icon{
+        transform:    rotate(180deg);
+        transition:   $transition-base;
+      }
     }
   }
-  /*active bg color*/
-  &.active > a{
-    background-color: rgba($white,.4);
-    span.arrow{
-      border-right-color: rgba($white,.6);
-      display: inline-block;
-    }
-    &:not([data-toggle=collapse]){
-      background-color: $primary;
-    }
+
+  /** arrow **/
+  span.arrow {
+    border: 1.3rem solid transparent;
+    display: none;
+    position: absolute;
+    right: -.5rem;
+    top: 0;
+    border-right: 2rem solid;
   }
-  /*toggle button animation*/
-  & > a[data-toggle=collapse] {
-    i.toggle-icon{
-      position: absolute;
-      right: .5rem;
-      top: .5rem;
-      transition: all 0.5s;
-    }
-    &.collapsed i.toggle-icon{
-      transform: rotate(180deg);
-      transition: all 0.5s;
-    }
+
+  .mini-hide {
+    display: inline-block;
   }
-}
-/*arrow on hover and selection*/
-span.arrow {
-  border: 1.3rem solid transparent;
-  display: none;
-  position: absolute;
-  right: -.5rem;
-  top: 0;
-  border-right: 2rem solid;
+  
 }
 
 /*sidebar outside div (onclick close)*/
-.sidebarOutside{
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color:rgba($black,.3);
-  opacity: 50%;
-  z-index: $sidebar-zindex - 1;
-  display: none;
+.sidebarOutside { 
+  display:          none;
+  height:           100vh;
+  width:            100vw;
+  position:         fixed;
+  top:              0;
+  left:             0;
+  opacity:          50%;
+  z-index:          $sidebar-zindex - 1;
+  background-color: rgba($black,.3);
 }
 
-@include media-breakpoint-down(lg){
-  .sidebar{
+/** media break points **/
+
+@include media-breakpoint-down(lg) {
+  .sidebar {
     width: $sidebar-width-lg;
   }
 }
 
 @include media-breakpoint-down(md) {
   .sidebar {
-    width: $sidebar-width-md;
-    &.hide{
-      width: $sidebar-mini-width-md;
+    width:      $sidebar-width-md;
+    &.hide {
+      width:    $sidebar-mini-width-md;
     }
   }
-  .sidebarOutside{
-    display: block;
+  .sidebarOutside {
+    display:  block;
   }
 }
 
-
 @include media-breakpoint-down(sm) {
-  .sidebar{
-    width: $sidebar-width-sm;
+  .sidebar {
+    width:     $sidebar-width-sm;
     &.hide {
-      width: 0;
-      left:  - 5%;
+      width:   0;
+      left:   -5%;
     }
   }
   .sidebar-header {
-    height: $navbar-height - 1px;
+    height:   $navbar-height - 1px;
   }
 }

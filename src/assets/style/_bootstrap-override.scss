@@ -3,18 +3,26 @@
 
 
 /**** overriding bootstrap variables ****/
-$input-group-addon-bg:                          lighten($primary,35%); 
-$input-group-addon-border-color:                lighten($primary,20%);
 $enable-shadows:                                true;
 $link-hover-decoration:                         none;
-$progress-height:                               .6rem;
-$custom-file-button-bg:                         lighten($secondary,25%);
 $btn-box-shadow :                               $box-shadow-sm;
+$card-border-radius:                            $border-radius-lg;
+
+$table-head-bg:                                 $primary;
+$table-head-color:                              $white;
+// $table-border-color:                            lighten($dark,20%);  
+
+$input-group-addon-bg:                          lighten($primary,35%); 
+$input-group-addon-border-color:                lighten($primary,20%);
+$custom-control-indicator-checked-box-shadow:   $box-shadow-sm; 
+
+$progress-height:                               .6rem;
+$progress-box-shadow:                           $box-shadow-sm;
+$custom-file-button-bg:                         lighten($secondary,25%);
+
 $nav-tabs-link-active-bg:                       $primary;
 $nav-tabs-link-active-color :                   $white;
-$progress-box-shadow:                           $box-shadow-sm;
-$custom-control-indicator-checked-box-shadow:   $box-shadow-sm; 
-$card-border-radius:                            $border-radius-lg;
+
 $pagination-padding-y:                          .5rem;
 $pagination-padding-x:                           0;
 $pagination-line-height:                         1.5rem;

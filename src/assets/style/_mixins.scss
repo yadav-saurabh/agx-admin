@@ -4,24 +4,21 @@
 @import "node_modules/bootstrap/scss/mixins";
 // @import "node_modules/compass-mixins/lib/compass";
 
-/** sidebar mini mixin*/
-@mixin sidebar-mini-mixin() {
-  .sidebar-header > strong {
-    display: none !important;
+
+
+/***** custom scrollbar webkit browser (not supported in firefox) ****/
+@mixin scroll-style($thumb-color,$track-color, $width:.5rem) {
+  &::-webkit-scrollbar {
+    width: $width;
   }
-  .sidebar-item {
-    margin: 0;
-    a {
-      margin: .5rem 0 0 .5rem;
-      strong, .arrow,{
-        display: none !important;
-      }
-      i.toggle-icon{
-        right: 0 !important;
-        font-size: 1rem;
-        top: .8rem !important;
-      }
-    }
+  &::-webkit-scrollbar-thumb {
+    background: $thumb-color; 
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba($thumb-color,.9); 
+  }
+  &::-webkit-scrollbar-track {
+    background: $track-color; 
   }
 }
 
@@ -31,7 +28,3 @@
   color: $white;
 }
 
-/** darken the border of the element */
-@mixin darken-border($color,$size:1px,$type:solid) {
-  border: $size $type darken($color,10%);
-}

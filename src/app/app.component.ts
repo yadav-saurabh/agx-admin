@@ -1,4 +1,4 @@
-import { Component, ViewChild, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router, RouteConfigLoadStart, RouteConfigLoadEnd, NavigationEnd } from '@angular/router';
 import * as NProgress from 'nprogress';
 import { CommonService } from './common.service';
@@ -14,6 +14,7 @@ export class AppComponent implements OnInit {
   commonService;
   constructor(private router: Router,private cs:CommonService) { 
     this.commonService = cs;
+    NProgress.configure({ showSpinner: false });
   }
 
   ngOnInit() {

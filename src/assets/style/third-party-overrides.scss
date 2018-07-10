@@ -1,3 +1,15 @@
+/******************* np progress *******************/
+#nprogress {
+  .bar{
+    height: 3px !important;
+    box-shadow: $box-shadow-sm ;
+    background-color: $primary !important;
+  }
+  .peg{
+    height: 3.5px!important;
+    box-shadow: 0 0 10px $primary, 0 0 5px $primary !important;
+  }
+}
 
 /******************ckeditor editor******************/
 .ck{
@@ -268,7 +280,7 @@
     .fc-event, .fc-event-dot{
       font-weight: $font-weight-bold;
       background-color: $secondary!important;
-      @include darken-border($secondary,1px);
+      border: 1px solid darken($secondary,10%);
       font-size: .8rem !important;
       box-shadow: $box-shadow-sm;
     }

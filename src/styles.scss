@@ -6,23 +6,8 @@
 @import './assets/style/bootstrap-override';
 @import './assets/style/third-party-overrides';
 
-
-/* custom scroller (not supported in firefox) */
-/* width */
-::-webkit-scrollbar {
-  width: .5rem;
-}
-/* Track */
-::-webkit-scrollbar-track {
-  background: rgba($white,.7); 
-}
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: rgba($black,.4); 
-}
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: $black; 
+body {
+  @include scroll-style(rgba($black,.4),rgba($white,.4),.4rem);
 }
 
 /**** heading font ****/
@@ -36,6 +21,14 @@ h2.heading {
   text-shadow: 2px 2px 3px rgba($black,.3);
 }
 
+
+hr.underline {
+  width:        90%;
+  left:         5%;
+  margin:       0;
+  position:     relative;
+  border-top:   1px solid $white;
+}
 
 /**** nav bar ****/
 .navigation-bar {
@@ -55,6 +48,25 @@ h2.heading {
 }
 
 /**** sidebar minimize ****/
+
+
+@mixin sidebar-mini-mixin() {
+  .mini-hide {
+    display: none !important;
+  }
+  .sidebar-item {
+    margin: 0;
+    a {
+      margin: .5rem 0 0 .5rem;
+      i.toggle-icon{
+        right: 0 !important;
+        font-size: 1rem;
+        top: .8rem !important;
+      }
+    }
+  }
+}
+
 .sidebar-mini {
   .sidebar-panel, .sidebar{
     width: $sidebar-mini-width !important;
