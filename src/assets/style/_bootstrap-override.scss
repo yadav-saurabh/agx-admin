@@ -61,11 +61,13 @@ $pagination-active-color:                        $primary;
       text-align: center;
       min-width: 2rem;
       border: none;
-      i.material-icons{
+      i.material-icons {
         @extend i.material-icons;
         font-size: 1.3rem;
       }
-      &:hover{
+    }
+    &:not(.active):hover {
+      .page-item{
         @include basic-hover();
       }
     }
@@ -109,11 +111,13 @@ $pagination-active-color:                        $primary;
     h5 > .btn {
       width: 100%;
       padding: 0.75rem 1.25rem; 
+      font-weight: $font-weight-bold;
       text-align: left;
       border: none;
       box-shadow: none;
       border-radius: unset;
       &.collapsed{
+        font-weight: $font-weight-normal;
         color: $black;
         &:before{
           transform: rotateX(180deg);

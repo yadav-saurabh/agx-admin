@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-maps',
   templateUrl: './maps.component.html',
-  styleUrls: ['./maps.component.scss']
+  styles: ['agm-map,.agm-map {  height: 400px;}']
 })
-export class MapsComponent implements OnInit {
+export class MapsComponent  {
 
   lat: number = 40.5;
   lng: number = -74.5;
@@ -169,9 +169,5 @@ export class MapsComponent implements OnInit {
       ]
     }
   ];
-  constructor() { }
-
-  ngOnInit() {
-  }
 
 }

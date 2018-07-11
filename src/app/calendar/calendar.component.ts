@@ -5,8 +5,7 @@ import 'fullcalendar';
 
 @Component({
   selector: 'app-calendar',
-  templateUrl: './calendar.component.html',
-  styleUrls: ['./calendar.component.scss']
+  templateUrl: './calendar.component.html'
 })
 export class CalendarComponent implements OnInit {
 

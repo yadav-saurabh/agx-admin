@@ -35,9 +35,9 @@
     z-index: 5;
     opacity: 0;
     cursor:pointer;
-    &:checked + label{
+    &:checked + label {
       background: $primary;
-      &:after{
+      &:after {
         background:$primary;
         left: 15px;
       }

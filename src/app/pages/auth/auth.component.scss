@@ -4,12 +4,13 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  .btn{
+  // width: 100%;
+  .btn {
     margin: 2rem;
     color: $white;
     background-color: $primary;
   }
+  z-index: 10;
 }
 
 
@@ -59,7 +60,7 @@
   }
 }
  
-.auth-text{
+.auth-text {
   background-color: rgba($black,.65);
   border-radius: $border-radius;
   display:flex;
@@ -71,7 +72,7 @@
   }
 }
 
-.w-80{
+.w-80 {
   width: 80%;
 }
 
@@ -83,9 +84,10 @@
   width: 35%;
   min-height: 420px;
   overflow: hidden;
-
-  transform: translate3d(100%, -50%, 0);
-  transition: transform .4s ease-in-out;
+  @include media-breakpoint-up(sm) { 
+    transform: translate3d(100%, -50%, 0);
+    transition: transform .4s ease-in-out;
+  }
 
   .auth-login{
     transition: opacity .4s ease-in-out, visibility .4s ease-in-out;
@@ -123,7 +125,7 @@
 
 .auth-forms{
   &.bounceLeft{
-    @include media-breakpoint-up(sm){
+    @include media-breakpoint-up(sm) {
       animation: bounceLeft 1s forwards;
     }
     .auth-signup {
@@ -159,12 +161,12 @@
   .auth-text{
     position: absolute;
     height: 60%;
-    top: 30%;
+    bottom: 10%;
     width: 100%;
     border-radius: 0;
     flex-direction: column-reverse;
     text-align: center;
-    h2{
+    h2 {
       font-size: 1.5rem;
     }
     p,.auth-signup-text{
@@ -193,10 +195,11 @@
   }
   .auth-forms{
     position: absolute;
-    min-height: 360px;
+    top: 10%;
+    min-height: 300px;
     height: 60%;
-    top: 42%;
-    left: -85%;
+    bottom: 20%;
+    left: 5%;
     width: 90%;
   }
 }

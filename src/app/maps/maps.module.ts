@@ -14,10 +14,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     AgmCoreModule.forRoot({
-     /* apiKey:     PASTE YOUR API KEY HERE
-
-     https://developers.google.com/maps/documentation/javascript/get-api-key?hl=en
-      */
+     apiKey:'AIzaSyBdofWIKJReb7ZAx2rH7pmsZqmAAHt31JM'    
     }),
     RouterModule.forChild(routes)
   ],

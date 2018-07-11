@@ -1,95 +1,99 @@
-<!-- <div class="row">
-  <div class="col">
-    <canvas id="sales-chart"></canvas>
+<div class="row">
+  <div class="row col-md-8 no-gutters">
+    <div class="row col-md no-gutters">
+      <div class="col-md-11">
+        <h3 class=" text-muted m-0 font-weight-bold">35,000</h3>
+        <small class="text-muted m-0">Sales in current month</small>
+        <div class="chart">
+          <canvas id="month-sales-chart"></canvas>
+        </div>
+      </div>
+      <div class="w-100 "></div>
+      <div class="col">
+        <small class="text-muted m-0 d-inline-block">Pages / Visit</small>
+        <small class="strong d-inline-block font-weight-bold text-muted">236 321.80</small> 
+      </div>
+      <div class="col">
+        <small class="text-muted m-0 d-inline-block">Pages / Visit</small>
+        <small class="strong d-inline-block font-weight-bold text-muted">236 321.80</small> 
+      </div>
+      <div class="col">
+        <small class="text-muted m-0 d-inline-block">Pages / Visit</small>
+        <small class="strong d-inline-block font-weight-bold text-muted">236 321.80</small> 
+      </div>
+    </div>
+    <div class="row col-md no-gutters">
+      <div class="col-md-11 mt-4 mt-md-0">
+        <h3 class=" text-muted m-0 font-weight-bold">35,000</h3>
+        <small class="text-muted m-0">Sales in current month</small>
+        <div class="chart">
+          <canvas id="day-sales-chart"></canvas>
+        </div>
+      </div>
+      <div class="w-100"></div>
+      <div class="col">
+        <small class="text-muted m-0 d-inline-block">Pages / Visit</small>
+        <small class="strong d-inline-block font-weight-bold text-muted">236 321.80</small> 
+      </div>
+      <div class="col">
+        <small class="text-muted m-0 d-inline-block">Pages / Visit</small>
+        <small class="strong d-inline-block font-weight-bold text-muted">236 321.80</small> 
+      </div>
+      <div class="col">
+        <small class="text-muted m-0 d-inline-block">Pages / Visit</small>
+        <small class="strong d-inline-block font-weight-bold text-muted">236 321.80</small> 
+      </div>
+    </div>
   </div>
-  <div class="col">
-    <canvas id="visitors-chart"></canvas>
+  <div class="col-md mt-4 mt-md-0">
+    <div class="row no-gutters">
+      <div class="col">
+        <small class="text-muted font-weight-bold">income in last month</small>
+        <h3 class="text-muted m-0 font-weight-bold">160,000</h3>
+      </div>
+      <div class="col">
+        <small class="text-muted font-weight-bold">Sales in current year</small>
+        <h3 class="text-muted m-0 font-weight-bold">42,000</h3>
+      </div>
+    </div>
+    <table class="table">
+      <tbody>
+        <tr>
+          <td class="text-muted"> <span class="font-weight-bold">142</span>   Projects</td>
+          <td class="text-muted"> <span class="font-weight-bold">22</span>   Messages</td>
+        </tr>
+        <tr>
+          <td class="text-muted"> <span class="font-weight-bold">142</span>   Projects</td>
+          <td class="text-muted"> <span class="font-weight-bold">22</span>   Messages</td>
+        </tr>
+        <tr>
+          <td class="text-muted"> <span class="font-weight-bold">142</span>   Projects</td>
+          <td class="text-muted"> <span class="font-weight-bold">22</span>   Messages</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-  <div class="col">
-    <p>Incone last Month</p>
-  </div>
-</div> -->
+</div>
+
+<div class="full-chart mt-4">
+  <canvas id="full-chart"></canvas>
+</div>
 
 <div class="row">
-  <div class="col-md">
-    <div class="card p-3">
-      <div class="card-body">
-        <p>Monthly Sales</p>
-        <strong>1234</strong>
-      </div>
-    </div>
-  </div>
-  <div class="col-md">
-    <div class="card p-3">
-      <div class="card-body">
-        <p>Monthly Visits</p>
-        <strong>1234</strong>
-      </div>
-    </div>
-  </div>
-  <div class="col-md">
-    <div class="card p-3">
-      <div class="card-body">
-        <p>Products</p>
-        <strong>1234</strong>
-      </div>
-    </div>
-  </div>
-  <div class="col-md">
-    <div class="card p-3">
-      <div class="card-body">
-        <p>Users</p>
-        <strong>1234</strong>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="card mt-4">
-  <div class="card-body">
-    <p>Statictcs</p>
-  </div>
-</div>
-
-<div class="row mt-4">
-  <div class="col-md">
-    <div class="card p-3">
-      <div class="card-body">
-        para111111
-      </div>
-    </div>
-  </div>
-  <div class="col-md">
-    <div class="card p-3">
-      <div class="card-body">
-        para111111
-      </div>
-    </div>
-  </div>
-  <div class="col-md">
-    <div class="card p-3">
-      <div class="card-body">
-        para111111
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="row mt-4">
-  <div class="col-lg">
-    <div class="card" style="height: 90px;">
+  <div class="col-7 mt-4">
+    <div class="card">
       <div class="card-body">
 
       </div>
     </div>
-    <div class="card mt-4" style="height: 90px;">
+    <div class="card mt-4">
       <div class="card-body">
-
+        <div id="cal"></div>
       </div>
     </div>
   </div>
-  <div class="col-lg">
-    <div class="card" style="height: 200px;">
+  <div class="col-5 mt-4">
+    <div class="card">
       <div class="card-body">
 
       </div>

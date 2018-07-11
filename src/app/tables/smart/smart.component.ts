@@ -4,8 +4,7 @@ import * as $ from 'jquery';
 
 @Component({
   selector: 'app-smart',
-  templateUrl: './smart.component.html',
-  styleUrls: ['./smart.component.scss']
+  templateUrl: './smart.component.html'
 })
 export class SmartComponent implements OnInit {
 

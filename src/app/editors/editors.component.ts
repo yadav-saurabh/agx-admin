@@ -4,8 +4,7 @@ import InlineEditor from '@ckeditor/ckeditor5-build-inline';
 
 @Component({
   selector: 'app-editors',
-  templateUrl: './editors.component.html',
-  styleUrls: ['./editors.component.scss']
+  templateUrl: './editors.component.html'
 })
 export class EditorsComponent implements OnInit {
 

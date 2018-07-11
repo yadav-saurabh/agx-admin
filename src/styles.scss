@@ -6,7 +6,7 @@
 @import './assets/style/bootstrap-override';
 @import './assets/style/third-party-overrides';
 
-body {
+body * {
   @include scroll-style(rgba($black,.4),rgba($white,.4),.4rem);
 }
 
