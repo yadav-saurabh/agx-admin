@@ -1,0 +1,56 @@
+/**** fonts ****/
+$font-family-sans-serif:     'Quicksand','Open Sans', sans-serif;
+
+/**** colcor ****/
+$black :      #000;
+$white:       #fff;
+$body-bg:     #eee;
+
+$primary:     #3ebb8c;  // 62,187,140
+$secondary:   #9092a5;  // 144,146,165
+$success:     #38bf55;  // 56,191,85
+$info:        #39a8d0;  // 57,168,208
+$warning:     #fed33d;  // 254,211,61
+$danger:      #f36b56;  // 243,107,86
+$dark :       #3a3a59;  // 58,58,89
+
+
+
+/**** z-index ******/
+$sidebar-zindex:         999;
+$navbar-zindex:          $sidebar-zindex + 10;
+
+/**** navbar ****/
+$navbar-height:          50px;
+$navbar-bg:             $white;
+
+
+/**** sidebar ****/
+$sidebar-width:            250px;
+$sidebar-width-sm:         240px;
+$sidebar-width-md:         300px;
+$sidebar-width-lg:         220px;
+
+$sidebar-mini-width:       68px;
+$sidebar-mini-width-md:    62px;
+
+$sidebar-color:                   $white;
+$sidebar-bg-color:                rgba($dark,.9);
+$sidebar-box-shadow:              0 1rem 2.1rem -.9rem rgba($black,.6),0 .2rem 1.2rem 0 rgba($black,.12), 0 .5rem .6rem .25rem rgba($black,.2);
+
+$sidebar-height:                  100vh;
+$sidebar-header-height:           $navbar-height;
+
+$sidebar-item-margin:                  .9rem 0 0 .6rem;
+$sidebar-item-padding:                 .5rem .8rem;
+$sidebar-item-bdr:                     .25rem 0 0 .25rem;
+$sidebar-item-active-box-shadow:       0 .15rem 1rem 0 rgba($white,.14), 0 .3rem .5rem -2rem rgba($white,.4);
+$sidebar-item-active-bg:               $primary;
+$sidebar-item-active-show-arrow:       true;
+
+
+
+
+
+
+$btn-round-br:           1.5rem;

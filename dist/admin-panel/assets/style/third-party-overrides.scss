@@ -1,0 +1,296 @@
+/******************* np progress *******************/
+#nprogress {
+  .bar{
+    height: 3px !important;
+    box-shadow: $box-shadow-sm ;
+    background-color: $primary !important;
+  }
+  .peg{
+    height: 3.5px!important;
+    box-shadow: 0 0 10px $primary, 0 0 5px $primary !important;
+  }
+}
+
+/******************ckeditor editor******************/
+.ck{
+  &.ck-toolbar{
+    background-color:$primary !important;
+    border:none !important;
+    box-shadow: $box-shadow-sm !important;
+  }
+  &.ck-reset_all, &.ck-reset_all *{
+    color: $white !important;
+  }
+  &.ck-dropdown ul.ck-list{
+    li{
+      color: $black !important;
+    }
+  }
+  &.ck-editor__main>.ck-editor__editable{
+    min-height: 200px;
+  }
+}
+
+/******************noUi Slider**********************/
+.noUi-target{
+  border: 1px solid darken($color: $body-bg, $amount: 20%);
+  &.noUi-horizontal{
+    height: 8px;
+    .noUi-handle{
+      &:after, &:before{
+        top: 4px;
+        height: 10px;
+      }
+      &:after{
+        left: 7px;
+      }
+      &:before{
+        left:11px;
+      }
+    }
+  }
+  &.noUi-vertical{
+    height: 100%;
+    min-height: 50px;    
+    width: 8px;
+    .noUi-handle{
+      &:after,&:before{
+        width: 10px;
+        left: 4px;
+      }
+      &:after{
+        top: 7px;
+        // height: 8px;
+      }
+      &:before{
+        top:11px;
+      }
+    }
+  }
+  .noUi-handle {
+    height: 20px !important;
+    width: 20px !important;
+    box-shadow: $box-shadow;
+    border-radius: 50% ;
+    top : -7px;
+    cursor: pointer;
+    &:after,&:before{
+      background:$primary;
+    }
+    &:focus{
+      outline: none;
+    }
+  }
+  .noUi-base, .noUi-connects{
+    cursor: pointer;
+    background: $body-bg;
+    box-shadow: $box-shadow-sm;
+  }
+  .noUi-connect{
+    background-color: $primary;
+  }
+}
+
+/**********flatpickr calendar (date picker)**********/
+.flatpickr-calendar{
+  .flatpickr-months{
+    padding: .5rem;
+    .flatpickr-month{
+      height:30px;
+    }
+    .flatpickr-prev-month,.flatpickr-next-month{
+      margin: .5rem;
+    }
+  }
+  .flatpickr-day{
+    &.selected,&.selected:hover,&.endRange,&.startRange{
+      background: $primary !important;
+      border: none;
+      box-shadow: $box-shadow-sm !important;
+    }
+    &.today{
+      border: 2px solid rgba($color: $primary, $alpha: .5);
+      box-shadow: $box-shadow-sm;
+    }
+    &.today.inRange {
+      background-color: $secondary;
+    }
+  }
+}
+.flatpickr-input {
+  @extend .form-control;
+  background-color : $white !important;
+}  
+
+/**********************ng2-tag**********************/
+.ng2-tag-input{
+  tag{
+    color: $white !important;
+    background: $primary !important;
+    box-shadow: $box-shadow-sm;
+  }
+}
+
+/***********************ng-select********************/
+.ng-select{
+  &.ng-select-focused:not(.ng-select-opened)>.ng-select-container{
+    border-color: $primary;
+  }
+  .ng-option{
+    border-radius: 5px !important;
+    margin: 5px;  
+  }
+  .ng-option-selected{
+    color: $white !important;
+    background-color: $primary !important;
+    box-shadow: $box-shadow-sm !important;
+  }
+  .ng-option-marked:not(.ng-option-selected){
+    background-color: lighten($secondary,30%) !important;
+  }
+  &.ng-select-multiple{
+    .ng-value-icon{
+      border-right: 1px solid $white !important;
+      &:hover{
+        background-color: darken($primary,10%) !important;
+        border-top-left-radius: 5px !important;
+        border-bottom-left-radius: 5px !important;
+      }
+    } 
+    .ng-value{
+      font-size: 1rem !important;
+      background-color: $primary !important;
+      color: $white !important;
+      box-shadow: $box-shadow-sm;
+      border-radius: 5px !important;
+      border: none !important;
+      // font-weight: 600;
+    }
+  }
+}
+
+
+/******************** datatables *********************/
+.dataTables_wrapper{
+  .dataTables_paginate{
+    ul.pagination{
+      li.page-item{
+        padding: 2px;
+        &:not(:first-child):not(:last-child){
+          a.page-link{
+            border-radius: 50%;
+          }
+          @include media-breakpoint-down(md){
+            a.page-link{
+              border-radius: 50%;
+              height:1rem;
+              min-width: 1rem; 
+              // width: 100%; 
+              &:hover{
+                background: none;
+                color: $secondary!important;
+              }
+              &:active,&:focus{
+                box-shadow: none;
+              }
+            }
+            &.active{
+              a.page-link{
+                font-size: 1.3rem;
+                font-weight: 600;
+                background: none;
+                color: $primary;
+                box-shadow: none;
+              }
+            }
+          }   
+        }
+      }
+    }
+  }
+  .odd , .even {
+    .sorting_1:before{
+      background-color: $info !important;
+    }
+    &.parent{
+      .sorting_1:before{
+        background-color:$danger !important; 
+      }
+    }
+  }
+}
+
+/********************full calendar*******************/
+.fc{
+  .fc-month-view{
+    *{
+      border: none !important;
+    }
+  }
+  .fc-toolbar.fc-header-toolbar{
+    @include media-breakpoint-down(md){
+      h2{
+        font-size: 1.5rem;
+      }
+    }
+    padding-top: 1rem;
+    .fc-next-button,.fc-prev-button, .fc-today-button {
+      height:2.2rem;
+      width: 2.2rem;
+      border-radius: 50%;
+    }
+    .fc-today-button{
+      margin-right: 1rem;
+      &:before{
+        content: "\f133"; 
+        font-family: FontAwesome;
+        left:7.5px;
+        font-weight: 600;
+        font-size: 1.15rem;
+        position:absolute;
+        top:2.5px;
+      }
+    }
+  }
+  .fc-view-container{
+    .fc-head{
+      .fc-day-header{
+        padding:.5rem;
+      }
+    }
+    .fc-row{
+      min-height: 3rem;
+    }
+    .fc-day-number{
+      display: block;
+      text-align: center;
+      float: none !important;
+    }
+    .fc-today{
+      color: $white;
+      background-color: $info;
+    }
+    .fc-month-view{
+      .fc-event, .fc-event-dot{
+        padding: 2px;
+        border-radius: .5rem;
+        background-color: $secondary!important;
+      }
+    }
+    .fc-event, .fc-event-dot{
+      font-weight: $font-weight-bold;
+      background-color: $secondary!important;
+      border: 1px solid darken($secondary,10%);
+      font-size: .8rem !important;
+      box-shadow: $box-shadow-sm;
+    }
+    .fc-more{
+      font-weight: $font-weight-bold;
+      color: $secondary !important;
+      @include media-breakpoint-down(md){
+        margin-top: 0rem;
+        display: inline-block;
+      }
+    }
+  }
+}

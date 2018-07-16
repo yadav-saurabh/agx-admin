@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>AdminPanel</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#eee">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#eee">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#eee">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- css cdn  -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.e175ab74ff4a2e915e6e.css"></head>
+
+<body>
+  <app-root>
+    <div id="loader">
+      <div id="shadow"></div>
+      <div id="box"></div>
+    <style>
+      #loader {    position: absolute;  top: calc(50% - 20px);  left: calc(50% - 20px);}
+      @keyframes loader {  0% { left: -100px }  100% { left: 110%; }}
+      #box {  width: 50px;  height: 50px;  background: #fff;  animation: animate .5s linear infinite;  position: absolute;  top: 0;  left: 0;  border-radius: 3px;}
+      @keyframes animate {  17% { border-bottom-right-radius: 3px; }  25% { transform: translateY(9px) rotate(22.5deg); }  50% {    transform: translateY(18px) scale(1,.9) rotate(45deg) ;    border-bottom-right-radius: 40px;  }  75% { transform: translateY(9px) rotate(67.5deg); }  100% { transform: translateY(0) rotate(90deg); }} 
+      #shadow {   width: 50px;  height: 5px;  background: #000;  opacity: 0.1;  position: absolute;  top: 59px;  left: 0;  border-radius: 50%;  animation: shadow .5s linear infinite;}      @keyframes shadow {  50% {    transform: scale(1.2,1);  }}
+      body {  background: #aaa;   overflow: hidden;}
+    </style>
+    </div>
+  </app-root>
+
+  <!-- scripts cdn -->
+  <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script> -->
+<script type="text/javascript" src="runtime.c2160f0607661889b495.js"></script><script type="text/javascript" src="polyfills.a1c559e892fae0613467.js"></script><script type="text/javascript" src="scripts.1fc6e0288caf854b774e.js"></script><script type="text/javascript" src="main.33f686f74d618cd1fbb3.js"></script></body>
+
+</html>
