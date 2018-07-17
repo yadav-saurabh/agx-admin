@@ -1,0 +1,152 @@
+@import "variables";
+@import "node_modules/bootstrap/scss/variables";
+
+
+/**** overriding bootstrap variables ****/
+$enable-shadows:                                true;
+$link-hover-decoration:                         none;
+$btn-box-shadow :                               $box-shadow-sm;
+$card-border-radius:                            $border-radius-lg;
+
+$table-head-bg:                                 $primary;
+$table-head-color:                              $white;
+// $table-border-color:                            lighten($dark,20%);  
+
+$input-group-addon-bg:                          lighten($primary,35%); 
+$input-group-addon-border-color:                lighten($primary,20%);
+$custom-control-indicator-checked-box-shadow:   $box-shadow-sm; 
+
+$progress-height:                               .6rem;
+$progress-box-shadow:                           $box-shadow-sm;
+$custom-file-button-bg:                         lighten($secondary,25%);
+
+$nav-tabs-link-active-bg:                       $primary;
+$nav-tabs-link-active-color :                   $white;
+
+$pagination-padding-y:                          .5rem;
+$pagination-padding-x:                           0;
+$pagination-line-height:                         1.5rem;
+$pagination-color:                               $black;
+$pagination-hover-color:                         $white;
+$pagination-hover-bg:                            lighten($secondary,20%);
+$pagination-active-color:                        $primary;
+
+@import "node_modules/bootstrap/scss/bootstrap";
+
+/**** other overrides ****/
+
+
+/**** adding box-shadow ****/
+.btn, .input-group-text, .card{
+  box-shadow:$box-shadow-sm;
+}
+
+/**** btn outline light  ****/
+.btn-outline-light {
+  color:$black;
+}
+
+/**** btn group *****/
+.btn-group {
+  box-shadow: $box-shadow-sm;
+  .btn {
+    box-shadow: none;
+  }
+}
+
+/**** pagination ****/
+.pagination{  
+  .page-item {
+    .page-link{
+      text-align: center;
+      min-width: 2rem;
+      border: none;
+      i.material-icons {
+        @extend i.material-icons;
+        font-size: 1.3rem;
+      }
+    }
+    &:not(.active):hover {
+      .page-item{
+        @include basic-hover();
+      }
+    }
+    &.active .page-link {
+      color: $white;
+      box-shadow: $box-shadow-sm;
+    }
+  }
+}
+
+/**** tabs ****/
+.nav-tabs {
+  display: table;
+  width: 100%;
+  text-align: center;
+  .nav-item {
+    display: table-cell;
+    .nav-link{
+      border:none;
+      &:hover:not(.active) {
+        @include basic-hover();
+      }
+    }
+  }
+}
+.nav-pills{
+  .nav-link:hover:not(.active){
+    @include basic-hover();
+  }
+}
+
+/**** accordion  ****/
+.accordion {
+  .card, .card-header{
+    border: none;
+    box-shadow: none;
+  }
+  .card-header{
+    padding: 0;
+    background: none;
+    h5 > .btn {
+      width: 100%;
+      padding: 0.75rem 1.25rem; 
+      font-weight: $font-weight-bold;
+      text-align: left;
+      border: none;
+      box-shadow: none;
+      border-radius: unset;
+      &.collapsed{
+        font-weight: $font-weight-normal;
+        color: $black;
+        &:before{
+          transform: rotateX(180deg);
+        }
+      }
+      &:active,&:focus,&:active:focus{
+        box-shadow: none;
+        text-decoration:none;
+      }
+      &:after{
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: $secondary;
+        left: 0;
+        position: relative;
+        display: block;
+        top: 10px;
+      }
+      &:before {
+        content: '';
+        border-bottom: 0.3rem solid;
+        border-left: 0.3rem solid transparent;
+        border-right: 0.3rem solid transparent;
+        position: absolute;
+        right: 1rem;
+        margin: 1rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

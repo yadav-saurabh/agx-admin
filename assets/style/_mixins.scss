@@ -1,0 +1,30 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "variables";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+// @import "node_modules/compass-mixins/lib/compass";
+
+
+
+/***** custom scrollbar webkit browser (not supported in firefox) ****/
+@mixin scroll-style($thumb-color,$track-color, $width:.5rem) {
+  &::-webkit-scrollbar {
+    width: $width;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $thumb-color; 
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba($thumb-color,.9); 
+  }
+  &::-webkit-scrollbar-track {
+    background: $track-color; 
+  }
+}
+
+/** hover bg color **/
+@mixin basic-hover  {
+  background-color: lighten($secondary,20%);
+  color: $white;
+}
+
