@@ -61,6 +61,9 @@
         padding-left: 1.2rem;
       }
     }
+    span.arrow {
+      border: 1.3rem solid transparent;
+    }
   }
 
   /** sub items **/
@@ -113,7 +116,6 @@
 
   /** arrow **/
   span.arrow {
-    border: 1.3rem solid transparent;
     display: none;
     position: absolute;
     right: -.5rem;

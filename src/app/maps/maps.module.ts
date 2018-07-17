@@ -14,7 +14,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     AgmCoreModule.forRoot({
-     apiKey:'AIzaSyBdofWIKJReb7ZAx2rH7pmsZqmAAHt31JM'    
+     apiKey:'AIzaSyAAZnaZBXLqNBRXjd-82km_NO7GUItyKek'    
     }),
     RouterModule.forChild(routes)
   ],

@@ -6,7 +6,7 @@
 @import './assets/style/bootstrap-override';
 @import './assets/style/third-party-overrides';
 
-body * {
+html,body * {
   @include scroll-style(rgba($black,.4),rgba($white,.4),.4rem);
 }
 
@@ -28,6 +28,13 @@ hr.underline {
   margin:       0;
   position:     relative;
   border-top:   1px solid $white;
+}
+
+
+hr.udr-head {
+  border:           none;
+  height:           1px;
+  background-color: $secondary;
 }
 
 /**** nav bar ****/

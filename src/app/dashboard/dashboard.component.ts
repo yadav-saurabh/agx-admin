@@ -10,6 +10,27 @@ import 'fullcalendar';
 })
 export class DashboardComponent implements OnInit {
 
+
+  activitys = [
+    { icon: 'edit', head: 'heading', body: 'body' },
+    { icon: 'map', head: 'heading', body: 'body' },
+    { icon: 'edit', head: 'heading', body: 'body' },
+    { icon: 'edit', head: 'heading', body: 'body' },
+    { icon: 'map', head: 'heading', body: 'body' },
+    { icon: 'map', head: 'heading', body: 'body' }
+  ];
+
+  tasks = [
+    { check: true, text: 'task 1' },
+    { check: false, text: 'task 2' },
+    { check: true, text: 'task 3' },
+    { check: true, text: 'task 4' },
+    { check: false, text: 'task 5' },
+    { check: false, text: 'task 6' },
+    { check: true, text: 'task 7' }
+  ];
+
+
   constructor() { }
 
   ngOnInit() {
@@ -73,7 +94,9 @@ export class DashboardComponent implements OnInit {
           data: [29, 25, 35, 30, 32, 25, 36],
           borderColor: "#3ebb8c",
           fill: false,
-          lineTension: 0
+          lineTension: 0,
+          borderWidth: 2,
+          radius: 2
         }],
       },
       options: {
@@ -101,16 +124,22 @@ export class DashboardComponent implements OnInit {
     new Chart(document.getElementById("full-chart"), {
       type: 'line',
       data: {
-        labels: [0, 20, 40, 30, 10, 25, 36],
+        labels: [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019],
         datasets: [
           {
-            data: [29, 25, 35, 30, 32, 25, 36],
-            borderColor: "#3ebb8c",
+            data: [29, 25, 30, 25, 30, 25, 36, 30, 25, 29, 18, 30, 32, 25],
+            backgroundColor: "rgba(144,146,165,.4)",
+            borderColor: "#9092a5",
+            borderWidth: 2,
+            radius: 2
           },
           {
-            data: [32, 20, 30, 34, 22, 39, 30],
-            borderColor: "#0ebb8c",
-          },
+            data: [22, 15, 30, 34, 25, 39, 30, 36, 30, 20, 20, 34, 22, 39],
+            backgroundColor: "rgba(62,187,140,.4)",
+            borderColor: "#3ebb8c",
+            borderWidth: 2,
+            radius: 2
+          }
         ],
       },
       options: {

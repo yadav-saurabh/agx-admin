@@ -259,7 +259,7 @@
       }
     }
     .fc-row{
-      min-height: 3rem;
+      min-height: 3rem !important;
     }
     .fc-day-number{
       display: block;
@@ -268,7 +268,7 @@
     }
     .fc-today{
       color: $white;
-      background-color: $info;
+      background-color: $primary;
     }
     .fc-month-view{
       .fc-event, .fc-event-dot{
