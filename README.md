@@ -8,4 +8,4 @@ Premium and Open Source dashboard template with responsive and high quality UI.
 
 | Preview |
 |:---------------:|
-|<a target="_blank" href="https://yadav-saurabh.github.io/angular-admin-panel/"><img src="https://raw.githubusercontent.com/yadav-saurabh/angular-admin-panel/gh-pages/dashboard.png"/></a>|
+|<a target="_blank" href="https://yadav-saurabh.github.io/angular-admin-panel/"><img src="https://raw.githubusercontent.com/yadav-saurabh/angular-admin-panel/master/src/assets/dashboard.png"/></a>|
