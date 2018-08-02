@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonService } from '../common.service';
 
 @Component({
@@ -7,7 +7,9 @@ import { CommonService } from '../common.service';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent {
+
   commonService;
+
   constructor(private cs:CommonService){
     this.commonService = cs;
   }

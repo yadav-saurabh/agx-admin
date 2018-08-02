@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2, AfterViewChecked } from '@angular/core';
 import { Router, RouteConfigLoadStart, RouteConfigLoadEnd, NavigationEnd } from '@angular/router';
 import * as NProgress from 'nprogress';
 import { CommonService } from './common.service';
@@ -8,15 +8,17 @@ import { CommonService } from './common.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, AfterViewChecked {
 
   pagesComponentRoute = false;
   commonService;
-  constructor(private router: Router,private cs:CommonService) { 
+
+  constructor(private router: Router,private cs:CommonService, private renderer: Renderer2) { 
     this.commonService = cs;
     NProgress.configure({ showSpinner: false });
+    this.renderer.addClass(document.body, 'preload');
   }
-
+  
   ngOnInit() {
     this.router.events.subscribe((obj: any) => {
       this.pagesComponentRoute = (!!obj.url && obj.url.includes('/pages')) ? true : false;
@@ -35,6 +37,12 @@ export class AppComponent implements OnInit {
         window.scrollTo(0, 0);
       }
     });
+  }
+
+  ngAfterViewChecked() {
+    setTimeout(() => {
+      this.renderer.removeClass(document.body, 'preload');
+    }, 300);
   }
 
 }
