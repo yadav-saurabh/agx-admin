@@ -23,6 +23,8 @@ export class CalendarComponent implements OnInit {
     $('#calendar').fullCalendar({
       themeSystem: 'bootstrap4',
       defaultView: $(window).width() < 765 ? 'listWeek' : 'month',
+      height: 650,
+      fixedWeekCount:false,
       header: {
         left: ' ',
         center: 'title  ' ,
@@ -59,6 +61,9 @@ export class CalendarComponent implements OnInit {
     $('#calendar-week').fullCalendar({
       defaultView: 'basicWeek',
       themeSystem: 'bootstrap4',
+      height: 410,
+      allDaySlot: false,
+      fixedWeekCount:false,
       header: {
         left: '  ',
         center: ' title ',
@@ -73,6 +78,9 @@ export class CalendarComponent implements OnInit {
   private monthCal() {
     $('#calendar-month').fullCalendar({
       themeSystem: 'bootstrap4',
+      height: 410,
+      allDaySlot: false,
+      fixedWeekCount:false,
       header: {
         left: '  ',
         center: ' title ',

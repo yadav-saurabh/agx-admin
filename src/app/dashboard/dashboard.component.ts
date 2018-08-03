@@ -37,8 +37,14 @@ export class DashboardComponent implements OnInit {
     this.salesChart();
     this.dayChart();
     this.fullChart();
+    this.calendar();
+  }
+
+  private calendar() {
     $('#cal').fullCalendar({
       themeSystem: 'bootstrap4',
+      fixedWeekCount: false,
+      height: 400,
       header: {
         left: '  ',
         center: ' title ',
@@ -50,7 +56,7 @@ export class DashboardComponent implements OnInit {
     });
   }
 
-  salesChart() {
+  private salesChart() {
     new Chart(document.getElementById("month-sales-chart"), {
       type: 'line',
       data: {
@@ -85,7 +91,7 @@ export class DashboardComponent implements OnInit {
     });
   }
 
-  dayChart() {
+  private dayChart() {
     new Chart(document.getElementById("day-sales-chart"), {
       type: 'line',
       data: {
@@ -120,7 +126,7 @@ export class DashboardComponent implements OnInit {
     });
   }
 
-  fullChart() {
+  private fullChart() {
     new Chart(document.getElementById("full-chart"), {
       type: 'line',
       data: {

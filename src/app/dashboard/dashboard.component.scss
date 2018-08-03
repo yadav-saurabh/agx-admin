@@ -18,8 +18,11 @@
   }
 } 
 
-
-
+@include media-breakpoint-down(sm){
+  .card-body.sm-p-0 {
+    padding: 0;
+  }
+}
 
 $activity-line-with:  4px;
 $activity-icon-rds:   36px;
