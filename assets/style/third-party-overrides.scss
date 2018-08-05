@@ -129,16 +129,19 @@
     background: $primary !important;
     box-shadow: $box-shadow-sm;
   }
+  &--focused{
+    border-color: $secondary !important; 
+  }
 }
 
 /***********************ng-select********************/
 .ng-select{
   &.ng-select-focused:not(.ng-select-opened)>.ng-select-container{
-    border-color: $primary;
+    border-color: $primary !important;
   }
   .ng-option{
     border-radius: 5px !important;
-    margin: 5px;  
+    margin: 5px !important;  
   }
   .ng-option-selected{
     color: $white !important;
