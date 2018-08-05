@@ -21,7 +21,9 @@ export class AppComponent implements OnInit, AfterViewChecked {
   
   ngOnInit() {
     this.router.events.subscribe((obj: any) => {
-      this.pagesComponentRoute = (!!obj.url && obj.url.includes('/pages')) ? true : false;
+      if(!!obj.url) {
+        this.pagesComponentRoute = obj.url.includes('/pages');
+      }
       if (obj instanceof RouteConfigLoadStart) {
         NProgress.start();
         NProgress.set(0.4);
