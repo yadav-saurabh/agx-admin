@@ -1,17 +1,2 @@
-<div class="wrapper" [class.sidebar-mini]="commonService.sidebarMiniToggleValue" *ngIf="!pagesComponentRoute;else fullView">
-  <div class="sidebar-panel">
-    <app-sidebar></app-sidebar>
-  </div>
-  <div class="main-panel">
-    <app-navbar></app-navbar>
-    <div class="panel-content">
-      <router-outlet></router-outlet>
-    </div>
-    <app-footer></app-footer>
-    <!-- <lib-notify-ng></lib-notify-ng> -->
-  </div>
-</div>
-<ng-template #fullView>
-  <router-outlet></router-outlet>
-  <!-- <app-footer></app-footer> -->
-</ng-template>
+<router-outlet>
+</router-outlet>

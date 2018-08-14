@@ -11,7 +11,7 @@ export class CommonService {
 
   constructor() {
     this.navbarToggleValue = false;
-    this.sidebarToggleValue = false;
+    this.sidebarToggleValue = true;
     this.sidebarMiniToggleValue = false;
   }
 

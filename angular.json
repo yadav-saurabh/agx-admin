@@ -44,7 +44,12 @@
               "node_modules/datatables.net-responsive/js/dataTables.responsive.min.js",
               "node_modules/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js",
               "node_modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js"
-            ]
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/assets/style"
+              ]
+            }
           },
           "configurations": {
             "production": {
