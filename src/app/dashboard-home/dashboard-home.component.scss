@@ -1,0 +1,86 @@
+@import 'mixins';
+
+.chart  {
+  position: relative;
+  height:   70px;
+}
+
+.full-chart {
+  position: relative;
+  height:   150px;
+}
+
+
+.task{
+  .custom-control-input:not(:checked) + .custom-control-label{
+    text-decoration: line-through;
+    color: $secondary;
+  }
+} 
+
+@include media-breakpoint-down(sm){
+  .card-body.sm-p-0 {
+    padding: 0;
+  }
+}
+
+$activity-line-with:  4px;
+$activity-icon-rds:   36px;
+$activity-icon-size:  1.3rem;
+
+.activity {
+  position: relative;
+
+  &:before {
+		content:       '';
+		top:           0;
+		height:        100%;
+    width:         4px;
+    border-radius: 1rem; 
+		position:      absolute;
+		background:    rgba($secondary,.5);
+		left:          $activity-icon-rds / 2 - $activity-line-with / 2;
+  }
+
+  &-block {
+    display: flex;
+    margin:  1rem 0;
+  }
+
+  &-icon {
+    border-radius:     50%;
+    top:               5px;
+    position:          relative;
+    color:             $white;
+    width:             $activity-icon-rds;
+    height:            $activity-icon-rds;
+    background-color:  $primary;
+    box-shadow:        $box-shadow-sm;
+    i {
+      font-size:  $activity-icon-size;
+      margin:     calc((#{$activity-icon-rds} / 2) - #{$activity-icon-size} / 2);
+    }
+  }
+
+  &-content {
+    width:        calc(100% - #{$activity-icon-rds} - #{$activity-icon-rds} / 2);
+    margin-left:  $activity-icon-rds / 2;
+
+    &:before {
+      content:      '';
+      position:     absolute;
+      top:          1rem;
+      right:        100%;
+      height:       0;
+      width:        0;
+      border:       .5rem solid transparent;
+      border-right: .5rem solid $primary;
+    }
+
+    &-head {
+      background-color:   $primary;
+      color:              $white;
+    }
+  }
+  
+}

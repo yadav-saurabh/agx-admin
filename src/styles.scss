@@ -2,9 +2,9 @@
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300|Quicksand');
 
-@import './assets/style/mixins';
-@import './assets/style/bootstrap-override';
-@import './assets/style/third-party-overrides';
+@import 'mixins';
+@import 'bootstrap-override';
+@import 'third-party-overrides';
 
 html,body * {
   @include scroll-style(rgba($black,.4),rgba($white,.4),.4rem);
