@@ -8,11 +8,11 @@ import { Component } from '@angular/core';
 export class BasicComponent {
 
   defaultTable = {
-    head:['#','First','Last','Handle'],
-    body:[
+    head: ['#', 'First', 'Last', 'Handle'],
+    body: [
       ['Mark', 'Otto', '@mdo'],
       ['Jacob', 'Thornton', '@fat'],
-      ['Larry', 'the Bird', '@twitter'] 
+      ['Larry', 'the Bird', '@twitter']
     ]
   };
 }

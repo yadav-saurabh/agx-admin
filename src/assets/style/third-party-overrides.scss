@@ -13,21 +13,34 @@
 
 /******************ckeditor editor******************/
 .ck{
+  &-focused{
+    border-color: $primary !important;
+  }
   &.ck-toolbar{
     background-color:$primary !important;
     border:none !important;
     box-shadow: $box-shadow-sm !important;
-  }
-  &.ck-reset_all, &.ck-reset_all *{
-    color: $white !important;
+    & > * , .ck-icon, .ck-button__label {
+        color: $white !important;
+    }
+    *:hover, .ck-on {
+      color: $black !important;
+      .ck-icon, .ck-button__label {
+        color: $black !important;
+      }
+    }
   }
   &.ck-dropdown ul.ck-list{
-    li{
+    li {
       color: $black !important;
+    }
+    li.ck-list__item_active{
+      background-color: $primary !important;
+      color: $white !important;
     }
   }
   &.ck-editor__main>.ck-editor__editable{
-    min-height: 200px;
+    min-height: 200px !important;
   }
 }
 

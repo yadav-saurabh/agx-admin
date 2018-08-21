@@ -57,7 +57,7 @@ export class DashboardHomeComponent implements OnInit {
   }
 
   private salesChart() {
-    new Chart(document.getElementById('month-sales-chart'), {
+    const sales = new Chart(document.getElementById('month-sales-chart'), {
       type: 'line',
       data: {
         labels: [0, 20, 40, 30, 10, 25, 36],
@@ -92,7 +92,7 @@ export class DashboardHomeComponent implements OnInit {
   }
 
   private dayChart() {
-    new Chart(document.getElementById('day-sales-chart'), {
+    const day = new Chart(document.getElementById('day-sales-chart'), {
       type: 'line',
       data: {
         labels: [0, 20, 40, 30, 10, 25, 36],
@@ -127,7 +127,7 @@ export class DashboardHomeComponent implements OnInit {
   }
 
   private fullChart() {
-    new Chart(document.getElementById('full-chart'), {
+    const full = new Chart(document.getElementById('full-chart'), {
       type: 'line',
       data: {
         labels: [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019],

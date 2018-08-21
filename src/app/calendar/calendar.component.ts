@@ -2,15 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import 'fullcalendar';
 
-
 @Component({
   selector: 'app-calendar',
   templateUrl: './calendar.component.html'
 })
 export class CalendarComponent implements OnInit {
-
-  constructor() { }
-
 
   ngOnInit() {
     this.monthCal();
@@ -18,16 +14,15 @@ export class CalendarComponent implements OnInit {
     this.eventCal();
   }
 
-
   private eventCal() {
     $('#calendar').fullCalendar({
       themeSystem: 'bootstrap4',
       defaultView: $(window).width() < 765 ? 'listWeek' : 'month',
       height: 650,
-      fixedWeekCount:false,
+      fixedWeekCount: false,
       header: {
         left: ' ',
-        center: 'title  ' ,
+        center: 'title  ',
         right: 'prev next today'
       },
       footer: {
@@ -63,7 +58,7 @@ export class CalendarComponent implements OnInit {
       themeSystem: 'bootstrap4',
       height: 410,
       allDaySlot: false,
-      fixedWeekCount:false,
+      fixedWeekCount: false,
       header: {
         left: '  ',
         center: ' title ',
@@ -80,7 +75,7 @@ export class CalendarComponent implements OnInit {
       themeSystem: 'bootstrap4',
       height: 410,
       allDaySlot: false,
-      fixedWeekCount:false,
+      fixedWeekCount: false,
       header: {
         left: '  ',
         center: ' title ',

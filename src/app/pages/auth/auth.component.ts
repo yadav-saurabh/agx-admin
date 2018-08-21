@@ -7,17 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthComponent implements OnInit {
 
- toggleFormClass;
-  
+  toggleFormClass;
+
   constructor() { }
 
-  ngOnInit() {  }
-  
-  showSignUp(){
+  ngOnInit() { }
+
+  showSignUp() {
     this.toggleFormClass = 'bounceLeft';
   }
-  
-  showLogin(){
+
+  showLogin() {
     this.toggleFormClass = 'bounceRight';
   }
 

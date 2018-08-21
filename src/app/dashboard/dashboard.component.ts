@@ -11,7 +11,6 @@ import * as NProgress from 'nprogress';
 
 export class DashboardComponent implements OnInit, AfterViewChecked {
 
-
   commonService;
 
   constructor(private router: Router, private cs: CommonService, private renderer: Renderer2) {

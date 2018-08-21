@@ -1,10 +1,10 @@
-import { FormsModule } from './forms.module';
+import { FormsLocalModule } from './forms.module';
 
 describe('FormsModule', () => {
-  let formsModule: FormsModule;
+  let formsModule: FormsLocalModule;
 
   beforeEach(() => {
-    formsModule = new FormsModule();
+    formsModule = new FormsLocalModule();
   });
 
   it('should create an instance', () => {
