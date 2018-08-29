@@ -272,43 +272,46 @@
 <h4 class="mt-4">Pagination</h4>
 <div class="card">
   <div class="card-body">
+    <div class=" p-4 bg-primary"> <h4 class="text-white"> Current Page no : <span class="text-white">{{ paginationPage }}</span>  </h4>  </div>
     <div class="row p-md-3">
       <div class="col-md">
         <ul class="pagination">
-          <li class="page-item">  <a class="page-link " href="#" ><i class="material-icons">keyboard_arrow_left</i></a></li>
-          <li class="page-item active">  <a class="page-link" href="#" >1</a></li>
-          <li class="page-item"><a class="page-link" href="#" >2</a></li>
-          <li class="page-item"><a class="page-link" href="#" >3</a></li>
-          <li class="page-item"><a class="page-link" href="#" >4</a></li>
-          <li class="page-item hide-sm"><a class="page-link" href="#" >5</a></li>
-          <li class="page-item"><a class="page-link" href="#" ><i class="material-icons">keyboard_arrow_right</i></a></li>
+          <li class="page-item">  <a class="page-link " (click)="decPage()"><i class="material-icons">keyboard_arrow_left</i></a></li>
+          <li class="page-item" [class.active]="paginationPage === 1 "><a class="page-link" (click)="goToPage(1)">1</a></li>
+          <li class="page-item" [class.active]="paginationPage === 2 "><a class="page-link" (click)="goToPage(2)">2</a></li>
+          <li class="page-item" [class.active]="paginationPage === 3 "><a class="page-link" (click)="goToPage(3)">3</a></li>
+          <li class="page-item" [class.active]="paginationPage === 4 "><a class="page-link" (click)="goToPage(4)">4</a></li>
+          <li class="page-item hide-sm" [class.active]="paginationPage === 5 "><a class="page-link"  (click)="goToPage(5)">5</a></li>
+          <li class="page-item"><a class="page-link" (click)="incPage()"><i class="material-icons">keyboard_arrow_right</i></a></li>
         </ul>
         <ul class="pagination-round">
-          <li class="page-item">  <a class="page-link " href="#" ><i class="material-icons">keyboard_arrow_left</i></a></li>
-          <li class="page-item active">  <a class="page-link" href="#" >1</a></li>
-          <li class="page-item"><a class="page-link" href="#" >2</a></li>
-          <li class="page-item"><a class="page-link" href="#" >3</a></li>
-          <li class="page-item"><a class="page-link" href="#" >4</a></li>
-          <li class="page-item hide-sm"><a class="page-link" href="#" >5</a></li>
-          <li class="page-item"><a class="page-link" href="#" ><i class="material-icons">keyboard_arrow_right</i></a></li>
+          <li class="page-item">  <a class="page-link " (click)="decPage()"><i class="material-icons">keyboard_arrow_left</i></a></li>
+          <li class="page-item" [class.active]="paginationPage === 1 " ><a class="page-link" (click)="goToPage(1)">1</a></li>
+          <li class="page-item" [class.active]="paginationPage === 2 " ><a class="page-link" (click)="goToPage(2)">2</a></li>
+          <li class="page-item" [class.active]="paginationPage === 3 " ><a class="page-link" (click)="goToPage(3)">3</a></li>
+          <li class="page-item" [class.active]="paginationPage === 4 " ><a class="page-link" (click)="goToPage(4)">4</a></li>
+          <li class="page-item hide-sm"  [class.active]="paginationPage === 5 "><a class="page-link" (click)="goToPage(5)">5</a></li>
+          <li class="page-item"><a class="page-link" (click)="incPage()"><i class="material-icons">keyboard_arrow_right</i></a></li>
         </ul>
       </div>
       <div class="col-md">
         <ul class="pagination-shwd">
-          <li class="page-item"><a class="page-link " href="#" ><i class="material-icons">keyboard_arrow_left</i></a></li>
-          <li class="page-item active"><a class="page-link" href="#" >1</a></li>
-          <li class="page-item"><a class="page-link" href="#" >2</a></li>
-          <li class="page-item"><a class="page-link" href="#" >3</a></li>
-          <li class="page-item hide-sm"><a class="page-link" href="#" >4</a></li>
-          <li class="page-item"><a class="page-link" href="#" ><i class="material-icons">keyboard_arrow_right</i></a></li>
+          <li class="page-item"><a class="page-link" (click)="decPage()"><i class="material-icons">keyboard_arrow_left</i></a></li>
+          <li class="page-item" [class.active]="paginationPage === 1 "><a class="page-link" (click)="goToPage(1)">1</a></li>
+          <li class="page-item" [class.active]="paginationPage === 2 "><a class="page-link" (click)="goToPage(2)">2</a></li>
+          <li class="page-item" [class.active]="paginationPage === 3 "><a class="page-link" (click)="goToPage(3)">3</a></li>
+          <li class="page-item" [class.active]="paginationPage === 4 "><a class="page-link" (click)="goToPage(4)">4</a></li>
+          <li class="page-item hide-sm" [class.active]="paginationPage ===  5"><a class="page-link" (click)="goToPage(5)">5</a></li>
+          <li class="page-item"><a class="page-link" (click)="incPage()"><i class="material-icons">keyboard_arrow_right</i></a></li>
         </ul>
         <ul class="pagination-round-shwd">
-          <li class="page-item"><a class="page-link " href="#" ><i class="material-icons">keyboard_arrow_left</i></a></li>
-          <li class="page-item active"><a class="page-link" href="#" >1</a></li>
-          <li class="page-item"><a class="page-link" href="#" >2</a></li>
-          <li class="page-item"><a class="page-link" href="#" >3</a></li>
-          <li class="page-item hide-sm"><a class="page-link" href="#" >4</a></li>
-          <li class="page-item"><a class="page-link" href="#" ><i class="material-icons">keyboard_arrow_right</i></a></li>
+          <li class="page-item"><a class="page-link " (click)="decPage()"><i class="material-icons">keyboard_arrow_left</i></a></li>
+          <li class="page-item" [class.active]="paginationPage === 1 "><a class="page-link" (click)="goToPage(1)">1</a></li>
+          <li class="page-item" [class.active]="paginationPage === 2 "><a class="page-link" (click)="goToPage(2)">2</a></li>
+          <li class="page-item" [class.active]="paginationPage === 3 "><a class="page-link" (click)="goToPage(3)">3</a></li>
+          <li class="page-item" [class.active]="paginationPage === 4 "><a class="page-link" (click)="goToPage(4)">4</a></li>
+          <li class="page-item hide-sm" [class.active]="paginationPage === 5 "><a class="page-link" (click)="goToPage(5)">5</a></li>
+          <li class="page-item"><a class="page-link" (click)="incPage()"><i class="material-icons">keyboard_arrow_right</i></a></li>
         </ul>
       </div>
     </div>
