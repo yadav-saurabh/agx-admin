@@ -8,13 +8,18 @@
   <div class="sidebar-body">
     <ul>
       <li *ngFor="let item of sidebarItems;let i = index;" class="sidebar-item" [class.active]="temp.isActive" #temp="routerLinkActive" routerLinkActive  [routerLinkActiveOptions]="{exact: true}">
-        <a *ngIf="!item.subItem" [routerLink]="item.link" ><i class="material-icons">{{item.icon}}</i><strong class="mini-hide text-capitalize ">{{item.label}}</strong>
-          <span class="arrow mini-hide" ></span>
-        </a>
-        <!-- if menu contains children -->
-        <a *ngIf="item.subItem" data-toggle="collapse" [href]="'#'+item.label.split(' ').join('')" [class.collapsed]="!temp.isActive"  ><i class="material-icons">{{item.icon}}</i><strong class="text-capitalize mini-hide">{{item.label}}</strong><i class="toggle-icon material-icons">expand_less</i></a>
+        <a *ngIf="!item.subItem" [routerLink]="item.link" ><i class="material-icons">{{item.icon}}</i><strong class="mini-hide text-capitalize ">{{item.label}}</strong><span class="arrow mini-hide" ></span></a>
+        <!-- if sub menu  -->
+        <a *ngIf="!!item.subItem" data-toggle="collapse" [href]="'#'+item.label.split(' ').join('')" [class.collapsed]="!temp.isActive"  ><i class="material-icons">{{item.icon}}</i><strong class="text-capitalize mini-hide">{{item.label}}</strong><i class="toggle-icon material-icons">expand_less</i></a>
         <div *ngIf="!!item.subItem" class="collapse" [class.show]="temp.isActive" [id]="item.label.split(' ').join('')">
-          <li *ngFor="let subItem of item.subItem" class="sidebar-sub-item" routerLinkActive="active"><a [routerLink]=subItem.link><span class="txt-icon text-uppercase">{{subItem.icon}}</span><strong class="text-capitalize mini-hide"> {{subItem.label}} </strong><span class="arrow mini-hide"></span></a></li>
+          <li *ngFor="let subIteml1 of item.subItem" class="sidebar-sub-item" routerLinkActive="active">
+            <a *ngIf="!subIteml1.subItem" [routerLink]=subIteml1.link><span class="txt-icon text-uppercase">{{subIteml1.icon}}</span><strong class="text-capitalize mini-hide"> {{subIteml1.label}} </strong><span class="arrow mini-hide"></span></a>
+            <!-- if sub menu level 2 -->
+            <a *ngIf="!!subIteml1.subItem" data-toggle="collapse" [href]="'#'+subIteml1.label.split(' ').join('')" [class.collapsed]="!temp.isActive"  ><span class="txt-icon text-uppercase">{{subIteml1.icon}}</span><strong class="text-capitalize mini-hide">{{subIteml1.label}}</strong><i class="toggle-icon material-icons">expand_less</i></a>
+            <div *ngIf="!!subIteml1.subItem" class="collapse" [class.show]="temp.isActive" [id]="subIteml1.label.split(' ').join('')">
+              <li *ngFor="let subIteml2 of subIteml1.subItem" class="sidebar-sub-item-2" routerLinkActive="active"><a [routerLink]=subIteml2.link><span class="txt-icon text-uppercase">{{subIteml2.icon}}</span><strong class="text-capitalize mini-hide"> {{subIteml2.label}} </strong><span class="arrow mini-hide"></span></a></li>
+            </div>
+          </li>
         </div>
       </li>
     </ul>

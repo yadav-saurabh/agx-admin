@@ -39,7 +39,7 @@
     overflow:   hidden;
     overflow-y: auto;
     ul {
-      padding:    0;
+      padding:    0 0 2rem 0;
       list-style: none;
       li {
         position: relative;
@@ -71,11 +71,14 @@
     a {
       margin-left:   1rem;
       padding:      .3rem .7rem;  
+      &[data-toggle="collapse"] {
+        padding:    .4rem .7rem;  
+      }
     }
     span {
       &.txt-icon {
         display:     inline-block;
-        width:       1.5rem;
+        width:       1.3rem;
       }
       &.arrow {
         display:        none;
@@ -83,10 +86,16 @@
         border-right:   1.5rem solid;
       }
     }
+    /** sub sub item **/ 
+    &-2 {
+      a {
+        margin-left: 1.3rem;
+      }
+    }
   } 
   
   /** hover and active **/
-  &-item,&-sub-item {
+  &-item,&-sub-item, &-sub-item-2 {
     &:hover:not(.active) > a {
       @include active-arrow(rgba($white,.3));
       background-color:      rgba($white,.2);

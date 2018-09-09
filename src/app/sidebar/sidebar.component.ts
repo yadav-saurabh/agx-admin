@@ -8,11 +8,7 @@ import { CommonService } from '../common.service';
 })
 export class SidebarComponent {
 
-  commonService;
-
-  constructor(private cs: CommonService) {
-    this.commonService = cs;
-  }
+  constructor(private commonService: CommonService) {  }
 
   sidebarItems = [
     {link: '/', label: 'Dashboard', icon: 'dashboard'},
@@ -42,7 +38,14 @@ export class SidebarComponent {
     {link: '/charts', label: 'Charts', icon: 'show_chart'},
     {link: '/maps', label: 'Maps', icon: 'place'},
     {link: '/editors', label: 'Editors', icon: 'edit'},
-    {link: '/calendar', label: 'Calendar', icon: 'date_range'}
+    {link: '/calendar', label: 'Calendar', icon: 'date_range'},
+    {label: 'Menu', icon: 'menu', subItem: [
+      {link: '/temp1', label: 'Sub Menu L1', icon: 'l1'},
+      { label: 'Sub Menu L1', icon: 'l1' , subItem: [
+        {link: '/temp2', label: 'Sub Menu L2', icon: 'l2'},
+        {link: '/temp3', label: 'Sub Menu L2', icon: 'l2'},
+      ]},
+    ]}
   ];
 
 }
