@@ -40,10 +40,10 @@ export class SidebarComponent {
     {link: '/editors', label: 'Editors', icon: 'edit'},
     {link: '/calendar', label: 'Calendar', icon: 'date_range'},
     {label: 'Menu', icon: 'menu', subItem: [
-      {link: '/temp1', label: 'Sub Menu L1', icon: 'l1'},
+      {link: 'void()', label: 'Sub Menu L1', icon: 'l1'},
       { label: 'Sub Menu L1', icon: 'l1' , subItem: [
-        {link: '/temp2', label: 'Sub Menu L2', icon: 'l2'},
-        {link: '/temp3', label: 'Sub Menu L2', icon: 'l2'},
+        {link: 'void()', label: 'Sub Menu L2', icon: 'l2'},
+        {link: 'void()', label: 'Sub Menu L2', icon: 'l2'},
       ]},
     ]}
   ];
