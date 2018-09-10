@@ -8,7 +8,7 @@ import { CommonService } from '../common.service';
 })
 export class SidebarComponent {
 
-  constructor(private commonService: CommonService) {  }
+  constructor(public commonService: CommonService) {  }
 
   sidebarItems = [
     {link: '/', label: 'Dashboard', icon: 'dashboard'},

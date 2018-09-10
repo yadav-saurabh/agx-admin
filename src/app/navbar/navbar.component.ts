@@ -1,8 +1,5 @@
-import { Component, Output, EventEmitter, Input, OnChanges } from '@angular/core';
-import { HostListener } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonService } from '../common.service';
-
-declare var $: any;
 
 @Component({
   selector: 'app-navbar',
@@ -13,15 +10,12 @@ declare var $: any;
 export class NavbarComponent {
 
   previousScroll = 0;
-  commonService;
-  constructor(private cs: CommonService) {
-    this.commonService = cs;
-  }
+  constructor( public commonService: CommonService) { }
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(event) {
     const currentScroll = window.pageYOffset;
-    if (currentScroll > 60 && currentScroll < $(document).height() - $(window).height()) {
+    if (currentScroll > 60 && currentScroll < document.documentElement.scrollHeight - window.innerHeight) {
       if (currentScroll > this.previousScroll) {
         this.hideNavbar();
       } else {
@@ -34,14 +28,14 @@ export class NavbarComponent {
 
   hideNavbar = () => {
     setTimeout(() => {
-      this.cs.navbarToggleValue = true;
-    }, 300);
+      this.commonService.navbarToggleValue = true;
+    }, 100);
   }
 
   showNavbar = () => {
     setTimeout(() => {
-      this.cs.navbarToggleValue = false;
-    }, 300);
+      this.commonService.navbarToggleValue = false;
+    }, 100);
   }
 
 }
