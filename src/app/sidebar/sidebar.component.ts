@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonService } from '../common.service';
+import { CommonService } from '../shared/services/common.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -8,7 +8,7 @@ import { CommonService } from '../common.service';
 })
 export class SidebarComponent {
 
-  constructor(public commonService: CommonService) {  }
+  constructor(public cmnSrv: CommonService) {  }
 
   sidebarItems = [
     {link: '/', label: 'Dashboard', icon: 'dashboard'},

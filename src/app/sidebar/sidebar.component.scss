@@ -95,7 +95,7 @@
   } 
   
   /** hover and active **/
-  &-item,&-sub-item, &-sub-item-2 {
+  &-item, &-sub-item, &-sub-item-2 {
     &:hover:not(.active) > a {
       @include active-arrow(rgba($white,.3));
       background-color:      rgba($white,.2);
@@ -151,7 +151,7 @@
   background-color: rgba($black,.3);
 }
 
-/** media break points **/
+/**** media break points ****/
 
 @include media-breakpoint-down(lg) {
   .sidebar {

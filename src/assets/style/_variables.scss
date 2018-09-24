@@ -14,6 +14,7 @@ $warning:     #fed33d;  // 254,211,61
 $danger:      #f36b56;  // 243,107,86
 $dark :       #3a3a59;  // 58,58,89
 
+$sidebar-bg:   #3a3a59; // 58,58,89
 
 
 /**** z-index ******/
@@ -35,7 +36,7 @@ $sidebar-mini-width:       68px;
 $sidebar-mini-width-md:    62px;
 
 $sidebar-color:                   $white;
-$sidebar-bg-color:                rgba($dark,.9);
+$sidebar-bg-color:                $sidebar-bg;
 $sidebar-box-shadow:              0 1rem 2.1rem -.9rem rgba($black,.6),0 .2rem 1.2rem 0 rgba($black,.12), 0 .5rem .6rem .25rem rgba($black,.2);
 
 $sidebar-height:                  100vh;

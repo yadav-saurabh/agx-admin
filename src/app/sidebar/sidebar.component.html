@@ -1,4 +1,4 @@
-<div class="sidebar"  [class.hide]="commonService.sidebarToggleValue">
+<div class="sidebar"  [class.hide]="cmnSrv.dashboardState.sidebarToggle">
   <div class="sidebar-header align-middle">
     <!-- <img class="brandImg" src="http://via.placeholder.com/60x60" alt="brandImg"> -->
     <span class="text-uppercase p-3">ad</span>
@@ -25,4 +25,4 @@
     </ul>
   </div>
 </div>
-<div *ngIf="!commonService.sidebarToggleValue" class="sidebarOutside" (click)="commonService.sidebarToggle()" ></div>
+<div *ngIf="!cmnSrv.dashboardState.sidebarToggle" class="sidebarOutside" (click)="cmnSrv.sidebarToggle()" ></div>

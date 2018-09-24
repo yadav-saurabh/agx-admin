@@ -11,7 +11,7 @@
   background-color:   $navbar-bg;
   
   &.hidden {
-    top:  -$navbar-height;
+    top:  -$navbar-height - 10px;
   }
   
   ul {

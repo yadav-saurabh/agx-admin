@@ -1,6 +1,6 @@
 import { Component, OnInit, Renderer2, AfterViewChecked } from '@angular/core';
 import { Router, RouteConfigLoadStart, RouteConfigLoadEnd, NavigationEnd } from '@angular/router';
-import { CommonService } from '../common.service';
+import { CommonService } from '@shared/services/common.service';
 import * as NProgress from 'nprogress';
 
 @Component({
@@ -11,15 +11,19 @@ import * as NProgress from 'nprogress';
 
 export class DashboardComponent implements OnInit, AfterViewChecked {
 
-  commonService;
-
-  constructor(private router: Router, private cs: CommonService, private renderer: Renderer2) {
-    this.commonService = cs;
+  constructor(private router: Router, public cmnSrv: CommonService, private renderer: Renderer2) {
     NProgress.configure({ showSpinner: false });
+    /**
+     * to add preload class before loading the APP
+     * to prevent transition effection on many element on app startup
+     */
     this.renderer.addClass(document.body, 'preload');
   }
 
   ngOnInit() {
+    /**
+     * for progres bar (loading) on top; after route chages
+     */
     this.router.events.subscribe((obj: any) => {
       if (obj instanceof RouteConfigLoadStart) {
         NProgress.start();
@@ -31,14 +35,17 @@ export class DashboardComponent implements OnInit, AfterViewChecked {
           NProgress.remove();
         }, 500);
       } else if (obj instanceof NavigationEnd) {
-        this.cs.navbarToggleValue = false;
-        this.cs.sidebarToggleValue = true;
+        this.cmnSrv.dashboardState.navbarToggle = false;
+        this.cmnSrv.dashboardState.sidebarToggle = true;
         window.scrollTo(0, 0);
       }
     });
   }
 
   ngAfterViewChecked() {
+    /**
+     * for removing transition effection on load of the page
+     */
     setTimeout(() => {
       this.renderer.removeClass(document.body, 'preload');
     }, 300);
