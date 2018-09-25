@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
-import * as Chart from 'chart.js'
+import * as Chart from 'chart.js';
 import 'fullcalendar';
 
 @Component({
@@ -8,8 +8,8 @@ import 'fullcalendar';
   templateUrl: './dashboard-home.component.html',
   styleUrls: ['./dashboard-home.component.scss']
 })
-export class DashboardHomeComponent implements OnInit {
 
+export class DashboardHomeComponent implements OnInit {
 
   activitys = [
     { icon: 'edit', head: 'heading', body: 'body' },
@@ -19,17 +19,6 @@ export class DashboardHomeComponent implements OnInit {
     { icon: 'map', head: 'heading', body: 'body' },
     { icon: 'map', head: 'heading', body: 'body' }
   ];
-
-  tasks = [
-    { check: true, text: 'task 1' },
-    { check: false, text: 'task 2' },
-    { check: true, text: 'task 3' },
-    { check: true, text: 'task 4' },
-    { check: false, text: 'task 5' },
-    { check: false, text: 'task 6' },
-    { check: true, text: 'task 7' }
-  ];
-
 
   constructor() { }
 

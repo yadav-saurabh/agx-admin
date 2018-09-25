@@ -4,12 +4,15 @@ import { DashboardComponent } from './dashboard.component';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { SidebarComponent } from '../sidebar/sidebar.component';
 import { FooterComponent } from '../footer/footer.component';
-import { DashboardHomeComponent } from '../dashboard-home/dashboard-home.component';
+import { DashboardHomeComponent } from './dashboard-home/dashboard-home.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
+import { TasksComponent } from './tasks/tasks.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
     DashboardRoutingModule
   ],
   declarations: [
@@ -17,7 +20,8 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
     SidebarComponent,
     FooterComponent,
     DashboardComponent,
-    DashboardHomeComponent
+    DashboardHomeComponent,
+    TasksComponent
   ]
 })
 export class DashboardModule { }

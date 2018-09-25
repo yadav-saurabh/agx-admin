@@ -1,0 +1,36 @@
+@import 'mixins';
+
+.task {
+  border-bottom: solid 1px $secondary;
+  .custom-control-label{
+    width: 85%;
+    display: inline-block;
+  }
+  .icon {
+    cursor: pointer;
+  }
+  .custom-control-input {
+    & + .custom-control-label {
+      font-weight: bolder;
+      &::before {
+        border-color: $primary;
+        background-color: $white;
+        border: 1px solid $primary;
+      }
+      &, & + .icon {
+        color: $primary;
+      } 
+    }
+    &:checked + .custom-control-label {
+      font-weight: normal;
+      text-decoration: line-through;
+      &::before {
+        background-color: $secondary;
+        border: none;
+      }
+      &, & + .icon {
+        color: $secondary;
+      } 
+    }
+  }
+} 

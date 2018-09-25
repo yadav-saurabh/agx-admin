@@ -1,0 +1,20 @@
+<div class="card">
+  <div class="card-body">
+
+    <div *ngFor="let data of tasks;let i = index" class="py-4 task custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" [checked]="data.check" id="{{'customCheck' + i}}">
+        <label class="custom-control-label" for="{{'customCheck' + i}}">{{data.text}}</label>
+        <span class="icon" (click)="removeTask(i)"><i class="material-icons float-right ">delete</i></span>
+    </div>
+
+    <div class="form-group row no-gutters my-4">
+      <div class="col-9">
+        <input type="text" class="form-control" [(ngModel)]="newTask">
+      </div>
+      <div class="col-3 text-center">
+        <button class="px-md-4 px-2 btn btn-primary" (click)="addTask()">Add</button>
+      </div>
+    </div>
+
+  </div>
+</div>

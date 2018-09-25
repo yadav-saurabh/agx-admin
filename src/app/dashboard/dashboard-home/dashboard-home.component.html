@@ -87,14 +87,7 @@
 <div class="row">
   <div class="col-md-7">
     <h4 class="mt-4">Task : </h4>
-    <div class="card">
-      <div class="card-body">
-        <div *ngFor="let data of tasks;let i = index" class="task custom-control custom-checkbox">
-          <input type="checkbox" class="custom-control-input" [checked]="data.check" id="{{'customCheck' + i}}">
-          <label class="custom-control-label" for="{{'customCheck' + i}}">{{data.text}}</label>
-        </div>
-      </div>
-    </div>
+    <app-tasks></app-tasks>
     <h4 class="mt-4"> Events : </h4>
     <div class="card">
       <div class="card-body sm-p-0">
