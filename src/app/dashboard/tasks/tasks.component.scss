@@ -2,31 +2,31 @@
 
 .task {
   border-bottom: solid 1px $secondary;
-  .custom-control-label{
-    width: 85%;
-    display: inline-block;
+  .custom-control-label {
+    width:    85%;
+    display:  inline-block;
   }
   .icon {
     cursor: pointer;
   }
   .custom-control-input {
     & + .custom-control-label {
-      font-weight: bolder;
+      font-weight:  bolder;
       &::before {
-        border-color: $primary;
-        background-color: $white;
-        border: 1px solid $primary;
+        border-color:       $primary;
+        background-color:   $white;
+        border:   1px solid $primary;
       }
       &, & + .icon {
-        color: $primary;
+        color:  $primary;
       } 
     }
     &:checked + .custom-control-label {
-      font-weight: normal;
-      text-decoration: line-through;
+      font-weight:      normal;
+      text-decoration:  line-through;
       &::before {
-        background-color: $secondary;
-        border: none;
+        background-color:  $secondary;
+        border:     none;
       }
       &, & + .icon {
         color: $secondary;

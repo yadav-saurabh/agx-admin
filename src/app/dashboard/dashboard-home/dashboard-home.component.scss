@@ -1,14 +1,5 @@
 @import 'mixins';
 
-.chart  {
-  position: relative;
-  height:   70px;
-}
-
-.full-chart {
-  position: relative;
-  height:   150px;
-}
 
 @include media-breakpoint-down(sm){
   .card-body.sm-p-0 {

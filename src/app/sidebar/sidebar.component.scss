@@ -116,7 +116,7 @@
         top:          .5rem;
         transition:   $transition-base;
       }
-      &.collapsed i.toggle-icon{
+      &.collapsed i.toggle-icon {
         transform:    rotate(180deg);
         transition:   $transition-base;
       }
@@ -125,11 +125,11 @@
 
   /** arrow **/
   span.arrow {
-    display: none;
-    position: absolute;
-    right: -.5rem;
-    top: 0;
-    border-right: 2rem solid;
+    display:      none;
+    position:     absolute;
+    right:        0;
+    top:          0;
+    border-right: 2rem solid; 
   }
 
   .mini-hide {

@@ -8,6 +8,7 @@ import { DashboardHomeComponent } from './dashboard-home/dashboard-home.componen
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { TasksComponent } from './tasks/tasks.component';
 import { FormsModule } from '@angular/forms';
+import { StatsComponent } from './stats/stats.component';
 
 @NgModule({
   imports: [
@@ -21,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     DashboardComponent,
     DashboardHomeComponent,
-    TasksComponent
+    TasksComponent,
+    StatsComponent
   ]
 })
 export class DashboardModule { }
