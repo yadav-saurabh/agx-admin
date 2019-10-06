@@ -62,7 +62,6 @@ $pagination-active-color:                        $primary;
       min-width: 2rem;
       border: none;
       i.material-icons {
-        @extend i.material-icons;
         font-size: 1.3rem;
       }
     }
